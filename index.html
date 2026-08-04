@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhaseX Laser Services | Industrial Fiber Laser Service, New Jersey</title>
+<meta name="description" content="Factory-level fiber laser service, based in New Jersey. Installation, commissioning, diagnostics, relocation and repair for industrial fiber laser machines. Independent service for NJ, NY, PA and CT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="phasex-mark.png">
+<style>
+:root{
+  --navy:#0D2A46;
+  --orange:#FA6D08;
+  --steel:#5A6B7A;
+  --mist:#F2F5F8;
+  --ink:#1A2B3C;
+  --line:#DCE3EA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:16px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
+.eyebrow.on-dark{color:#9FB3C4}
+h1,h2,h3{color:var(--navy);line-height:1.15}
+h2{font-size:clamp(26px,3.4vw,34px);font-weight:700;margin:10px 0 14px}
+.section{padding:78px 0}
+.btn{display:inline-block;font-weight:600;font-size:15px;padding:14px 26px;border-radius:4px;text-decoration:none;border:2px solid transparent}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:#e05f04}
+.btn-ghost{border-color:#fff;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* top bar */
+.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{height:44px;width:auto}
+.logo-text{font-weight:800;font-size:22px;color:var(--navy);text-decoration:none;letter-spacing:-.01em}
+.logo-text span{color:var(--orange)}
+.top-phone{display:flex;align-items:center;gap:18px}
+.top-phone .num{font-weight:700;color:var(--navy);text-decoration:none;font-size:17px}
+.top-phone .btn{padding:10px 18px}
+@media(max-width:640px){.top-phone .num{display:none}}
+
+/* hero — the kerf: one orange beam cuts the navy panel, like the mark */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero .kerf{position:absolute;top:-12%;right:6%;width:5px;height:130%;background:var(--orange);transform:rotate(24deg);transform-origin:top center}
+.hero .kerf::after{content:"";position:absolute;left:-9px;top:0;width:5px;height:100%;background:rgba(250,109,8,.28)}
+.hero .wrap{position:relative;padding-top:96px;padding-bottom:96px;max-width:1120px}
+.hero h1{color:#fff;font-size:clamp(32px,4.6vw,52px);font-weight:800;letter-spacing:-.015em;max-width:14em;margin:14px 0 20px}
+.hero p{color:#C7D3DD;font-size:18px;max-width:36em;margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .states{margin-top:44px;font-size:13px;letter-spacing:.24em;color:#8CA2B5;font-weight:600}
+@media(max-width:640px){.hero .kerf{right:-4%}}
+
+/* services */
+.services{background:var(--mist)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:34px}
+.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);padding:26px 24px;border-radius:4px}
+.card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--steel)}
+
+/* how we work */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:34px}
+.step .n{font-weight:800;font-size:14px;color:var(--orange);letter-spacing:.18em}
+.step h3{font-size:18px;margin:8px 0 8px}
+.step p{font-size:15px;color:var(--steel)}
+
+/* dealer band */
+.dealer{background:var(--navy);color:#fff}
+.dealer h2{color:#fff}
+.dealer p{color:#C7D3DD;max-width:46em}
+.dealer .note{margin-top:18px;font-size:14px;color:#9FB3C4;border-left:3px solid var(--orange);padding-left:14px;max-width:46em}
+
+/* about */
+.about p{max-width:46em;margin-bottom:14px;font-size:16.5px}
+
+/* contact */
+.contact{background:var(--mist)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:30px}
+.contact-item .lbl{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
+.contact-item a{font-size:19px;font-weight:700;color:var(--navy);text-decoration:none}
+.contact-item p{font-size:16px;color:var(--ink)}
+.contact .btn{margin-top:30px}
+
+/* footer */
+footer{background:var(--navy);color:#8CA2B5;padding:44px 0;font-size:13.5px}
+footer .disc{max-width:60em;margin-bottom:16px;line-height:1.7}
+footer .base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;color:#7A93A8}
+footer a{color:#C7D3DD;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="#top" class="logo-text" aria-label="PhaseX Laser home">
+      <img src="phasex-logo.png" alt="PhaseX Laser — Industrial Laser Services" class="logo"
+           onerror="this.outerHTML='Phase<span>X</span> Laser'">
+    </a>
+    <div class="top-phone">
+      <a class="num" href="tel:+15513796083">(551) 379-6083</a>
+      <a class="btn btn-orange" href="mailto:services@phasexlaser.com">Request service</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="kerf" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow on-dark">Independent industrial laser service · New Jersey</div>
+    <h1>Factory-level fiber laser service, based in New Jersey.</h1>
+    <p>PhaseX Laser installs, commissions, relocates and repairs industrial fiber laser cutting machines. Our technicians service the parts of these systems that most owners cannot get serviced locally — laser sources, power supplies and fiber delivery cables — on site, without waiting for overseas support.</p>
+    <div class="cta">
+      <a class="btn btn-orange" href="tel:+15513796083">Call (551) 379-6083</a>
+      <a class="btn btn-ghost" href="mailto:services@phasexlaser.com">services@phasexlaser.com</a>
+    </div>
+    <div class="states">NJ&nbsp;&nbsp;·&nbsp;&nbsp;NY&nbsp;&nbsp;·&nbsp;&nbsp;PA&nbsp;&nbsp;·&nbsp;&nbsp;CT</div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="eyebrow">What we do</div>
+    <h2>Service scope</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Installation and commissioning</h3>
+        <p>Machine placement coordination, utility checks, alignment, first cuts and operator handover for new and imported fiber laser machines. Site readiness is reviewed before delivery.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnostics and field repair</h3>
+        <p>Machine-down service calls: cutting problems, motion and CNC faults, chiller and cooling issues, interlocks, electrical and automation troubleshooting.</p>
+      </div>
+      <div class="card">
+        <h3>Laser source and power systems</h3>
+        <p>Diagnostics on laser sources, power supplies and DC power modules — the failure points that usually mean waiting for a factory technician from overseas.</p>
+      </div>
+      <div class="card">
+        <h3>Fiber delivery cable support</h3>
+        <p>Inspection and damage assessment of high-power delivery cables and QBH/QD connections, with removal, managed repair and reinstallation handled under a defined scope.</p>
+      </div>
+      <div class="card">
+        <h3>Relocation and recommissioning</h3>
+        <p>Pre-move condition documentation, dismantling scope, utility requirements at the new site, transport coordination with rigging partners, and startup after the move.</p>
+      </div>
+      <div class="card">
+        <h3>Preventive maintenance</h3>
+        <p>Scheduled inspection and maintenance with written reports, so machine condition is documented before it becomes downtime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="eyebrow">How we work</div>
+    <h2>Every job runs on a written scope</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">STEP 1</div>
+        <h3>Scope before dispatch</h3>
+        <p>Machine, fault, site conditions, required tooling and documentation are confirmed in writing before any visit. Scheduling and response time are confirmed for each assignment.</p>
+      </div>
+      <div class="step">
+        <div class="n">STEP 2</div>
+        <h3>Work on site</h3>
+        <p>The agreed scope is executed on site. We name the machine, the fault and the fix — findings are shared as they happen, not after the invoice.</p>
+      </div>
+      <div class="step">
+        <div class="n">STEP 3</div>
+        <h3>Documented service report</h3>
+        <p>Every job closes with a written service report: machine and serial data, reported symptom, diagnostic actions, readings, parts, test results and open items, with photos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dealer" id="dealers">
+  <div class="wrap">
+    <div class="eyebrow on-dark">Dealers and importers</div>
+    <h2>Subcontract field execution in the Northeast</h2>
+    <p>When your team needs additional coverage for an installation, commissioning job or machine-down service call in NJ, NY, PA or CT, PhaseX executes approved field assignments under your direction. You retain all customer and warranty administration; PhaseX performs only the field scope you authorize in writing and does not assume or modify the OEM warranty.</p>
+    <p class="note">PhaseX will not solicit or bypass customers introduced by a partner for the assigned work.</p>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>Built by people who built the machines</h2>
+    <p>PhaseX Laser is an industrial laser service company based in Parsippany, New Jersey, operating as a division of CoreX Robotics Services LLC. Our background is industrial machinery manufacturing and field service — we built, installed and serviced fiber laser cutting machines before founding PhaseX, including laser source diagnostics and high-power fiber delivery cable work.</p>
+    <p>Machine importers and owners work with us because we solve on site what would otherwise require a technician flown in from the manufacturer. We serve New Jersey and the surrounding region.</p>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Talk to a technician, not a call center</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="lbl">Phone</div>
+        <a href="tel:+15513796083">(551) 379-6083</a>
+      </div>
+      <div class="contact-item">
+        <div class="lbl">Email</div>
+        <a href="mailto:services@phasexlaser.com">services@phasexlaser.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="lbl">Office</div>
+        <p>239 New Road, Suite B210<br>Parsippany, NJ 07054</p>
+      </div>
+      <div class="contact-item">
+        <div class="lbl">Hours</div>
+        <p>Monday–Friday<br>8:00–18:00 ET</p>
+      </div>
+    </div>
+    <a class="btn btn-orange" href="mailto:services@phasexlaser.com?subject=Service%20request%20—%20PhaseX%20Laser">Request service by email</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="disc">PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p>
+    <div class="base">
+      <div>© 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a division of CoreX Robotics Services LLC.</div>
+      <div><a href="tel:+15513796083">(551) 379-6083</a> &nbsp;·&nbsp; <a href="mailto:services@phasexlaser.com">services@phasexlaser.com</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
