@@ -1,160 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PhaseX Laser Services | Industrial Fiber Laser Service, New Jersey</title>
-<meta name="description" content="Factory-level fiber laser service, based in New Jersey. Installation, commissioning, diagnostics, relocation and repair for industrial fiber laser machines. Independent service for NJ, NY, PA and CT.">
+<meta name="description" content="Independent industrial fiber laser service based in New Jersey. Installation, commissioning, field repair, laser source and fiber delivery cable work across NJ, NY, PA and CT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="phasex-mark.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#0D2A46;
-  --orange:#FA6D08;
-  --steel:#5A6B7A;
-  --mist:#F2F5F8;
-  --ink:#1A2B3C;
-  --line:#DCE3EA;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:16px}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--navy)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
-.eyebrow.on-dark{color:#9FB3C4}
-h1,h2,h3{color:var(--navy);line-height:1.15}
-h2{font-size:clamp(26px,3.4vw,34px);font-weight:700;margin:10px 0 14px}
-.section{padding:78px 0}
-.btn{display:inline-block;font-weight:600;font-size:15px;padding:14px 26px;border-radius:4px;text-decoration:none;border:2px solid transparent}
-.btn-orange{background:var(--orange);color:#fff}
-.btn-orange:hover{background:#e05f04}
-.btn-ghost{border-color:#fff;color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.1)}
+  :root{
+    --navy:#0D2A46;
+    --orange:#FA6D08;
+    --steel:#5A6B7A;
+    --mist:#F2F5F8;
+    --ink:#1A2B3C;
+    --line:#DCE3EA;
+    --navy-2:#123457;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-/* top bar */
-.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
-.logo{height:44px;width:auto}
-.logo-text{font-weight:800;font-size:22px;color:var(--navy);text-decoration:none;letter-spacing:-.01em}
-.logo-text span{color:var(--orange)}
-.top-phone{display:flex;align-items:center;gap:18px}
-.top-phone .num{font-weight:700;color:var(--navy);text-decoration:none;font-size:17px}
-.top-phone .btn{padding:10px 18px}
-@media(max-width:640px){.top-phone .num{display:none}}
+  /* engineered eyebrow */
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);display:inline-block}
+  .eyebrow.on-dark{color:var(--orange)}
 
-/* hero, the kerf: one orange beam cuts the navy panel, like the mark */
-.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.hero .kerf{position:absolute;top:-12%;right:6%;width:5px;height:130%;background:var(--orange);transform:rotate(24deg);transform-origin:top center}
-.hero .kerf::after{content:"";position:absolute;left:-9px;top:0;width:5px;height:100%;background:rgba(250,109,8,.28)}
-.hero .wrap{position:relative;padding-top:96px;padding-bottom:96px;max-width:1120px}
-.hero h1{color:#fff;font-size:clamp(32px,4.6vw,52px);font-weight:800;letter-spacing:-.015em;max-width:14em;margin:14px 0 20px}
-.hero p{color:#C7D3DD;font-size:18px;max-width:36em;margin-bottom:34px}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero .states{margin-top:44px;font-size:13px;letter-spacing:.24em;color:#8CA2B5;font-weight:600}
-@media(max-width:640px){.hero .kerf{right:-4%}}
+  h1,h2,h3{color:var(--navy);line-height:1.1;font-weight:800;letter-spacing:-.022em}
+  .section{padding:96px 0;position:relative}
+  .section--mist{background:var(--mist)}
+  .section--grid{background:
+    radial-gradient(circle at 1px 1px, rgba(13,42,70,.05) 1px, transparent 0) 0 0/26px 26px,
+    var(--mist)}
+  .section--navy{background:var(--navy);color:#fff}
+  .section--navy h2,.section--navy h3{color:#fff}
+  .section-head{max-width:720px;margin-bottom:52px}
+  .section-head .eyebrow{margin-bottom:18px}
+  .section-head h2{font-size:2.3rem;margin-bottom:14px}
+  .section-head p{color:var(--steel);font-size:1.06rem}
+  .section--navy .section-head p{color:#b6c4d2}
 
-/* services */
-.services{background:var(--mist)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:34px}
-.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);padding:26px 24px;border-radius:4px}
-.card h3{font-size:17px;font-weight:700;margin-bottom:8px}
-.card p{font-size:14.5px;color:var(--steel)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.94rem;padding:14px 26px;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:.18s;letter-spacing:.01em}
+  .btn--primary{background:var(--orange);color:#fff}
+  .btn--primary:hover{background:#e05f00;transform:translateY(-1px)}
+  .btn--ghost{background:transparent;border-color:var(--line);color:var(--navy)}
+  .btn--ghost:hover{border-color:var(--navy)}
+  .btn--on-navy{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+  .btn--on-navy:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 
-/* how we work */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:34px}
-.step .n{font-weight:800;font-size:14px;color:var(--orange);letter-spacing:.18em}
-.step h3{font-size:18px;margin:8px 0 8px}
-.step p{font-size:15px;color:var(--steel)}
+  /* reveal */
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.in{opacity:1;transform:none}
 
-/* dealer band */
-.dealer{background:var(--navy);color:#fff}
-.dealer h2{color:#fff}
-.dealer p{color:#C7D3DD;max-width:46em}
-.dealer .note{margin-top:18px;font-size:14px;color:#9FB3C4;border-left:3px solid var(--orange);padding-left:14px;max-width:46em}
+  /* ---------- TOP UTILITY BAR ---------- */
+  .topbar{background:var(--ink);color:#aebccb;font-size:.76rem;letter-spacing:.04em}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .topbar b{color:#fff;font-weight:600}
+  .topbar__r{display:flex;gap:22px}
+  .topbar a:hover{color:#fff}
 
-/* about */
-.about p{max-width:46em;margin-bottom:14px;font-size:16.5px}
+  /* ---------- HEADER ---------- */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .nav__logo img{height:40px;width:auto}
+  .nav__links{display:flex;gap:32px;list-style:none}
+  .nav__links a{font-weight:600;font-size:.9rem;color:var(--ink);transition:.15s;position:relative;padding:4px 0}
+  .nav__links a:hover{color:var(--orange)}
+  .nav__right{display:flex;align-items:center;gap:22px}
+  .nav__phone{font-weight:800;color:var(--navy);white-space:nowrap;font-size:1rem}
+  .nav__toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+  .nav__toggle span{width:24px;height:2px;background:var(--navy);display:block}
 
-/* contact */
-.contact{background:var(--mist)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:30px}
-.contact-item .lbl{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
-.contact-item a{font-size:19px;font-weight:700;color:var(--navy);text-decoration:none}
-.contact-item p{font-size:16px;color:var(--ink)}
-.contact .btn{margin-top:30px}
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+  .hero__media{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy)}
+  .hero__media video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero__overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg,rgba(9,29,50,.96) 0%,rgba(9,29,50,.82) 36%,rgba(9,29,50,.42) 66%,rgba(9,29,50,.18) 100%)}
+  .hero__overlay::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(9,29,50,.4),transparent 26%,transparent 62%,rgba(9,29,50,.72))}
+  .hero__inner{position:relative;z-index:2;padding:120px 0 100px;max-width:780px}
+  .hero .eyebrow{color:#9fb2c4;margin-bottom:24px}
+  .hero .eyebrow::before{background:var(--orange)}
+  .hero h1{color:#fff;font-size:3.5rem;font-weight:900;margin-bottom:26px;letter-spacing:-.03em}
+  .hero p.lead{color:#cdd8e2;font-size:1.14rem;max-width:650px;margin-bottom:38px}
+  .hero__btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+  .hero__strip{display:flex;align-items:center;gap:16px;font-size:.9rem;font-weight:600;letter-spacing:.05em;color:#9fb2c4;border-top:1px solid rgba(255,255,255,.14);padding-top:24px}
+  .hero__strip b{color:#fff;letter-spacing:.08em}
+  .hero__strip .dot{color:var(--orange)}
 
-/* footer */
-footer{background:var(--navy);color:#8CA2B5;padding:44px 0;font-size:13.5px}
-footer .disc{max-width:60em;margin-bottom:16px;line-height:1.7}
-footer .base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;color:#7A93A8}
-footer a{color:#C7D3DD;text-decoration:none}
+  /* ---------- PLATFORM STRIP ---------- */
+  .platforms{background:var(--ink);color:#fff;padding:30px 0;border-top:1px solid rgba(255,255,255,.06)}
+  .platforms__row{display:flex;align-items:center;justify-content:space-between;gap:18px 40px;flex-wrap:wrap}
+  .platforms__label{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7d8fa1;white-space:nowrap}
+  .platforms__names{display:flex;gap:14px 30px;flex-wrap:wrap;align-items:center}
+  .platforms__names span{font-weight:700;font-size:1.05rem;color:#e3eaf1;letter-spacing:.01em}
+
+  /* ---------- SERVICE CARDS ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .card{background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 32px;position:relative;transition:.2s}
+  .card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+  .card:hover{background:#fbfcfd}
+  .card:hover::before{transform:scaleX(1)}
+  .card__top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
+  .card__icon{width:52px;height:52px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .card__icon svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .card__no{font-size:.78rem;font-weight:800;letter-spacing:.1em;color:var(--line)}
+  .card:hover .card__no{color:var(--orange)}
+  .card h3{font-size:1.14rem;margin-bottom:10px}
+  .card p{color:var(--steel);font-size:.94rem}
+
+  /* ---------- SPLIT (WHY) ---------- */
+  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+  .split__text .eyebrow{margin-bottom:18px}
+  .split__text h2{font-size:2.3rem;margin-bottom:20px}
+  .split__text p{color:var(--steel);margin-bottom:16px}
+  .split__text .cred{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+  .split__text .cred div{font-size:.86rem;color:var(--steel)}
+  .split__text .cred b{display:block;color:var(--navy);font-weight:800;font-size:.94rem;letter-spacing:.01em;margin-bottom:2px}
+  .figure{position:relative}
+  .figure img{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:12px;display:block}
+  .figure::after{content:"";position:absolute;left:18px;top:18px;width:46px;height:46px;border-left:2px solid var(--orange);border-top:2px solid var(--orange);opacity:.9}
+  .figure figcaption{position:absolute;left:0;bottom:0;background:var(--navy);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.03em;padding:12px 18px;border-radius:0 10px 0 12px}
+  .figure--contain img{object-fit:contain;height:auto;min-height:auto;background:#fff;border:1px solid var(--line)}
+
+  /* ---------- HOW WE WORK ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:34px 30px;position:relative}
+  .step__n{font-size:2.6rem;font-weight:900;color:var(--mist);line-height:1;margin-bottom:16px;-webkit-text-stroke:1px var(--line)}
+  .step__num{font-size:.72rem;font-weight:800;letter-spacing:.16em;color:var(--orange);text-transform:uppercase;margin-bottom:14px}
+  .step h3{font-size:1.16rem;margin-bottom:10px}
+  .step p{color:var(--steel);font-size:.94rem}
+
+  /* ---------- COVERAGE ---------- */
+  .cov{text-align:center}
+  .cov .tags{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:26px 0 20px}
+  .tag{background:var(--navy);color:#fff;font-weight:800;letter-spacing:.06em;padding:16px 30px;border-radius:8px;font-size:1.1rem;position:relative}
+  .cov p{color:var(--steel);max-width:600px;margin:0 auto}
+  .cov .note{margin-top:12px;font-size:.95rem;color:var(--navy);font-weight:700}
+
+  /* ---------- DEALERS BAND ---------- */
+  .band{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;border-radius:16px;padding:60px 52px;position:relative;overflow:hidden}
+  .band::after{content:"";position:absolute;top:-30%;right:-4%;width:42%;height:170%;
+    background:linear-gradient(115deg,transparent 58%,rgba(250,109,8,.9) 59%,rgba(250,109,8,.9) 60.2%,transparent 61%);opacity:.5}
+  .band .eyebrow{color:#9fb2c4;margin-bottom:16px}
+  .band h2{color:#fff;font-size:2rem;margin-bottom:18px;max-width:640px}
+  .band p{color:#c7d2dd;max-width:700px;margin-bottom:14px;position:relative;z-index:2}
+  .band .btn{margin-top:14px;position:relative;z-index:2}
+  .band .band-bg{position:absolute;inset:0;z-index:0;background:url('dealers-bg.jpg') center/cover;opacity:.55}
+  .band .band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(9,29,50,.9),rgba(9,29,50,.66))}
+  .band .eyebrow,.band h2{position:relative;z-index:2}
+  #how{position:relative;overflow:hidden;background:var(--navy)}
+  #how .how-bg{position:absolute;inset:0;z-index:0;background:url('how-bg.jpg') center/cover}
+  #how .how-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,50,.9),rgba(9,29,50,.86))}
+  #how .wrap{position:relative;z-index:1}
+  #how .section-head h2{color:#fff}
+  #how .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(3px)}
+  #how .step h3{color:#fff}
+  #how .step p{color:#c7d2dd}
+  #how .step__n{color:rgba(255,255,255,.16);-webkit-text-stroke:1px rgba(255,255,255,.22)}
+  .compgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .compcard{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  .compcard img{width:100%;height:290px;object-fit:cover;display:block;transition:transform .35s}
+  .compcard:hover img{transform:scale(1.05)}
+  .compcard figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(9,29,50,.92));color:#fff;font-weight:700;font-size:.92rem;letter-spacing:.02em;padding:30px 18px 15px}
+  @media(max-width:960px){.compgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.compgrid{grid-template-columns:1fr}}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:840px;margin:0 auto}
+  .faq__item{border-bottom:1px solid var(--line)}
+  .faq__q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:24px 44px 24px 0;font-size:1.06rem;font-weight:700;color:var(--navy);position:relative}
+  .faq__q::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;font-weight:400;color:var(--orange);transition:.2s}
+  .faq__item.open .faq__q::after{content:"\2013"}
+  .faq__a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq__a p{color:var(--steel);padding:0 0 24px;font-size:.98rem}
+
+  /* ---------- CONTACT ---------- */
+  #contact{position:relative;overflow:hidden}
+  #contact .contact-bg{position:absolute;inset:0;z-index:0;background:url('contact-bg.jpg') center/cover}
+  #contact .contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,29,50,.95),rgba(9,29,50,.86) 50%,rgba(9,29,50,.74))}
+  #contact .wrap{position:relative;z-index:1}
+  .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;margin-bottom:36px}
+  .contact-grid > div{background:rgba(9,29,50,.55);padding:26px 24px}
+  .contact-grid .label{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9fb2c4;margin-bottom:12px}
+  .contact-grid .val{color:#fff;font-weight:700;font-size:1.06rem}
+  .contact-grid .val span{display:block;font-weight:400;color:#cdd8e2;font-size:.95rem}
+  .contact-grid a.val:hover{color:var(--orange)}
+  .contact-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---------- FOOTER ---------- */
+  footer.site{background:var(--ink);color:#9fb2c4;padding:60px 0 32px;font-size:.9rem}
+  .tagline{font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:24px;letter-spacing:.01em}
+  .tagline b{color:var(--orange)}
+  .footer-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .f-logo img{height:34px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
+  footer .f-logo p{max-width:290px}
+  .footer-cols{display:flex;gap:56px;flex-wrap:wrap}
+  .footer-cols .label{color:#fff;font-weight:700;margin-bottom:12px;font-size:.82rem;letter-spacing:.06em}
+  .footer-cols a:hover{color:#fff}
+  .disclaimer{padding-top:28px;font-size:.8rem;line-height:1.75;color:#7d8e9c;max-width:920px}
+  .copy{margin-top:18px;font-size:.82rem;color:#6f8093}
+
+  /* ---------- MOBILE CALL BAR ---------- */
+  .callbar{display:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:960px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:36px}
+    .contact-grid{grid-template-columns:repeat(2,1fr)}
+    .hero h1{font-size:2.6rem}
+    .section{padding:70px 0}
+    .topbar{display:none}
+  }
+  @media(max-width:640px){
+    .nav__links,.nav__phone{display:none}
+    .nav__toggle{display:flex}
+    .nav.open .nav__links{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12)}
+    .nav.open .nav__links li{padding:13px 0;border-bottom:1px solid var(--mist)}
+    .cards{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2.15rem}
+    .hero__inner{padding:80px 0 84px}
+    .band{padding:38px 26px}
+    .section-head h2{font-size:1.75rem}
+    body{padding-bottom:62px}
+    .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--navy);border-top:2px solid var(--orange)}
+    .callbar a{flex:1;text-align:center;padding:17px 0;color:#fff;font-weight:700;font-size:.95rem}
+    .callbar a:first-child{background:var(--orange)}
+    .callbar a+a{border-left:1px solid rgba(255,255,255,.15)}
+  }
 </style>
 </head>
 <body>
 
-<header class="topbar">
+<!-- TOP UTILITY BAR -->
+<div class="topbar">
   <div class="wrap">
-    <a href="#top" class="logo-text" aria-label="PhaseX Laser home">
-      <img src="phasex-logo.png" alt="PhaseX Laser, Industrial Laser Services" class="logo"
-           onerror="this.outerHTML='Phase<span>X</span> Laser'">
-    </a>
-    <div class="top-phone">
-      <a class="num" href="tel:+15513796083">(551) 379-6083</a>
-      <a class="btn btn-orange" href="mailto:service@phasexlaser.com">Request service</a>
-    </div>
+    <span><b>Independent industrial laser service</b> · New Jersey</span>
+    <span class="topbar__r">
+      <span>Mon–Fri 8:00–18:00 ET</span>
+      <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
+    </span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap">
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav__logo"><img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser, Industrial Laser Services"></a>
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why PhaseX</a></li>
+        <li><a href="#how">How we work</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="tel:+15513796083" class="nav__phone">+1 (551) 379-6083</a>
+        <a href="#contact" class="btn btn--primary">Request service</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="kerf" aria-hidden="true"></div>
+  <div class="hero__media">
+    <video id="heroVideo" autoplay muted loop playsinline poster="hero-poster.jpg">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__overlay"></div>
   <div class="wrap">
-    <div class="eyebrow on-dark">Independent industrial laser service · New Jersey</div>
-    <h1>Factory-level fiber laser service, based in New Jersey.</h1>
-    <p>PhaseX Laser installs, commissions, relocates and repairs industrial laser machinery: fiber laser cutting machines, laser welding, cleaning and cladding systems, robotic cells and automated loading lines. Our technicians service the parts of these systems that most owners cannot get serviced locally: laser sources, power supplies and fiber delivery cables. On site, without waiting for overseas support.</p>
-    <div class="cta">
-      <a class="btn btn-orange" href="tel:+15513796083">Call (551) 379-6083</a>
-      <a class="btn btn-ghost" href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
+    <div class="hero__inner">
+      <span class="eyebrow">Independent Industrial Laser Service · New Jersey</span>
+      <h1>Factory-level fiber laser service, based in New Jersey.</h1>
+      <p class="lead">PhaseX Laser installs, commissions, relocates and repairs industrial laser machinery: fiber laser cutting machines, laser welding, cleaning and cladding systems, robotic cells and automated loading lines. Our technicians service the parts of these systems that most owners cannot get serviced locally: laser sources, power supplies and fiber delivery cables. On site, without waiting for overseas support.</p>
+      <div class="hero__btns">
+        <a href="#contact" class="btn btn--primary">Request service</a>
+        <a href="#services" class="btn btn--on-navy">See what we fix</a>
+      </div>
+      <p class="hero__strip"><b>NJ <span class="dot">·</span> NY <span class="dot">·</span> PA <span class="dot">·</span> CT</b> — rapid on-site response</p>
     </div>
-    <div class="states">NJ&nbsp;&nbsp;·&nbsp;&nbsp;NY&nbsp;&nbsp;·&nbsp;&nbsp;PA&nbsp;&nbsp;·&nbsp;&nbsp;CT&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Nationwide for scheduled installations</div>
   </div>
 </section>
 
-<section class="section services" id="services">
+<!-- PLATFORM STRIP -->
+<div class="platforms">
+  <div class="wrap platforms__row">
+    <span class="platforms__label">Platforms we service</span>
+    <div class="platforms__names">
+      <span>Raycus</span><span>IPG</span><span>MAX</span><span>JPT</span><span>GW</span><span>Raytools</span><span>BOCI</span><span>OSPRI</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
   <div class="wrap">
-    <div class="eyebrow">What we do</div>
-    <h2>Service scope</h2>
-    <div class="grid">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Service scope</h2>
+    </div>
+    <div class="cards reveal">
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></div><span class="card__no">01</span></div>
         <h3>Installation and commissioning</h3>
         <p>Machine placement coordination, utility checks, alignment, first cuts and operator handover for new and imported laser machinery: flatbed and tube cutters, robotic cells, coil-fed and automated loading lines, and laser welding, cleaning and cladding systems. Site readiness is reviewed before delivery.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><span class="card__no">02</span></div>
         <h3>Diagnostics and field repair</h3>
         <p>Machine-down service calls: cutting problems, motion and CNC faults, chiller and cooling issues, interlocks, electrical troubleshooting, and cutting-head work on Raytools, BOCI, OSPRI and similar heads.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h6M7 13h4"/><circle cx="17" cy="14" r="1.4"/></svg></div><span class="card__no">03</span></div>
         <h3>Laser source and power systems</h3>
         <p>Component-level diagnostics and repair on Raycus, IPG, MAX, JPT and GW sources, power supplies and DC modules: the failures that usually mean waiting for an overseas technician.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 12c3-6 15-6 18 0M3 12c3 6 15 6 18 0"/><circle cx="12" cy="12" r="2.2"/></svg></div><span class="card__no">04</span></div>
         <h3>Fiber delivery cable support</h3>
         <p>Inspection and damage assessment of high-power delivery cables and QBH/QD connections, with removal, managed repair and reinstallation handled under a defined scope.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 16l6-6 4 4 6-7M15 7h5v5"/></svg></div><span class="card__no">05</span></div>
         <h3>Relocation and recommissioning</h3>
         <p>Pre-move condition documentation, dismantling scope, utility requirements at the new site, transport coordination with rigging partners, and startup after the move.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4L14 9l-1-1 1.7-1.7z"/></svg></div><span class="card__no">06</span></div>
         <h3>Retrofit and modernization</h3>
         <p>Conversion of legacy CO2 machines to fiber, and modernization of aging Trumpf, Amada and other European and Japanese platforms with current-generation sources, cutting heads and control systems. We have done these conversions before; scope and feasibility are defined per machine.</p>
       </div>
       <div class="card">
+        <div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><span class="card__no">07</span></div>
         <h3>Preventive maintenance</h3>
         <p>Scheduled inspection and maintenance with written reports, so machine condition is documented before it becomes downtime.</p>
       </div>
@@ -162,84 +352,200 @@ footer a{color:#C7D3DD;text-decoration:none}
   </div>
 </section>
 
-<section class="section" id="process">
+<!-- WHY PHASEX -->
+<section class="section section--grid" id="why">
+  <div class="wrap split">
+    <div class="split__text reveal">
+      <span class="eyebrow">About</span>
+      <h2>Built by people who built the machines</h2>
+      <p>PhaseX Laser is an industrial laser service company based in Parsippany, New Jersey, operating as a division of CoreX Robotics Services LLC. Our background is industrial machinery manufacturing and field service. We built, installed and serviced fiber laser cutting machines before founding PhaseX. That includes laser source diagnostics and high-power fiber delivery cable work.</p>
+      <p>Machine importers and owners work with us because we solve on site what would otherwise require a technician flown in from the manufacturer. We serve New Jersey and the surrounding region.</p>
+      <div class="cred">
+        <div><b>Parsippany, NJ</b>Division of CoreX Robotics Services LLC</div>
+        <div><b>Source-level</b>Diagnostics and repair, not just part swaps</div>
+        <div><b>On site</b>No waiting for overseas support</div>
+      </div>
+    </div>
+    <figure class="figure reveal">
+      <img src="why-tech.jpg" alt="Technician performing board-level repair on laser electronics">
+      <figcaption>Board-level repair · fiber laser electronics</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- COMPONENT-LEVEL BAND -->
+<section class="section" id="components">
   <div class="wrap">
-    <div class="eyebrow">How we work</div>
-    <h2>Every job runs on a written scope</h2>
-    <div class="steps">
+    <div class="section-head reveal" style="text-align:center;margin:0 auto 44px">
+      <span class="eyebrow" style="justify-content:center">What we service</span>
+      <h2 style="margin-top:16px">Sources, cables and cutting heads</h2>
+    </div>
+    <div class="compgrid reveal">
+      <figure class="compcard"><img src="comp-source.jpg" alt="Fiber laser source internals during service"><figcaption>Laser sources &amp; power</figcaption></figure>
+      <figure class="compcard"><img src="comp-cable.jpg" alt="Fiber delivery cable and QBH connector"><figcaption>Fiber cables &amp; QBH connectors</figcaption></figure>
+      <figure class="compcard"><img src="why-phasex.jpg" alt="Fiber laser cutting head"><figcaption>Cutting heads</figcaption></figure>
+      <figure class="compcard"><img src="comp-control.jpg" alt="Servo drives and control cabinet"><figcaption>Control &amp; drive electronics</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="section" id="how">
+  <div class="how-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>Every job runs on a written scope</h2>
+    </div>
+    <div class="steps reveal">
       <div class="step">
-        <div class="n">STEP 1</div>
-        <h3>Scope before dispatch</h3>
+        <div class="step__n">01</div>
+        <div class="step__num">Scope before dispatch</div>
+        <h3>Confirmed in writing</h3>
         <p>Machine, fault, site conditions, required tooling and documentation are confirmed in writing before any visit. Scheduling and response time are confirmed for each assignment.</p>
       </div>
       <div class="step">
-        <div class="n">STEP 2</div>
-        <h3>Work on site</h3>
+        <div class="step__n">02</div>
+        <div class="step__num">Work on site</div>
+        <h3>Named machine, fault, fix</h3>
         <p>The agreed scope is executed on site. We name the machine, the fault and the fix. Findings are shared as they happen, not after the invoice.</p>
       </div>
       <div class="step">
-        <div class="n">STEP 3</div>
-        <h3>Documented service report</h3>
+        <div class="step__n">03</div>
+        <div class="step__num">Documented report</div>
+        <h3>Every job closes on paper</h3>
         <p>Every job closes with a written service report: machine and serial data, reported symptom, diagnostic actions, readings, parts, test results and open items, with photos.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section dealer" id="dealers">
-  <div class="wrap">
-    <div class="eyebrow on-dark">Dealers and importers</div>
-    <h2>Subcontract field execution in the Northeast</h2>
-    <p>When your team needs additional coverage for an installation, commissioning job or machine-down service call in NJ, NY, PA or CT, PhaseX executes approved field assignments under your direction. You retain all customer and warranty administration; PhaseX performs only the field scope you authorize in writing and does not assume or modify the OEM warranty.</p>
-    <p class="note">PhaseX will not solicit or bypass customers introduced by a partner for the assigned work.</p>
+<!-- FULL RETROFITS -->
+<section class="section" id="retrofit">
+  <div class="wrap split">
+    <figure class="figure figure--contain reveal">
+      <img src="retrofit.jpg" alt="New-generation laser source, CNC control and servo drives">
+      <figcaption>Source · CNC · drives · servo motors</figcaption>
+    </figure>
+    <div class="split__text reveal">
+      <span class="eyebrow">Full retrofits</span>
+      <h2>We replace the whole control chain</h2>
+      <p>When a machine is worth keeping but its electronics are done, we replace the entire chain, not a single part: CNC and control system, servo drives and complete motor groups, cutting head, laser source and fiber delivery cable.</p>
+      <p>New-generation components, matched to the machine and wired and commissioned as one system. Scope and feasibility are defined per machine before any work starts.</p>
+    </div>
   </div>
 </section>
 
-<section class="section about" id="about">
-  <div class="wrap">
-    <div class="eyebrow">About</div>
-    <h2>Built by people who built the machines</h2>
-    <p>PhaseX Laser is an industrial laser service company based in Parsippany, New Jersey, operating as a division of CoreX Robotics Services LLC. Our background is industrial machinery manufacturing and field service. We built, installed and serviced fiber laser cutting machines before founding PhaseX. That includes laser source diagnostics and high-power fiber delivery cable work.</p>
-    <p>Machine importers and owners work with us because we solve on site what would otherwise require a technician flown in from the manufacturer. We serve New Jersey and the surrounding region.</p>
+<!-- COVERAGE -->
+<section class="section section--mist" id="coverage">
+  <div class="wrap cov reveal">
+    <span class="eyebrow" style="justify-content:center">Coverage</span>
+    <h2 style="font-size:2.2rem;margin-top:16px">Where we work</h2>
+    <div class="tags">
+      <span class="tag">NJ</span><span class="tag">NY</span><span class="tag">PA</span><span class="tag">CT</span>
+    </div>
+    <p>Rapid on-site response across New Jersey, New York, Pennsylvania and Connecticut.</p>
+    <p class="note">Nationwide for scheduled installations.</p>
   </div>
 </section>
 
-<section class="section contact" id="contact">
+<!-- DEALERS BAND -->
+<section class="section">
   <div class="wrap">
-    <div class="eyebrow">Contact</div>
-    <h2>Talk to a technician, not a call center</h2>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="lbl">Phone</div>
-        <a href="tel:+15513796083">(551) 379-6083</a>
+    <div class="band reveal">
+      <div class="band-bg"></div>
+      <span class="eyebrow">Dealers and importers</span>
+      <h2>Subcontract field execution in the Northeast</h2>
+      <p>When your team needs additional coverage for an installation, commissioning job or machine-down service call in NJ, NY, PA or CT, PhaseX executes approved field assignments under your direction. You retain all customer and warranty administration; PhaseX performs only the field scope you authorize in writing and does not assume or modify the OEM warranty.</p>
+      <p>PhaseX will not solicit or bypass customers introduced by a partner for the assigned work.</p>
+      <a href="#contact" class="btn btn--primary">Discuss a partnership</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--grid" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin:0 auto 48px;text-align:center">
+      <span class="eyebrow" style="justify-content:center">FAQ</span>
+      <h2 style="margin-top:16px">Common questions</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq__item"><button class="faq__q">Which laser sources do you work on?</button><div class="faq__a"><p>Component-level diagnostics and repair on Raycus, IPG, MAX, JPT and GW sources, power supplies and DC modules — the failures that usually mean waiting for an overseas technician.</p></div></div>
+      <div class="faq__item"><button class="faq__q">Which cutting heads do you service?</button><div class="faq__a"><p>Cutting-head work on Raytools, BOCI, OSPRI and similar heads, as part of machine-down service calls.</p></div></div>
+      <div class="faq__item"><button class="faq__q">Are you an authorized service center?</button><div class="faq__a"><p>PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only.</p></div></div>
+      <div class="faq__item"><button class="faq__q">Do you work on machines under manufacturer warranty?</button><div class="faq__a"><p>Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p></div></div>
+      <div class="faq__item"><button class="faq__q">What area do you cover?</button><div class="faq__a"><p>Rapid on-site response across NJ, NY, PA and CT, with nationwide coverage for scheduled installations.</p></div></div>
+      <div class="faq__item"><button class="faq__q">Can you convert an older CO2 machine to fiber?</button><div class="faq__a"><p>Yes. We convert legacy CO2 machines to fiber and modernize aging Trumpf, Amada and other European and Japanese platforms with current-generation sources, cutting heads and control systems. We have done these conversions before; scope and feasibility are defined per machine.</p></div></div>
+      <div class="faq__item"><button class="faq__q">How does a job start?</button><div class="faq__a"><p>Machine, fault, site conditions, required tooling and documentation are confirmed in writing before any visit. Scheduling and response time are confirmed for each assignment.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--navy" id="contact">
+  <div class="contact-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:720px">
+      <span class="eyebrow on-dark">Contact</span>
+      <h2>Talk to a technician, not a call center</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div><div class="label">Phone</div><a href="tel:+15513796083" class="val">(551) 379-6083</a></div>
+      <div><div class="label">Email</div><a href="mailto:service@phasexlaser.com" class="val">service@phasexlaser.com</a></div>
+      <div><div class="label">Office</div><div class="val"><span>239 New Road, Suite B210</span><span>Parsippany, NJ 07054</span></div></div>
+      <div><div class="label">Hours</div><div class="val"><span>Monday–Friday</span><span>8:00–18:00 ET</span></div></div>
+    </div>
+    <div class="contact-cta reveal">
+      <a href="tel:+15513796083" class="btn btn--primary">Call</a>
+      <a href="mailto:service@phasexlaser.com" class="btn btn--on-navy">Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="tagline"><b>Machines don't wait.</b></div>
+    <div class="footer-top">
+      <div class="f-logo">
+        <img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser, Industrial Laser Services">
+        <p>Independent industrial fiber laser service, based in Parsippany, New Jersey.</p>
       </div>
-      <div class="contact-item">
-        <div class="lbl">Email</div>
-        <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
-      </div>
-      <div class="contact-item">
-        <div class="lbl">Office</div>
-        <p>239 New Road, Suite B210<br>Parsippany, NJ 07054</p>
-      </div>
-      <div class="contact-item">
-        <div class="lbl">Hours</div>
-        <p>Monday–Friday<br>8:00–18:00 ET</p>
+      <div class="footer-cols">
+        <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
+        <div><div class="label">Office</div>239 New Road, Suite B210<br>Parsippany, NJ 07054</div>
+        <div><div class="label">Sections</div><a href="#services">Services</a> · <a href="#why">Why PhaseX</a> · <a href="#how">How we work</a> · <a href="#coverage">Coverage</a> · <a href="#faq">FAQ</a></div>
       </div>
     </div>
-    <a class="btn btn-orange" href="mailto:service@phasexlaser.com?subject=Service%20request%20-%20PhaseX%20Laser">Request service by email</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p style="color:#fff;font-weight:700;font-size:17px;margin-bottom:14px;">Machines don't wait.</p>
-    <p class="disc">PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p>
-    <div class="base">
-      <div>© 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a division of CoreX Robotics Services LLC.</div>
-      <div><a href="tel:+15513796083">(551) 379-6083</a> &nbsp;·&nbsp; <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
-    </div>
+    <p class="disclaimer">PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p>
+    <p class="copy">© 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a division of CoreX Robotics Services LLC.<br>(551) 379-6083 · service@phasexlaser.com</p>
   </div>
 </footer>
 
+<!-- MOBILE CALL BAR -->
+<div class="callbar">
+  <a href="tel:+15513796083">Call now</a>
+  <a href="mailto:service@phasexlaser.com">Email</a>
+</div>
+
+<script>
+  var t=document.getElementById('navToggle'), n=document.getElementById('nav');
+  if(t){t.addEventListener('click',function(){n.classList.toggle('open');});}
+  document.querySelectorAll('.nav__links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');});});
+  var hv=document.getElementById('heroVideo');
+  if(hv){var sr=function(){try{hv.playbackRate=1.4;}catch(e){}};hv.addEventListener('loadedmetadata',sr);sr();}
+  document.querySelectorAll('.faq__q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement,a=q.nextElementSibling,open=item.classList.contains('open');
+      document.querySelectorAll('.faq__item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq__a').style.maxHeight=null;});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
 </body>
 </html>
