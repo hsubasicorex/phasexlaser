@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Picosecond Laser Repair and Diagnostics | PhaseX Laser</title>
+<meta name="description" content="Independent repair engineering for seeded picosecond sources: seed and pump drivers, amplifier chains, pulse-train faults and feedback paths.">
+<meta name="keywords" content="picosecond laser repair, picosecond laser service, seeded fiber amplifier diagnostics, laser pump driver repair, pulse train diagnostics, scientific laser repair, ultrafast laser service">
+<link rel="canonical" href="https://phasexlaser.com/scientific-laser-repair/picosecond-lasers/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Picosecond Laser Repair and Diagnostics | PhaseX Laser">
+<meta property="og:description" content="Independent repair engineering for seeded picosecond sources: seed and pump drivers, amplifier chains, pulse-train faults and feedback paths.">
+<meta property="og:url" content="https://phasexlaser.com/scientific-laser-repair/picosecond-lasers/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/phasex.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://phasexlaser.com/#organization",
+      "name": "PhaseX Laser Services",
+      "legalName": "CoreX Robotics Services LLC",
+      "url": "https://phasexlaser.com/",
+      "logo": "https://phasexlaser.com/phasex-logo.png",
+      "telephone": "+1-551-379-6083",
+      "email": "service@phasexlaser.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "239 New Road, Suite B210",
+        "addressLocality": "Parsippany",
+        "addressRegion": "NJ",
+        "postalCode": "07054",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Picosecond laser repair and diagnostic evaluation",
+      "serviceType": "Picosecond laser evaluation and repair engineering",
+      "provider": { "@id": "https://phasexlaser.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "description": "Independent diagnostic evaluation and repair engineering for picosecond laser systems: seed sources, seed and pump drivers, fiber and solid-state amplifier chains, pulse-train faults, feedback paths and wavelength-conversion stages.",
+      "url": "https://phasexlaser.com/scientific-laser-repair/picosecond-lasers/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://phasexlaser.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Scientific laser repair", "item": "https://phasexlaser.com/scientific-laser-repair/" },
+        { "@type": "ListItem", "position": 3, "name": "Picosecond laser repair", "item": "https://phasexlaser.com/scientific-laser-repair/picosecond-lasers/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "My picosecond laser shows a normal repetition rate but produces no light. Where is the fault?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A normal repetition-rate indication confirms the timing electronics are running. On a seeded architecture the timing path is independent of the optical generation path, so it says nothing about whether the seed is emitting or the amplifier chain is delivering gain. The fault is usually in the seed diode, the seed driver, the pump, the pump driver, the amplifier chain or the fiber path. Confirming whether an optical pulse train exists requires fast photodetection on the actual beam." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you measure pulse duration?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pulse-train structure, repetition rate and timing behavior are measured on our bench with fast photodetection and high-bandwidth acquisition. True pulse-duration measurement in the picosecond and femtosecond regime requires autocorrelation, which we perform through owned equipment or a qualified outside laboratory depending on the system. The evaluation proposal states which method applies to your unit." }
+        },
+        {
+          "@type": "Question",
+          "name": "The laser worked yesterday and produces almost nothing today, with no error message. Is that normal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is common. Silent degradation without an alarm usually points to a protection state, a driver limit, a feedback-path error or damage at a fiber interface, none of which the control layer is necessarily designed to report. An absent error message is not evidence that the electronics are healthy." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <span><b>Independent industrial and scientific laser service</b> &middot; New Jersey</span>
+    <span class="topbar__r">
+      <span>Mon&ndash;Fri 8:00&ndash;18:00 ET</span>
+      <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
+    </span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <nav class="nav" id="nav">
+      <a href="/" class="nav__logo"><img src="/phasex-logo.png" alt="PhaseX Laser Services"></a>
+      <ul class="nav__links">
+        <li><a href="/#services">Industrial</a></li>
+        <li><a href="/scientific-laser-repair/">Scientific lasers</a></li>
+        <li><a href="/scientific-laser-repair/#technologies" class="is-current">Technologies</a></li>
+        <li><a href="/scientific-laser-repair/#manufacturers">Manufacturers</a></li>
+        <li><a href="/scientific-laser-repair/intake/">Evaluation request</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="tel:+15513796083" class="nav__phone">+1 (551) 379-6083</a>
+        <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request evaluation</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="phero__inner">
+      <span class="eyebrow">Technology page</span>
+      <h1>Picosecond laser repair and diagnostics</h1>
+      <p class="lead">Independent evaluation and repair engineering for seeded picosecond sources, amplified fiber and solid-state platforms, and the conversion stages built on top of them. The work starts by establishing where in the chain optical power stops existing.</p>
+      <div class="phero__btns">
+        <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request an evaluation</a>
+        <a href="#process" class="btn btn--on-navy">How we localize the fault</a>
+      </div>
+      <div class="phero__facts">
+        <div><b>Architecture</b>Seed, amplifier chain, pump, feedback, conversion</div>
+        <div><b>Method</b>Measure the beam, not the display</div>
+        <div><b>Outcome</b>Written findings before repair</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="crumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a><span class="sep">/</span><a href="/scientific-laser-repair/">Scientific laser repair</a><span class="sep">/</span><b>Picosecond laser repair</b>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Scientific laser sections">
+  <div class="wrap">
+    <div class="subnav__row"><span class="subnav__lbl">Technologies</span><div class="subnav__links"><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast laser repair</a><a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond laser repair</a><a href="/scientific-laser-repair/picosecond-lasers/" class="on">Picosecond laser repair</a><a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire laser service</a><a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonic generation</a><a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a><a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Diode and pump driver repair</a><a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete laser support</a></div></div>
+    <div class="subnav__row"><span class="subnav__lbl">Manufacturers</span><div class="subnav__links"><a href="/scientific-laser-repair/coherent/">Coherent</a><a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a><a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT KATANA</a><a href="/scientific-laser-repair/light-conversion/">Light Conversion</a><a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a><a href="/scientific-laser-repair/ekspla/">EKSPLA</a><a href="/scientific-laser-repair/litron-lasers/">Litron Lasers</a></div></div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="wrap">
+    <div class="doc">
+      <aside class="doc__aside">
+        <div class="toc">
+          <div class="label">On this page</div>
+          <ol>
+            <li><a href="#arch">The architecture that matters</a></li>
+            <li><a href="#symptoms">Failure symptoms</a></li>
+            <li><a href="#traps">Four diagnostic traps</a></li>
+            <li><a href="#process">How we localize the fault</a></li>
+            <li><a href="#bench">Measurement bench</a></li>
+            <li><a href="#covered">Systems covered</a></li>
+            <li><a href="#shipment">Required shipment components</a></li>
+            <li><a href="#limits">Limits and safety</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <div class="prose">
+
+        <section id="arch">
+          <span class="eyebrow" style="margin-bottom:14px">Orientation</span>
+          <h2>The architecture that matters for diagnosis</h2>
+          <p>Picosecond systems from different manufacturers look nothing alike from the outside and are remarkably similar inside. For diagnostic purposes the useful model is a chain, and the job is to find the link where optical power stops.</p>
+          <ol class="plan">
+            <li><b>Seed.</b> A diode or oscillator generating the pulse, with a high-speed driver defining its timing and amplitude.</li>
+            <li><b>Preamplifier.</b> First gain stage, frequently fiber-based, with its own pump and protection.</li>
+            <li><b>Power amplifier.</b> The main gain stage, and in fiber systems the section carrying the most optical stress.</li>
+            <li><b>Optical path hardware.</b> Splices, pump combiners, isolators, mode-field adaptors, connectors and delivery fiber. No electrical signature when they fail.</li>
+            <li><b>Conversion stage.</b> Where present, an SHG or higher harmonic stage with a temperature-controlled crystal.</li>
+            <li><b>Feedback and control.</b> Monitor photodiodes, converter stages, control loop, interlocks, trigger and communication.</li>
+          </ol>
+          <p>Almost every difficult picosecond fault comes down to one question: <strong>is the problem upstream or downstream of a given point in this chain</strong>. Everything on this page is organized around answering that question cheaply and in the right order.</p>
+        </section>
+
+        <section id="symptoms">
+          <h2>Failure symptoms we are asked to evaluate</h2>
+          <div class="branches">
+            <div class="branch"><div class="branch__n">01</div><div>
+              <h4>No output or output at the detector noise floor</h4>
+              <p>The system powers up and reports normally while measured power is a small fraction of expected, or indistinguishable from background.</p></div></div>
+            <div class="branch"><div class="branch__n">02</div><div>
+              <h4>Setpoint changes but optical power does not</h4>
+              <p>Commanded values change the displayed reading with no physical effect. A command-path or protection-state problem until proven otherwise.</p></div></div>
+            <div class="branch"><div class="branch__n">03</div><div>
+              <h4>Timing normal, no optical pulse</h4>
+              <p>Repetition rate and sync outputs behave correctly. The timing electronics are alive. The optical chain may be entirely dead.</p></div></div>
+            <div class="branch"><div class="branch__n">04</div><div>
+              <h4>Gradual power decline over weeks or months</h4>
+              <p>Pump diode degradation, progressive fiber-interface damage, contamination or a slow drift in the feedback path.</p></div></div>
+            <div class="branch"><div class="branch__n">05</div><div>
+              <h4>Unstable or intermittent output</h4>
+              <p>Power that fluctuates, drops out and returns, or depends on ambient temperature. Thermal control, connector integrity and marginal driver behavior.</p></div></div>
+            <div class="branch"><div class="branch__n">06</div><div>
+              <h4>Pulse-train structure wrong</h4>
+              <p>Missing pulses, amplitude modulation across the train, incorrect response to external trigger, or master and slave synchronization that will not lock.</p></div></div>
+            <div class="branch"><div class="branch__n">07</div><div>
+              <h4>Converted output low, fundamental present</h4>
+              <p>The genuine conversion-stage case, distinguished from all of the above by the fundamental power confirmed at the stage input.</p></div></div>
+            <div class="branch"><div class="branch__n">08</div><div>
+              <h4>Trips, faults and silent limits</h4>
+              <p>Protection states that shut the system down, and protection states that quietly cap it without reporting anything.</p></div></div>
+          </div>
+        </section>
+
+        <section id="traps">
+          <h2>Four diagnostic traps</h2>
+          <p>These four account for most of the misdirected work we see on picosecond systems, including work already carried out by competent people before the instrument reaches us.</p>
+          <h3>1. The displayed value is not a measurement</h3>
+          <p>Many systems display the commanded setpoint rather than a sensed value. If the command reaches the display layer but not the current driver, the panel reads perfectly while nothing changes physically. Measure the drive current at the hardware and establish whether the readback path is a measurement or an echo.</p>
+          <h3>2. Timing is not lasing</h3>
+          <p>The trigger and synchronization electronics run independently of the optical chain. A clean repetition-rate reading and a healthy sync output confirm the timing board. Whether optical pulses exist is a separate measurement made with fast photodetection on the real beam.</p>
+          <h3>3. The wrong detector produces confident nonsense</h3>
+          <p>A fiber-coupled power meter used on a free-space beam collects an unknown fraction of the light. A sensor calibrated at one wavelength misreports another. A detector operated near its noise floor produces a number that looks like a measurement and is not. Before any small reading is interpreted, the noise floor has to be established and the measurement repeated with calibrated free-space detection and wavelength-selective optics.</p>
+          <h3>4. The last stage is blamed for the first stage</h3>
+          <p>When a system with a conversion stage produces low visible output, the crystal is the intuitive suspect and usually the wrong one. Second-harmonic generation cannot produce more than the fundamental delivered into it. If the converted reading and the fundamental reading are of the same order, the arithmetic does not describe a working conversion process, and the real question is what is happening upstream. This is covered in detail on the <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonic generation page</a>.</p>
+        </section>
+
+        <section id="process">
+          <h2>How we localize the fault</h2>
+          <ol class="plan">
+            <li><b>As-received condition report.</b> Photographed and recorded before any setting is changed.</li>
+            <li><b>Configuration verification.</b> Every module label read separately. What the system actually is takes precedence over what the record says it is.</li>
+            <li><b>Infrastructure check.</b> Supplies, rails, cooling, interlocks and their states, control communication, and whether readback is sensed or echoed.</li>
+            <li><b>Measurement setup elimination.</b> Noise floor established. Output measured by wavelength with calibrated free-space detection and wavelength-selective optics on a defined, terminated beam path.</li>
+            <li><b>Optical pulse-train verification.</b> Fast photodetection with high-bandwidth acquisition to establish whether pulses exist, at what rate, and in what relationship to the trigger.</li>
+            <li><b>Command-path measurement.</b> Commanded values compared against actual seed and pump drive current at the hardware.</li>
+            <li><b>Upstream or downstream determination.</b> Fundamental power measured at the input of any conversion stage. One measurement, and it halves the problem.</li>
+            <li><b>Chain bisection.</b> Seed, seed driver, pump, pump driver, preamplifier, power amplifier, splices, combiner, isolator, mode-field adaptor and delivery fiber, worked through until the fault is isolated.</li>
+            <li><b>Feedback-path check.</b> Monitor photodiode, conditioning, converter stages and control loop, in both failure directions.</li>
+            <li><b>Written findings.</b> What was measured, what was found, what remains unknown, and the repair options with their risks and cost.</li>
+            <li><b>Repair on written approval only.</b> Within the approved scope. Deviations require a new approval.</li>
+            <li><b>Validation.</b> Electrical, optical, timing and functional validation, with a written service report.</li>
+          </ol>
+        </section>
+
+        <section id="bench">
+          <h2>Measurement bench</h2>
+          <p>Diagnosis on these systems is measurement work. The bench is equipped for it.</p>
+          <div class="tablewrap">
+            <table class="spec">
+              <thead><tr><th>Capability</th><th>What it answers</th></tr></thead>
+              <tbody>
+                <tr><td>Calibrated free-space power measurement</td><td>Actual output at UV, visible, 1064 nm and 1550 nm, across low milliwatt to tens of watts, with a known noise floor</td></tr>
+                <tr><td>Wavelength-selective optics</td><td>Separating fundamental from converted output: dichroics, filters, beam samplers, attenuators and terminations</td></tr>
+                <tr><td>Fast photodetection, Si and InGaAs</td><td>Whether an optical pulse train exists, its rate, and its relationship to the trigger</td></tr>
+                <tr><td>High-bandwidth acquisition</td><td>Pulse-train structure, driver current and timing behavior, trigger and synchronization paths</td></tr>
+                <tr><td>Spectral measurement</td><td>Emission wavelength and spectral condition, UV through near-infrared</td></tr>
+                <tr><td>Beam profiling</td><td>Spatial condition of the output and evidence of damage or misalignment in the delivery path</td></tr>
+                <tr><td>Fiber inspection microscopy</td><td>Connector end-face and splice condition, contamination and damage localization</td></tr>
+                <tr><td>Precision current and power analysis</td><td>Drive current against command, protection behavior and supply integrity</td></tr>
+                <tr><td>Thermal imaging</td><td>Hot spots in drivers, supplies and amplifier housings, and thermal-control behavior under load</td></tr>
+                <tr><td>Class 4 controlled work area</td><td>Beam containment, wavelength-appropriate eyewear, defined and terminated beam paths, access control</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tnote">Autocorrelation, pulse-width and M&sup2; measurements are performed through owned equipment or a qualified outside laboratory depending on the system and the question being answered. The evaluation proposal states which measurements will be made, by what method, and which are sourced externally.</p>
+        </section>
+
+        <section id="covered">
+          <h2>Systems covered</h2>
+          <p>Evaluation is available across seeded and amplified picosecond platforms, including the following manufacturers. Where we have not worked on a specific configuration we will say so rather than imply otherwise.</p>
+          <div class="chips">
+            <span class="chip">Onefive / NKT KATANA</span><span class="chip">Origami</span><span class="chip">EKSPLA Atlantic</span><span class="chip">EKSPLA PL series</span><span class="chip">Light Conversion PHAROS</span><span class="chip">Light Conversion CARBIDE</span><span class="chip">Coherent Monaco</span><span class="chip">Spectra-Physics IceFyre</span><span class="chip">Spectra-Physics Talon</span><span class="chip">Amplitude Satsuma</span><span class="chip">Lumentum / Time-Bandwidth</span><span class="chip">TOPTICA FemtoFiber</span><span class="chip">Menlo Systems fiber platforms</span>
+          </div>
+          <div class="notice" style="margin-top:24px">
+            <div class="label">Read this before assuming coverage</div>
+            <p>Naming a platform here means evaluation is available and we will assess the system and tell you plainly what is possible. It does not mean we have serviced every model in that family. Contact us to confirm your configuration before shipping.</p>
+          </div>
+          <p style="margin-top:20px">Dedicated manufacturer pages: <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT KATANA</a>. Additional manufacturer hubs are published as the underlying documentation is verified.</p>
+        </section>
+
+        <section id="shipment">
+          <h2>Required shipment components</h2>
+          <ul>
+            <li>Laser head</li>
+            <li>Controller</li>
+            <li>Power supply</li>
+            <li>All interconnecting cables, including any with a non-standard pinout</li>
+            <li>Any dedicated module required for normal operation, including conversion, trigger or paired excitation units</li>
+            <li>Control software, license files and interface documentation, including a MATLAB control path where that is how the system is driven</li>
+            <li>Manuals, configuration sheets, acceptance data and prior service reports, however incomplete</li>
+          </ul>
+          <p>A system that cannot be brought to its normal operating state on the bench cannot be diagnosed. We receive systems from outside the United States and will provide the commercial documentation a repair shipment normally requires, but customs classification, duties and clearance timing remain the sender's responsibility and we do not give customs guarantees.</p>
+        </section>
+
+        <section id="limits">
+          <h2>Limits and safety</h2>
+          <ul>
+            <li>PhaseX is not a factory-authorized service center for any manufacturer named on this page.</li>
+            <li>No repair is guaranteed before evaluation. A finding that a system is not economically repairable is a legitimate result and is delivered in writing.</li>
+            <li>We do not perform manufacturer-equivalent calibration, and we do not certify to original published specifications without the original acceptance data and the corresponding standards.</li>
+            <li>We do not claim service experience on a configuration we have not actually worked on.</li>
+          </ul>
+          <p>These are Class 4 systems. Bench work is performed in a controlled area with beam containment, wavelength-appropriate eyewear, defined and terminated beam paths and access control. Where the configuration is not yet verified, the area is prepared for the widest plausible wavelength range until the actual output has been measured.</p>
+          <div class="notice">
+            <div class="label">Independent service</div>
+            <p>PhaseX Laser Services is an independent third-party service provider and is not affiliated with, authorized by, or endorsed by the manufacturers listed unless expressly stated in writing. Brand names and model names are used only to identify equipment for which customers may request evaluation.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Related pages</h2>
+          <div class="tiles tiles--2">
+            <a class="tile" href="/scientific-laser-repair/shg-harmonic-generation/"><div class="n">Technology</div><h3>SHG and harmonic generation</h3><p>How a conversion stage is actually tested, and why it is so often blamed for an upstream fault.</p><span class="go">Read the page</span></a>
+            <a class="tile" href="/scientific-laser-repair/onefive-nkt-katana-10-hp/"><div class="n">Model</div><h3>KATANA 10 HP</h3><p>A worked example of the low-output case, with the full decision tree.</p><span class="go">Read the page</span></a>
+            <a class="tile" href="/scientific-laser-repair/obsolete-laser-support/"><div class="n">Lifecycle</div><h3>Obsolete scientific laser support</h3><p>What remains possible after end-of-support, and where the real limits are.</p><span class="go">Read the page</span></a>
+            <a class="tile" href="/scientific-laser-repair/intake/"><div class="n">Start here</div><h3>Evaluation request form</h3><p>Model, configuration, symptoms and photographs in one submission.</p><span class="go">Open the form</span></a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="band">
+      <span class="eyebrow">Next step</span>
+      <h2>Tell us what you measured and how you measured it.</h2>
+      <p>On picosecond systems the measurement method is as important as the number. Send the model and serial label photographs, your normal operating parameters, the symptoms, and the instrument and beam arrangement you used. We will tell you whether an evaluation is worth your shipping cost.</p>
+      <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request an evaluation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <div class="section-head" style="max-width:720px">
+      <span class="eyebrow on-dark">Contact</span>
+      <h2>Talk to an engineer, not a call center</h2>
+    </div>
+    <div class="contact-grid">
+      <div><div class="label">Phone</div><a href="tel:+15513796083" class="val">(551) 379-6083</a></div>
+      <div><div class="label">Email</div><a href="mailto:service@phasexlaser.com" class="val">service@phasexlaser.com</a></div>
+      <div><div class="label">Bench</div><div class="val"><span>239 New Road, Suite B210</span><span>Parsippany, NJ 07054</span></div></div>
+      <div><div class="label">Hours</div><div class="val"><span>Monday&ndash;Friday</span><span>8:00&ndash;18:00 ET</span></div></div>
+    </div>
+    <div class="contact-cta">
+      <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request evaluation</a>
+      <a href="mailto:service@phasexlaser.com" class="btn btn--on-navy">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="tagline"><b>Machines don't wait.</b></div>
+    <div class="footer-top">
+      <div class="f-logo">
+        <img src="/phasex-logo.png" alt="PhaseX Laser Services">
+        <p>Independent industrial and scientific laser service, based in Parsippany, New Jersey.</p>
+      </div>
+      <div class="footer-cols">
+        <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
+        <div><div class="label">Office</div>239 New Road, Suite B210<br>Parsippany, NJ 07054</div>
+        <div><div class="label">Industrial</div><a href="/#services">Services</a> &middot; <a href="/#systems">Systems</a> &middot; <a href="/#brands">Brands</a> &middot; <a href="/#coverage">Coverage</a></div>
+      </div>
+    </div>
+    <div class="footer-index">
+      <div><div class="label">Scientific laser technologies</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast laser repair</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond laser repair</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond laser repair</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire laser service</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonic generation</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Diode and pump driver repair</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete laser support</a></p></div>
+      <div><div class="label">Manufacturers</div><p><a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT KATANA</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron Lasers</a></p></div>
+      <div><div class="label">Start</div><p><a href="/scientific-laser-repair/">Scientific laser repair overview</a> &middot; <a href="/scientific-laser-repair/intake/">Evaluation request</a></p></div>
+    </div>
+    <p class="disclaimer">PhaseX Laser Services is an independent third-party service provider. We are not an authorized service center for any laser or machine manufacturer unless expressly stated in writing, and we are not affiliated with or endorsed by any manufacturer named on this site. Manufacturer, brand and model names, including Coherent, Spectra-Physics, MKS Instruments, Onefive, NKT Photonics, Hamamatsu Photonics, Light Conversion, Continuum, Lumibird, Quantel, EKSPLA, Litron Lasers, Amplitude, TOPTICA, Menlo Systems, KMLabs, Clark-MXR, Time-Bandwidth Products and Lumentum, are used for identification only and remain the property of their respective owners. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the equipment seller or manufacturer.</p>
+    <p class="copy">&copy; 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a registered DBA of CoreX Robotics Services LLC.<br>(551) 379-6083 &middot; service@phasexlaser.com</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15513796083">Call now</a>
+  <a href="mailto:service@phasexlaser.com">Email</a>
+</div>
+
+<script src="/assets/phasex.js"></script>
+</body>
+</html>

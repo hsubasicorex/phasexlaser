@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KATANA 10 HP Repair and Evaluation | PhaseX Laser</title>
+<meta name="description" content="Model and wavelength verification, no-output and low-output diagnostics, setpoint-versus-power faults and SHG assessment for the KATANA 10 HP.">
+<meta name="keywords" content="KATANA 10 HP repair, Onefive KATANA repair, NKT KATANA service, KATANA HP no output, picosecond laser repair, KATANA SHG 532 nm low power, obsolete picosecond laser service">
+<link rel="canonical" href="https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Onefive / NKT KATANA 10 HP Evaluation and Repair Engineering">
+<meta property="og:description" content="Model verification, no-output diagnostics and SHG conversion assessment for the KATANA 10 HP picosecond laser.">
+<meta property="og:url" content="https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/phasex.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://phasexlaser.com/#organization",
+      "name": "PhaseX Laser Services",
+      "legalName": "CoreX Robotics Services LLC",
+      "url": "https://phasexlaser.com/",
+      "logo": "https://phasexlaser.com/phasex-logo.png",
+      "telephone": "+1-551-379-6083",
+      "email": "service@phasexlaser.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "239 New Road, Suite B210",
+        "addressLocality": "Parsippany",
+        "addressRegion": "NJ",
+        "postalCode": "07054",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "KATANA 10 HP evaluation and repair engineering",
+      "serviceType": "Picosecond laser diagnostic evaluation and repair engineering",
+      "provider": { "@id": "https://phasexlaser.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "description": "Independent diagnostic evaluation and repair engineering for Onefive and NKT Photonics KATANA 10 HP picosecond laser systems, including configuration verification, no-output and low-output fault localization, pump and seed driver diagnostics, and wavelength-conversion assessment.",
+      "url": "https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://phasexlaser.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Scientific laser repair", "item": "https://phasexlaser.com/scientific-laser-repair/" },
+        { "@type": "ListItem", "position": 3, "name": "Onefive / NKT KATANA", "item": "https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana/" },
+        { "@type": "ListItem", "position": 4, "name": "KATANA 10 HP", "item": "https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "My KATANA 10 HP outputs 532 nm but the datasheet says it is an infrared model. Which is right?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the published Onefive KATANA HP family the model number identifies the wavelength band, not the output power. The 10 HP designation belongs to the infrared family around 1030 to 1064 nm, while the high-power visible family is designated 05 HP. A unit labelled 10 HP that produces green output is normally either a custom or OEM configuration with an associated second-harmonic stage, a paired system where the labels belong to different modules, or a model designation that was recorded incorrectly. The physical labels on the head, the controller and any conversion module have to be read before the configuration can be treated as known." }
+        },
+        {
+          "@type": "Question",
+          "name": "The front panel setpoint changes but the measured optical power does not. What does that indicate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It indicates that the command reaches the display layer. It does not indicate that the command reaches the current driver. The displayed value may be an echo of the commanded setpoint rather than a measurement. The diagnostic step is to measure the actual pump and seed drive current at the hardware, not to read the panel, and to confirm whether the controller is holding a limited or protection state." }
+        },
+        {
+          "@type": "Question",
+          "name": "The SHG crystal temperature stays constant when I change the current. Is the SHG stage the fault?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily, and usually not. A temperature-stabilized crystal oven is designed to hold its setpoint. If little or no fundamental power is reaching the conversion stage, there is almost no optical heat load to disturb it, so a flat temperature is consistent with an absent fundamental rather than with a failed conversion stage. The conversion stage cannot be assessed until the true fundamental power arriving at it is known." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the KATANA HP still supported by the manufacturer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The KATANA HP platform originated with Onefive, later moved to NKT Photonics, and the associated product line now sits within Hamamatsu Photonics. Hamamatsu's published application material identifies KATANA HP as obsolete. That is the reason independent evaluation and repair engineering is relevant for these systems." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><b>Independent industrial and scientific laser service</b> &middot; New Jersey</span>
+    <span class="topbar__r">
+      <span>Mon&ndash;Fri 8:00&ndash;18:00 ET</span>
+      <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
+    </span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <nav class="nav" id="nav">
+      <a href="/" class="nav__logo"><img src="/phasex-logo.png" alt="PhaseX Laser Services"></a>
+      <ul class="nav__links">
+        <li><a href="/#services">Industrial</a></li>
+        <li><a href="/scientific-laser-repair/">Scientific lasers</a></li>
+        <li><a href="/scientific-laser-repair/#technologies">Technologies</a></li>
+        <li><a href="/scientific-laser-repair/#manufacturers" class="is-current">Manufacturers</a></li>
+        <li><a href="/scientific-laser-repair/intake/">Evaluation request</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="tel:+15513796083" class="nav__phone">+1 (551) 379-6083</a>
+        <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request evaluation</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="phero__inner">
+      <span class="eyebrow">Onefive / NKT Photonics &middot; Model page</span>
+      <h1>KATANA 10 HP evaluation and repair engineering</h1>
+      <p class="lead">Independent diagnostic evaluation for the KATANA 10 HP picosecond platform, with the configuration verified against the physical labels before any conclusion is drawn. Written findings before repair, for a system the manufacturer lists as obsolete.</p>
+      <div class="phero__btns">
+        <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request an evaluation</a>
+        <a href="#tree" class="btn btn--on-navy">Diagnostic decision tree</a>
+      </div>
+      <div class="phero__facts">
+        <div><b>Status</b>Listed obsolete by the current product owner</div>
+        <div><b>Approach</b>Configuration verified before diagnosis</div>
+        <div><b>Deliverable</b>Written findings, then a repair quotation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="crumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a><span class="sep">/</span><a href="/scientific-laser-repair/">Scientific laser repair</a><span class="sep">/</span><a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT KATANA</a><span class="sep">/</span><b>KATANA 10 HP</b>
+  </div>
+</nav>
+<nav class="subnav" aria-label="Scientific laser sections">
+  <div class="wrap">
+    <div class="subnav__row"><span class="subnav__lbl">Technologies</span><div class="subnav__links"><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast laser repair</a><a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond laser repair</a><a href="/scientific-laser-repair/picosecond-lasers/">Picosecond laser repair</a><a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire laser service</a><a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonic generation</a><a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a><a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Diode and pump driver repair</a><a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete laser support</a></div></div>
+    <div class="subnav__row"><span class="subnav__lbl">Manufacturers</span><div class="subnav__links"><a href="/scientific-laser-repair/coherent/">Coherent</a><a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a><a href="/scientific-laser-repair/onefive-nkt-katana/" class="on">Onefive / NKT KATANA</a><a href="/scientific-laser-repair/light-conversion/">Light Conversion</a><a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a><a href="/scientific-laser-repair/ekspla/">EKSPLA</a><a href="/scientific-laser-repair/litron-lasers/">Litron Lasers</a></div></div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="wrap">
+    <div class="doc">
+
+      <aside class="doc__aside">
+        <div class="toc">
+          <div class="label">On this page</div>
+          <ol>
+            <li><a href="#identify">Identify the system first</a></li>
+            <li><a href="#family">Model and wavelength table</a></li>
+            <li><a href="#variants">LP, HP and XP</a></li>
+            <li><a href="#symptoms">Common symptoms</a></li>
+            <li><a href="#case">The low-output case in detail</a></li>
+            <li><a href="#tree">Diagnostic decision tree</a></li>
+            <li><a href="#shipment">Required shipment components</a></li>
+            <li><a href="#scope">Evaluation scope and limits</a></li>
+            <li><a href="#obsolete">Obsolete-support statement</a></li>
+            <li><a href="#sources">Sources</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <div class="prose">
+
+        <section id="identify">
+          <span class="eyebrow" style="margin-bottom:14px">Start here</span>
+          <h2>Identify the system before diagnosing it</h2>
+          <p>More KATANA evaluations go wrong at this step than at any point later. The model designation a laboratory has on record is frequently not the configuration sitting on the optical table, and on a platform that shipped in OEM and custom variants, that difference changes the entire diagnostic approach.</p>
+          <p>In the published Onefive KATANA HP family, <strong>the model number identifies the wavelength band, not the output power</strong>. A system described as a 10 HP but producing green output is therefore a contradiction that has to be resolved before anything else is measured. It is normally one of four things:</p>
+          <ol>
+            <li><strong>The model designation was recorded incorrectly.</strong> The number on the purchase order, the grant record or the instrument log does not match the label.</li>
+            <li><strong>The unit is a custom or OEM KATANA 10 HP</strong> with an internal or associated second-harmonic stage, delivering visible output from an infrared fundamental.</li>
+            <li><strong>It is a paired multi-wavelength system.</strong> The KATANA HP platform was built for multi-wavelength operation, and in imaging work the units were deliberately combined. A laboratory holding two heads under one instrument record can easily attribute one head's label to the other head's output.</li>
+            <li><strong>Different labels apply to different modules.</strong> The laser head, the controller and any wavelength-conversion module may each carry their own designation, and only one of them is the number that has been written down.</li>
+          </ol>
+          <div class="notice">
+            <div class="label">What we ask for first</div>
+            <p>Photographs of every product label, read individually: laser head, controller, power supply, and any separate conversion or trigger module, each showing the complete model and serial number. Photographs of the rear panels and connections. The original configuration documents if they still exist.</p>
+            <p>No repair quotation is finalized on this platform until the exact configuration has been confirmed from the physical equipment. A quotation written against the wrong configuration is worse than no quotation.</p>
+          </div>
+        </section>
+
+        <section id="family">
+          <h2>Model and wavelength identification</h2>
+          <p>As published in Onefive and NKT Photonics KATANA HP material, the designation number corresponds to the output wavelength band. Use this to check what your label is actually telling you.</p>
+          <div class="tablewrap">
+            <table class="spec">
+              <thead>
+                <tr><th>Designation</th><th>Published wavelength band</th><th>Typical role</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>KATANA 05 HP</td><td>512 to 532 nm (green)</td><td>High-power visible source, excitation and general visible work</td></tr>
+                <tr><td>KATANA 06 HP</td><td>556 to 620 nm (orange)</td><td>Visible excitation</td></tr>
+                <tr><td>KATANA 08 HP</td><td>775 nm</td><td>Depletion source in STED microscopy, paired with a visible excitation unit</td></tr>
+                <tr><td class="hit">KATANA 10 HP</td><td class="hit">1012 to 1320 nm, commonly 1030 to 1064 nm</td><td class="hit">Infrared fundamental, and the pump for downstream conversion</td></tr>
+                <tr><td>KATANA 15 HP</td><td>1550 nm</td><td>Telecom-band infrared</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tnote">Band definitions vary slightly between the manufacturer's own documents across model years, and individual units were built to order. Treat this table as an orientation aid for reading your label, not as a specification for your specific serial number.</p>
+
+          <h3>Platform behavior common to the HP family</h3>
+          <div class="tablewrap">
+            <table class="spec">
+              <thead>
+                <tr><th>Parameter</th><th>Published platform behavior</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Pulse duration</td><td>Approximately 30 ps to 10 ns, configuration dependent</td></tr>
+                <tr><td>Repetition rate</td><td>Pulse-on-demand up to approximately 100 MHz, continuously tunable</td></tr>
+                <tr><td>Triggering</td><td>Internal or external source, master or slave operation</td></tr>
+                <tr><td>Architecture</td><td>Seeded, amplified, alignment-free pulsed module</td></tr>
+                <tr><td>Visible high-power example</td><td>KATANA 05 HP at 532 nm published up to approximately 5 W and 5 &micro;J, with peak power in the hundreds of kilowatts</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tnote">Your unit's actual configuration takes precedence over any published family figure. Where original acceptance data exists, that is the reference we work against.</p>
+        </section>
+
+        <section id="variants">
+          <h2>KATANA, KATANA HP and KATANA XP</h2>
+          <p>The platform name covers several generations and power classes, and the service implications differ.</p>
+          <ul>
+            <li><strong>KATANA</strong> is the base pulsed platform, generally at lower average power, widely used as an excitation source.</li>
+            <li><strong>KATANA HP</strong> is the high-power, multi-wavelength pulsed module, designed for continuous tuning of the repetition rate and for master or slave triggered operation. This is the family most often found in imaging and microscopy laboratories.</li>
+            <li><strong>KATANA XP</strong> denotes the extended-performance configurations of the platform.</li>
+          </ul>
+          <p>For evaluation purposes the meaningful difference is not the marketing tier but what is physically inside the box: the seed architecture, the number of amplification stages, whether a wavelength-conversion stage is present, and whether the control electronics are the original generation or a later revision. Those are determined on the bench, not from the model name.</p>
+        </section>
+
+        <section id="symptoms">
+          <h2>Common symptoms we are asked to evaluate</h2>
+          <div class="branches">
+            <div class="branch">
+              <div class="branch__n">01</div>
+              <div>
+                <h4>No output, or output far below the expected level</h4>
+                <p>The system powers up and reports normally, but measured optical power is a small fraction of what the laboratory expects, or is at the detector noise floor.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">02</div>
+              <div>
+                <h4>Setpoint changes but optical power does not</h4>
+                <p>Commanding a new output or current value from the front panel or from software changes the displayed value, while measured optical power stays where it was. Covered in detail below.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">03</div>
+              <div>
+                <h4>Trigger and timing operate but no optical pulse is present</h4>
+                <p>Repetition rate and synchronization outputs behave normally. This confirms the timing electronics are running. It does not confirm that optical pulses exist, because the timing path and the optical generation path are separate.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">04</div>
+              <div>
+                <h4>Fundamental present, converted output low</h4>
+                <p>Measurable infrared power at the fundamental with disproportionately low visible output. This is the genuine conversion-stage case, and it is distinguished from the others by the fundamental power actually reaching the stage.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">05</div>
+              <div>
+                <h4>Conversion-stage temperature instability</h4>
+                <p>Crystal oven temperature that will not settle, oscillates, or drifts against its setpoint. A different failure from a stage that simply holds a flat temperature.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">06</div>
+              <div>
+                <h4>Pump driver and amplifier faults</h4>
+                <p>Pump-current driver failures, protection trips, degraded pump diodes, or a fault in the amplification chain that the control layer does not report as an error.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">07</div>
+              <div>
+                <h4>Controller and communication faults</h4>
+                <p>Serial or software control that appears to work while the lower-level controller is unresponsive, and readback values that turn out to be echoes of commanded values rather than measurements.</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div class="branch__n">08</div>
+              <div>
+                <h4>Silent protection states</h4>
+                <p>An internal interlock or protection condition limiting power with no error, no warning and no alarm presented to the operator.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="case">
+          <h2>The low-output case in detail</h2>
+          <p>This is the pattern we are contacted about most often on this platform, and it is worth setting out the reasoning, because the obvious conclusion is usually the wrong one.</p>
+          <h3>The reported pattern</h3>
+          <ul>
+            <li>A small measured power at the visible wavelength, in the region of a milliwatt</li>
+            <li>A similarly small residual reading at the infrared fundamental from the same output port</li>
+            <li>Commanded output or current changes the displayed value but not the measured optical power</li>
+            <li>Conversion-stage crystal temperature essentially constant when current is changed</li>
+            <li>No error, no warning, and apparently normal repetition rate and timing</li>
+          </ul>
+
+          <h3>Why the conversion stage is not the first suspect</h3>
+          <p>Second-harmonic generation cannot produce more converted power than the fundamental delivered into it, and in practice it produces a modest fraction of it. If the visible reading and the infrared reading are of the same order, the two numbers cannot both describe a working conversion process fed by that fundamental. There are three ways that arithmetic resolves, and all three have to be tested rather than assumed:</p>
+          <ol>
+            <li><strong>Both readings are at or near the detector noise floor.</strong> In that case the honest interpretation is that there is effectively no output at either wavelength, and the conversion stage is not the subject at all. This is the most common resolution.</li>
+            <li><strong>The measurement setup is producing invalid numbers.</strong> A fiber-coupled power meter used on a free-space beam will collect an unknown fraction of the light, and a sensor calibrated for one wavelength will misreport another. Neither reading can be trusted until the measurement is repeated with calibrated free-space detection and wavelength-selective optics that separate the two components.</li>
+            <li><strong>The two readings do not describe the same optical path.</strong> Residual pump leakage, scattered light, or a second port can produce a reading that has nothing to do with the fundamental arriving at the conversion stage.</li>
+          </ol>
+
+          <h3>Why a flat crystal temperature is not evidence of a failed crystal</h3>
+          <p>A temperature-stabilized crystal oven exists to hold its setpoint. When significant optical power passes through the crystal, the resulting heat load is visible as a disturbance the controller has to work against. When little or no fundamental arrives, there is no meaningful load to disturb. A temperature that does not move when the current command changes is therefore consistent with an absent fundamental, and it is a weak indicator of crystal failure. A genuine conversion-stage fault more often shows as temperature that will not reach or hold setpoint, or as poor conversion in the presence of a confirmed, healthy fundamental.</p>
+
+          <h3>Why normal timing does not prove the laser is lasing</h3>
+          <p>On a seeded, externally triggerable architecture, the timing and synchronization electronics run independently of whether the seed diode is emitting and whether the amplifier chain is delivering gain. A clean repetition-rate indication and a normal sync output tell you the trigger board is alive. The presence of an actual optical pulse train is a separate measurement, made with a suitable fast photodetector on the real beam.</p>
+
+          <h3>Why a changing display is not a changing current</h3>
+          <p>Systems of this generation frequently display the commanded setpoint rather than a measured value. If the command reaches the display layer but not the current driver, or if the driver is sitting in a limited or protection state, the panel will read exactly as expected while nothing changes physically. The test is to measure the drive current at the hardware and compare it against the command, and to establish whether the readback path is a measurement or an echo.</p>
+
+          <div class="notice">
+            <div class="label">The working conclusion</div>
+            <p>On this symptom pattern, the system usually retains its control and timing functions while optical power generation is absent or strongly suppressed. The fault is far more likely to sit upstream, in the seed, the seed driver, the pump, the pump driver, the amplifier chain or the fiber path, than in the frequency-conversion stage. The conversion stage cannot be judged at all until the true fundamental power reaching it has been measured.</p>
+          </div>
+        </section>
+
+        <section id="tree">
+          <h2>Diagnostic decision tree</h2>
+          <p>The order matters. Each step exists to eliminate a branch cheaply before the next, more invasive step is justified.</p>
+          <ol class="plan">
+            <li><b>Record the as-received condition.</b> Photograph the unit, the labels, the connectors, the modules and the shipping condition. Nothing is adjusted before this is complete.</li>
+            <li><b>Confirm the configuration.</b> Read every label on every module. Establish whether a conversion stage exists, where it sits, and what the output ports actually are.</li>
+            <li><b>Verify the infrastructure.</b> Power supplies and rails, cooling, interlocks and their states, control communication, and whether readback values are measurements or echoes.</li>
+            <li><b>Eliminate the measurement setup.</b> Measure the visible and infrared components separately, with calibrated free-space detection and wavelength-selective optics, on a defined and terminated beam path. Establish the noise floor before interpreting any small reading.</li>
+            <li><b>Verify the optical pulse train.</b> Confirm with fast photodetection whether optical pulses exist at all, at what rate, and with what relationship to the trigger.</li>
+            <li><b>Measure the command path.</b> Compare commanded values against actual seed and pump drive current at the hardware. Establish whether the controller is holding a limited or protection state without reporting it.</li>
+            <li><b>Determine upstream or downstream.</b> Measure the fundamental power reaching the conversion stage. This single measurement separates a conversion-stage problem from everything before it.</li>
+            <li><b>Localize within the chain.</b> Work through seed, seed driver, pump, pump driver, preamplifier, power amplifier, splices, pump combiner, isolator, mode-field adaptor and delivery fiber until the fault is isolated.</li>
+            <li><b>Check the feedback path.</b> Internal power-monitor photodiode, its conditioning, the analog-to-digital and digital-to-analog stages, and the control loop. A healthy laser reporting a false low reading, and a dead laser reporting a healthy value, are both possible here.</li>
+            <li><b>Assess auxiliaries.</b> Auxiliary supplies, TEC modules and drivers, fans, temperature sensors and cabling, any of which can produce a silent power limit.</li>
+            <li><b>Issue written findings.</b> What was measured, what was found, what remains unknown, and the repair options with their risks and their cost.</li>
+            <li><b>Repair only on written approval.</b> Within the approved scope. Any deviation requires a new approval before work continues.</li>
+          </ol>
+        </section>
+
+        <section id="shipment">
+          <h2>Required shipment components</h2>
+          <p>A KATANA system that cannot be brought to its normal operating state on the bench cannot be diagnosed. Send:</p>
+          <ul>
+            <li>Laser head</li>
+            <li>Controller</li>
+            <li>Power supply</li>
+            <li>All interconnecting cables, including any cable with a non-standard pinout</li>
+            <li>Any separate wavelength-conversion, trigger or excitation module that forms part of normal operation</li>
+            <li>Control software, license files or interface documentation, including the MATLAB control path if that is how the system is normally driven</li>
+            <li>Original manuals, configuration sheets, acceptance data and prior service reports, however incomplete</li>
+          </ul>
+          <p>On a discontinued platform, the customer's own paperwork is frequently the only surviving record of the configuration. Send it even if it looks irrelevant.</p>
+          <p>We receive systems from outside the United States, including from Canadian universities and research institutes. We will provide the commercial documentation a repair shipment normally requires and coordinate with your shipping office. Customs classification, duties and clearance timing remain the sender's responsibility, and we do not give customs guarantees.</p>
+        </section>
+
+        <section id="scope">
+          <h2>Evaluation scope and limits</h2>
+          <p>What we offer on this model is a defined diagnostic evaluation with written findings, followed by repair engineering within a scope you approve. Stated plainly:</p>
+          <ul>
+            <li><strong>Evaluation is available on this platform.</strong> Contact us to confirm your configuration before assuming your specific variant is covered.</li>
+            <li><strong>We are not an authorized service center</strong> for Onefive, NKT Photonics or Hamamatsu Photonics, and we hold no factory affiliation or endorsement. Those names appear here only to identify equipment.</li>
+            <li><strong>We do not guarantee a repair before the evaluation.</strong> Some of these systems are found to have a failed custom assembly with no available substitute, and that outcome is reported in the same written form as any other.</li>
+            <li><strong>We do not certify to original published specifications</strong> where the original acceptance data is not available. What we document is the condition on arrival, the fault found, the work performed, and the measured condition on completion.</li>
+            <li><strong>Obsolete component substitution and retrofit engineering</strong> are performed only within an approved scope, and any deviation from original design is documented as such.</li>
+          </ul>
+          <h3>What is measured on the bench</h3>
+          <div class="tablewrap">
+            <table class="spec">
+              <thead><tr><th>Capability</th><th>What it answers on this platform</th></tr></thead>
+              <tbody>
+                <tr><td>Calibrated free-space power measurement</td><td>True output at the visible and infrared wavelengths separately, with a known noise floor, replacing any reading taken with a fiber-coupled sensor on a free-space beam</td></tr>
+                <tr><td>Wavelength-selective optics</td><td>Separating residual fundamental from converted output so the two numbers describe different things</td></tr>
+                <tr><td>Fast photodetection, Si and InGaAs</td><td>Whether an optical pulse train exists at all, and its relationship to the trigger and to master or slave operation</td></tr>
+                <tr><td>High-bandwidth acquisition</td><td>Pulse-train structure, seed and pump drive current against command, and protection behavior</td></tr>
+                <tr><td>Spectral measurement</td><td>Confirming the light being measured is the wavelength it is assumed to be</td></tr>
+                <tr><td>Beam profiling</td><td>Spatial condition of the output, and damage or misalignment in the delivery path</td></tr>
+                <tr><td>Fiber inspection microscopy</td><td>Connector end-face and splice condition through the amplifier chain</td></tr>
+                <tr><td>Thermal imaging</td><td>Driver and supply hot spots, and crystal oven behavior under an actual optical load</td></tr>
+                <tr><td>Class 4 controlled work area</td><td>Containment for an output whose wavelength has not yet been verified</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Autocorrelation, pulse-width and M&sup2; measurements are performed through owned equipment or a qualified outside laboratory depending on the question being answered. The evaluation proposal states which measurements will be made, by what method, and which are sourced externally.</p>
+          <p>Systems in this class are Class 4 sources. Bench work is performed in a controlled area with beam containment, wavelength-appropriate eyewear, defined and terminated beam paths and access control. Where the configuration is not yet verified, the work area is prepared for the widest plausible wavelength range until the actual output has been measured.</p>
+        </section>
+
+        <section id="obsolete">
+          <h2>Obsolete-support statement</h2>
+          <p>The KATANA platform originated with Onefive in Switzerland, moved to NKT Photonics, and the associated product line now sits within Hamamatsu Photonics. Hamamatsu's published application material identifies KATANA HP as obsolete.</p>
+          <p>For a laboratory, that means the ordinary route has closed: no current service contract, no factory module exchange, and in many cases no surviving contact who knows the configuration. It does not mean the instrument is finished. Faults in these systems concentrate in areas that respond to component-level engineering: drivers, supplies, thermal control, feedback paths, fiber interfaces and connectors, and control electronics. Those are the areas we work in.</p>
+          <p>Where an original part no longer exists, the options are substitution with a functionally equivalent component, a redesigned driver or interface, or a documented finding that the system is not economically repairable. All three are legitimate results, and all three are delivered in writing.</p>
+          <div class="notice">
+            <div class="label">Independent service</div>
+            <p>PhaseX Laser Services is an independent third-party service provider and is not affiliated with, authorized by, or endorsed by Onefive, NKT Photonics, Hamamatsu Photonics or any other manufacturer unless expressly stated in writing. Brand names and model names are used only to identify equipment for which customers may request evaluation.</p>
+          </div>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <p>Manufacturer and distributor documentation used for the family and platform descriptions on this page. Where our reading of a document differs from the configuration in front of us, the physical equipment governs.</p>
+          <ul class="sources">
+            <li><a href="https://www.laserlabsource.com/files/pdfs/solidstatelasersource_com/product-266/Picosecond_Laser_532nm_5uJ_Onefive-1462013180.pdf" rel="nofollow noopener" target="_blank">Onefive KATANA HP datasheet, multi-wavelength high-power pulsed laser module (2016)</a></li>
+            <li><a href="https://lf.hamamatsu.com/about-us/history-of-nkt-photonics/" rel="nofollow noopener" target="_blank">Hamamatsu Photonics, history of NKT Photonics and Onefive</a></li>
+            <li><a href="https://lf.hamamatsu.com/applications/medical-life-science/sted-microscopy/" rel="nofollow noopener" target="_blank">Hamamatsu Photonics, STED microscopy application page identifying KATANA HP as obsolete</a></li>
+            <li><a href="https://lf.hamamatsu.com/products/ultrafast-lasers/" rel="nofollow noopener" target="_blank">Hamamatsu Photonics, ultrafast laser product pages carrying the former NKT and Onefive lines</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Related pages</h2>
+          <div class="tiles tiles--2">
+            <a class="tile" href="/scientific-laser-repair/onefive-nkt-katana/">
+              <div class="n">Manufacturer</div>
+              <h3>Onefive / NKT KATANA hub</h3>
+              <p>The full KATANA and Origami family, service scope and what we ask for at intake.</p>
+              <span class="go">Read the page</span>
+            </a>
+            <a class="tile" href="/scientific-laser-repair/shg-harmonic-generation/">
+              <div class="n">Technology</div>
+              <h3>SHG and harmonic generation</h3>
+              <p>How a conversion stage is actually tested, and why it is so often blamed for an upstream fault.</p>
+              <span class="go">Read the page</span>
+            </a>
+            <a class="tile" href="/scientific-laser-repair/picosecond-lasers/">
+              <div class="n">Technology</div>
+              <h3>Picosecond laser repair</h3>
+              <p>Seed, amplifier chain and pulse-train diagnostics across picosecond platforms.</p>
+              <span class="go">Read the page</span>
+            </a>
+            <a class="tile" href="/scientific-laser-repair/obsolete-laser-support/">
+              <div class="n">Lifecycle</div>
+              <h3>Obsolete scientific laser support</h3>
+              <p>What remains possible after end-of-support, and where the real limits are.</p>
+              <span class="go">Read the page</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="band">
+      <span class="eyebrow">Next step</span>
+      <h2>Send the label photographs and the measured behavior.</h2>
+      <p>On this platform the first useful answer comes from the labels, not from the symptom. Send photographs of every module label with the complete model and serial number, the operating parameters you expect, and what you actually measured. We will tell you whether the configuration is one we can evaluate and what the evaluation would involve.</p>
+      <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request an evaluation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <div class="section-head" style="max-width:720px">
+      <span class="eyebrow on-dark">Contact</span>
+      <h2>Talk to an engineer, not a call center</h2>
+    </div>
+    <div class="contact-grid">
+      <div><div class="label">Phone</div><a href="tel:+15513796083" class="val">(551) 379-6083</a></div>
+      <div><div class="label">Email</div><a href="mailto:service@phasexlaser.com" class="val">service@phasexlaser.com</a></div>
+      <div><div class="label">Bench</div><div class="val"><span>239 New Road, Suite B210</span><span>Parsippany, NJ 07054</span></div></div>
+      <div><div class="label">Hours</div><div class="val"><span>Monday&ndash;Friday</span><span>8:00&ndash;18:00 ET</span></div></div>
+    </div>
+    <div class="contact-cta">
+      <a href="/scientific-laser-repair/intake/" class="btn btn--primary">Request evaluation</a>
+      <a href="mailto:service@phasexlaser.com" class="btn btn--on-navy">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="tagline"><b>Machines don't wait.</b></div>
+    <div class="footer-top">
+      <div class="f-logo">
+        <img src="/phasex-logo.png" alt="PhaseX Laser Services">
+        <p>Independent industrial and scientific laser service, based in Parsippany, New Jersey.</p>
+      </div>
+      <div class="footer-cols">
+        <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
+        <div><div class="label">Office</div>239 New Road, Suite B210<br>Parsippany, NJ 07054</div>
+        <div><div class="label">Industrial</div><a href="/#services">Services</a> &middot; <a href="/#systems">Systems</a> &middot; <a href="/#brands">Brands</a> &middot; <a href="/#coverage">Coverage</a></div>
+      </div>
+    </div>
+    <div class="footer-index">
+      <div><div class="label">Scientific laser technologies</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast laser repair</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond laser repair</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond laser repair</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire laser service</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonic generation</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Diode and pump driver repair</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete laser support</a></p></div>
+      <div><div class="label">Manufacturers</div><p><a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT KATANA</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron Lasers</a></p></div>
+      <div><div class="label">Start</div><p><a href="/scientific-laser-repair/">Scientific laser repair overview</a> &middot; <a href="/scientific-laser-repair/intake/">Evaluation request</a></p></div>
+    </div>
+    <p class="disclaimer">PhaseX Laser Services is an independent third-party service provider. We are not an authorized service center for any laser or machine manufacturer unless expressly stated in writing, and we are not affiliated with or endorsed by any manufacturer named on this site. Manufacturer, brand and model names, including Coherent, Spectra-Physics, MKS Instruments, Onefive, NKT Photonics, Hamamatsu Photonics, Light Conversion, Continuum, Lumibird, Quantel, EKSPLA, Litron Lasers, Amplitude, TOPTICA, Menlo Systems, KMLabs, Clark-MXR, Time-Bandwidth Products and Lumentum, are used for identification only and remain the property of their respective owners. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the equipment seller or manufacturer.</p>
+    <p class="copy">&copy; 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a registered DBA of CoreX Robotics Services LLC.<br>(551) 379-6083 &middot; service@phasexlaser.com</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15513796083">Call now</a>
+  <a href="mailto:service@phasexlaser.com">Email</a>
+</div>
+
+<script src="/assets/phasex.js"></script>
+</body>
+</html>
