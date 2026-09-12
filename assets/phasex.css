@@ -17,7 +17,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Inter,Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
@@ -82,8 +82,42 @@ footer .f-logo p{max-width:290px}
 .disclaimer{padding-top:28px;font-size:.8rem;line-height:1.75;color:#7d8e9c;max-width:920px}
 .copy{margin-top:18px;font-size:.82rem;color:#6f8093}
 
-/* ---------- MOBILE CALL BAR ---------- */
+/* ---------- MOBILE ACTION BAR ---------- */
 .callbar{display:none}
+
+/* ---------- HERO CONTACT ROW ---------- */
+.herocontact{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;margin-top:26px}
+.herocontact a{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:1.02rem;letter-spacing:.01em}
+.herocontact a:hover{color:var(--orange)}
+.herocontact .sep{color:rgba(255,255,255,.3)}
+.herocontact svg{width:17px;height:17px;stroke:var(--orange);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+/* ---------- TRUST STRIP ---------- */
+.trust{background:var(--ink);color:#fff;padding:0}
+.trust__row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1)}
+.trust__row > div{background:var(--ink);padding:22px 18px}
+.trust b{display:block;color:#fff;font-weight:800;font-size:.92rem;letter-spacing:-.01em;margin-bottom:5px}
+.trust span{display:block;color:#8d9fae;font-size:.82rem;line-height:1.5}
+@media(max-width:960px){.trust__row{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.trust__row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- INLINE CTA ---------- */
+.cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;
+  border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:0 12px 12px 0;
+  background:var(--mist);padding:26px 30px;margin:0}
+.cta h3{font-size:1.14rem;margin-bottom:6px}
+.cta p{color:var(--steel);font-size:.94rem;margin:0}
+.cta__act{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:860px){.cta{grid-template-columns:minmax(0,1fr);gap:18px}.cta__act{justify-content:flex-start}}
+
+/* ---------- FAULT QUICK LIST ---------- */
+.faults{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.faults div{border-bottom:1px solid var(--line);padding:16px 0;display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;align-items:start}
+.faults div:nth-child(odd){padding-right:28px}
+.faults .mk{color:var(--orange);font-weight:800;font-size:.8rem;letter-spacing:.06em;padding-top:2px}
+.faults p{margin:0;color:var(--steel);font-size:.95rem}
+.faults b{color:var(--navy);font-weight:700}
+@media(max-width:860px){.faults{grid-template-columns:minmax(0,1fr)}.faults div:nth-child(odd){padding-right:0}}
 
 /* ============================================================
    SCIENTIFIC SECTION
@@ -93,7 +127,28 @@ footer .f-logo p{max-width:290px}
 .phero{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;position:relative;overflow:hidden}
 .phero::after{content:"";position:absolute;top:-40%;right:-6%;width:46%;height:180%;
   background:linear-gradient(115deg,transparent 58%,rgba(250,109,8,.85) 59%,rgba(250,109,8,.85) 60.1%,transparent 61%);opacity:.45;pointer-events:none}
+/* where the hero carries a schematic the accent line would compete with it */
+@supports selector(:has(*)){
+  .phero:has(.phero__grid)::after{opacity:.18}
+}
+@media(max-width:640px){.phero::after{opacity:.14}}
 .phero__inner{position:relative;z-index:2;padding:62px 0 72px;max-width:860px}
+/* hero with an abstract beam-path schematic alongside the text */
+.phero__grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;padding:58px 0 66px}
+.phero__grid .phero__inner{padding:0;max-width:none}
+.schematic{width:100%;height:auto;display:block}
+.schematic .lbl{font:600 9.5px -apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;fill:#8fa4b8}
+.schematic .box{fill:rgba(255,255,255,.045);stroke:rgba(255,255,255,.22)}
+.schematic .beam{stroke:var(--orange);stroke-width:1.6;fill:none}
+.schematic .beam-soft{stroke:rgba(250,109,8,.28);stroke-width:5;fill:none}
+.schematic .axis{stroke:rgba(255,255,255,.16);stroke-width:1}
+.schematic .trace{stroke:#9fb2c4;stroke-width:1.3;fill:none}
+.schematic__cap{margin-top:14px;font-size:.74rem;letter-spacing:.06em;color:#7d8fa1;text-transform:uppercase;font-weight:600}
+@media(max-width:1040px){
+  .phero__grid{grid-template-columns:minmax(0,1fr);gap:38px;padding:48px 0 56px}
+  .phero__aside{max-width:460px}
+}
+@media(max-width:640px){.phero__aside{display:none}}
 .phero h1{color:#fff;font-size:2.85rem;font-weight:900;letter-spacing:-.03em;margin-bottom:20px}
 .phero p.lead{color:#cdd8e2;font-size:1.12rem;max-width:720px;margin-bottom:30px}
 .phero .eyebrow{color:#9fb2c4;margin-bottom:20px}
@@ -113,11 +168,31 @@ footer .f-logo p{max-width:290px}
 .subnav__links a.on:hover{color:#fff}
 
 /* ---------- FOOTER INDEX ---------- */
-.footer-index{display:grid;grid-template-columns:1.35fr 1fr .75fr;gap:36px;padding:28px 0 4px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-index{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,.75fr);gap:36px;padding:28px 0 4px;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer-index .label{color:#fff;font-weight:700;margin-bottom:10px;font-size:.82rem;letter-spacing:.06em}
 .footer-index p{font-size:.84rem;line-height:1.9;color:#8d9fae}
 .footer-index a:hover{color:#fff}
 @media(max-width:960px){.footer-index{grid-template-columns:1fr;gap:24px}}
+
+
+/* ---------- CATEGORY MOTIF ----------
+   A decorative accent that differs by page category so the sections are not
+   visually identical. Abstract line work only, never presented as data. */
+.phero[data-cat]::before{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;z-index:1;pointer-events:none;opacity:.5}
+.phero[data-cat="technology"]::before{
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.13) 0 1px,transparent 1px 34px)}
+.phero[data-cat="manufacturer"]::before{
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.15) 0 2px,transparent 2px 26px),
+             linear-gradient(180deg,transparent,rgba(250,109,8,.10))}
+.phero[data-cat="model"]::before{
+  background:repeating-linear-gradient(90deg,rgba(250,109,8,.34) 0 3px,transparent 3px 16px)}
+.phero[data-cat="lifecycle"]::before{
+  background:repeating-linear-gradient(115deg,rgba(255,255,255,.10) 0 1px,transparent 1px 18px)}
+.phero[data-cat="repair"]::before,.phero[data-cat="systems"]::before{
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.06))}
+.phero[data-cat="intake"]::before{
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.09) 0 1px,transparent 1px 46px)}
+@media(max-width:640px){.phero[data-cat]::before{height:40px;opacity:.35}}
 
 /* ---------- BREADCRUMB ---------- */
 .crumb{background:var(--mist);border-bottom:1px solid var(--line);font-size:.82rem;color:var(--steel)}
@@ -127,7 +202,15 @@ footer .f-logo p{max-width:290px}
 .crumb b{color:var(--navy);font-weight:600}
 
 /* ---------- ARTICLE LAYOUT ---------- */
-.doc{display:grid;grid-template-columns:1fr 268px;gap:56px;align-items:start}
+/* minmax(0,1fr) rather than 1fr: a bare 1fr track takes the min-content of its
+   contents, and the wide spec tables force the whole grid wider than the viewport */
+.doc{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:56px;align-items:start}
+/* the aside comes first in the source so the table of contents reads first on a
+   phone, but on a wide screen it belongs in the narrow right-hand column */
+@media(min-width:1041px){
+  .doc > .prose{grid-column:1;grid-row:1}
+  .doc > .doc__aside{grid-column:2;grid-row:1}
+}
 .doc__aside{position:sticky;top:100px}
 .toc{border:1px solid var(--line);border-radius:12px;padding:22px 22px 18px;background:#fff}
 .toc .label{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:14px}
@@ -152,12 +235,18 @@ footer .f-logo p{max-width:290px}
 
 /* ---------- SPEC TABLE ---------- */
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:18px;background:#fff}
-table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px}
-table.spec th{background:var(--navy);color:#fff;text-align:left;font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;white-space:nowrap}
+/* table-layout:fixed so column widths come from the table box and can never
+   overflow it; the wrapper scrolls horizontally below 560px instead */
+table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px;table-layout:fixed}
+table.spec th:first-child,table.spec td:first-child{width:34%}
+table.spec td{overflow-wrap:break-word}
+table.spec th{background:var(--navy);color:#fff;text-align:left;font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px}
 table.spec td{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--steel);vertical-align:top}
 table.spec tr:last-child td{border-bottom:0}
 table.spec tbody tr:hover{background:#fbfcfd}
-table.spec td:first-child{color:var(--navy);font-weight:700;white-space:nowrap}
+/* no white-space:nowrap here: long first-column labels would overflow the table
+   box itself, which the scrolling wrapper cannot contain */
+table.spec td:first-child{color:var(--navy);font-weight:700}
 table.spec td.hit{color:var(--orange);font-weight:700}
 .tnote{font-size:.82rem;color:var(--steel);margin-bottom:26px}
 
@@ -171,7 +260,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 
 /* ---------- SYMPTOM / BRANCH LIST ---------- */
 .branches{display:grid;gap:0;border-top:1px solid var(--line)}
-.branch{border-bottom:1px solid var(--line);padding:22px 0 22px 0;display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start}
+.branch{border-bottom:1px solid var(--line);padding:22px 0 22px 0;display:grid;grid-template-columns:54px minmax(0,1fr);gap:18px;align-items:start}
 .branch__n{font-size:.74rem;font-weight:800;letter-spacing:.1em;color:var(--orange);padding-top:4px}
 .branch h4{margin:0 0 6px;font-size:1.02rem;color:var(--navy);font-weight:800}
 .branch p{margin:0;color:var(--steel);font-size:.94rem}
@@ -183,7 +272,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .plan li b{color:var(--navy)}
 
 /* ---------- CARD GRIDS ---------- */
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .tile{border:1px solid var(--line);border-radius:12px;padding:26px 24px;background:#fff;transition:.2s;position:relative;overflow:hidden;display:block}
 .tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .25s}
 .tile:hover{box-shadow:0 14px 34px rgba(13,42,70,.10);transform:translateY(-2px)}
@@ -194,12 +283,15 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .tile p{color:var(--steel);font-size:.92rem;margin:0}
 .tile .go{display:inline-block;margin-top:14px;font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.02em}
 
-.tiles--2{grid-template-columns:repeat(2,1fr)}
-.tiles--4{grid-template-columns:repeat(4,1fr)}
+.tiles--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tiles--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles--4{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 /* ---------- CHIPS ---------- */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
-.chip{background:var(--mist);border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:.82rem;padding:6px 12px;border-radius:20px;white-space:nowrap}
+/* nowrap keeps short brand names tidy, but a few chips hold whole phrases, so
+   cap the width and let them wrap on a narrow screen */
+.chip{background:var(--mist);border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:.82rem;padding:6px 12px;border-radius:20px;white-space:nowrap;max-width:100%;overflow-wrap:break-word}
 .chip--on-navy{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#dce6f0}
 
 /* ---------- BAND CTA ---------- */
@@ -212,7 +304,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .band .btn{margin-top:14px;position:relative;z-index:2}
 
 /* ---------- CONTACT STRIP ---------- */
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;margin-bottom:32px}
+.contact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;margin-bottom:32px}
 .contact-grid > div{background:rgba(9,29,50,.55);padding:26px 24px}
 .contact-grid .label{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9fb2c4;margin-bottom:12px}
 .contact-grid .val{color:#fff;font-weight:700;font-size:1.04rem}
@@ -227,8 +319,8 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .form__legend{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;display:block}
 .form__grouphead{font-size:1.12rem;color:var(--navy);font-weight:800;margin-bottom:6px;letter-spacing:-.015em}
 .form__grouphint{font-size:.88rem;color:var(--steel);margin-bottom:20px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .field{display:flex;flex-direction:column;margin-bottom:18px}
 .field:last-child{margin-bottom:0}
 .grid2 .field,.grid3 .field{margin-bottom:0}
@@ -257,26 +349,38 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:1040px){
-  .doc{grid-template-columns:1fr;gap:0}
+  .doc{grid-template-columns:minmax(0,1fr);gap:0}
   .doc__aside{position:static;margin-bottom:40px}
   .toc ol{columns:2;column-gap:32px}
 }
 @media(max-width:960px){
   .section{padding:64px 0}
   .topbar{display:none}
-  .tiles,.tiles--4{grid-template-columns:repeat(2,1fr)}
-  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .tiles,.tiles--3,.tiles--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .phero h1{font-size:2.25rem}
-  .grid3{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+/* the horizontal nav stops fitting well before the phone breakpoint, so the
+   menu collapses at 940px while the phone number stays visible */
+@media(max-width:1000px){
+  .nav__links{display:none}
+  .nav__toggle{display:flex}
+  .nav.open .nav__links{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12);z-index:60}
+  .nav.open .nav__links li{padding:13px 0;border-bottom:1px solid var(--mist)}
+  .nav__right{gap:16px}
 }
 @media(max-width:640px){
-  .nav__links,.nav__phone{display:none}
-  .nav__toggle{display:flex}
-  .nav.open .nav__links{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12)}
-  .nav.open .nav__links li{padding:13px 0;border-bottom:1px solid var(--mist)}
-  .tiles,.tiles--2,.tiles--4{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .grid2,.grid3{grid-template-columns:1fr}
+  .nav__phone{display:none}
+  /* the sticky action bar already carries Request service, so the header keeps
+     only the logo and the menu and stops competing for width */
+  .nav__right .btn{display:none}
+  .nav__logo img{height:32px}
+  .nav{height:64px}
+  .nav.open .nav__links{top:64px}
+  .tiles,.tiles--2,.tiles--3,.tiles--4{grid-template-columns:minmax(0,1fr)}
+  .contact-grid{grid-template-columns:minmax(0,1fr)}
+  .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
   .toc ol{columns:1}
   .phero h1{font-size:1.9rem}
   .phero__inner{padding:44px 0 54px}
@@ -288,9 +392,14 @@ table.spec td.hit{color:var(--orange);font-weight:700}
   .subnav__row{flex-direction:column;gap:8px}
   .subnav__lbl{flex:none}
   .subnav{padding:14px 0}
+  .chip{white-space:normal}
+  .subnav__links a{white-space:normal}
   body{padding-bottom:62px}
   .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--navy);border-top:2px solid var(--orange)}
-  .callbar a{flex:1;text-align:center;padding:17px 0;color:#fff;font-weight:700;font-size:.95rem}
-  .callbar a:first-child{background:var(--orange)}
-  .callbar a+a{border-left:1px solid rgba(255,255,255,.15)}
+  .callbar a{flex:1;text-align:center;padding:16px 4px;color:#fff;font-weight:700;font-size:.88rem;letter-spacing:.01em}
+  .callbar a.primary{background:var(--orange)}
+  .callbar a+a{border-left:1px solid rgba(255,255,255,.18)}
+  .herocontact{gap:10px 18px}
+  .herocontact a{font-size:.96rem}
+  .herocontact .sep{display:none}
 }
