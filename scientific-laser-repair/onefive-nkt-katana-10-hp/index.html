@@ -42,7 +42,7 @@
       "name": "KATANA 10 HP evaluation and repair engineering",
       "serviceType": "Picosecond laser diagnostic evaluation and repair engineering",
       "provider": { "@id": "https://phasexlaser.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}],
       "description": "Independent diagnostic evaluation and repair engineering for Onefive and NKT Photonics KATANA 10 HP picosecond laser systems, including configuration verification, no-output and low-output fault localization, pump and seed driver diagnostics, and wavelength-conversion assessment.",
       "url": "https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/"
     },
@@ -102,6 +102,7 @@
       <a href="/" class="nav__logo"><img src="/phasex-logo.png" alt="PhaseX Laser Services"></a>
       <ul class="nav__links">
         <li><a href="/#services">Industrial</a></li>
+        <li><a href="/packaging-laser-service/">Packaging</a></li>
         <li><a href="/scientific-laser-repair/" class="is-current">Laser repair</a></li>
         <li><a href="/scientific-laser-systems/">Laser systems</a></li>
         <li><a href="/scientific-laser-repair/intake/">Request service</a></li>
@@ -186,8 +187,7 @@
         <section id="family">
           <h2>Model and wavelength identification</h2>
           <p>As published in Onefive and NKT Photonics KATANA HP material, the designation number corresponds to the output wavelength band. Use this to check what your label is actually telling you.</p>
-          <div class="tablewrap">
-            <table class="spec">
+          <div class="tablewrap"><table class="spec">
               <thead>
                 <tr><th>Designation</th><th>Published wavelength band</th><th>Typical role</th></tr>
               </thead>
@@ -198,13 +198,11 @@
                 <tr><td class="hit">KATANA 10 HP</td><td class="hit">1012 to 1320 nm, commonly 1030 to 1064 nm</td><td class="hit">Infrared fundamental, and the pump for downstream conversion</td></tr>
                 <tr><td>KATANA 15 HP</td><td>1550 nm</td><td>Telecom-band infrared</td></tr>
               </tbody>
-            </table>
-          </div>
+            </table></div>
           <p class="tnote">Band definitions vary slightly between the manufacturer's own documents across model years, and individual units were built to order. Treat this table as an orientation aid for reading your label, not as a specification for your specific serial number.</p>
 
           <h3>Platform behavior common to the HP family</h3>
-          <div class="tablewrap">
-            <table class="spec">
+          <div class="tablewrap"><table class="spec">
               <thead>
                 <tr><th>Parameter</th><th>Published platform behavior</th></tr>
               </thead>
@@ -215,8 +213,7 @@
                 <tr><td>Architecture</td><td>Seeded, amplified, alignment-free pulsed module</td></tr>
                 <tr><td>Visible high-power example</td><td>KATANA 05 HP at 532 nm published up to approximately 5 W and 5 &micro;J, with peak power in the hundreds of kilowatts</td></tr>
               </tbody>
-            </table>
-          </div>
+            </table></div>
           <p class="tnote">Your unit's actual configuration takes precedence over any published family figure. Where original acceptance data exists, that is the reference we work against.</p>
         </section>
 
@@ -456,7 +453,7 @@
     <div class="footer-top">
       <div class="f-logo">
         <img src="/phasex-logo.png" alt="PhaseX Laser Services">
-        <p>Independent industrial and scientific laser service, based in Parsippany, New Jersey.</p>
+        <p>Independent industrial, packaging and scientific laser service. Based in Parsippany, New Jersey, working across the United States and Canada.</p>
       </div>
       <div class="footer-cols">
         <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
@@ -465,9 +462,9 @@
       </div>
     </div>
     <div class="footer-index">
-      <div><div class="label">Scientific laser services</div><p><a href="/scientific-laser-repair/">Repair and diagnostics</a> &middot; <a href="/scientific-laser-systems/">Systems integration</a> &middot; <a href="/scientific-laser-repair/intake/">Request service</a></p></div>
-      <div><div class="label">Technologies</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonics</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and supplies</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a></p></div>
-      <div><div class="label">Manufacturers</div><p><a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron</a></p></div>
+      <div><div class="label">Services</div><p><a href="/#services">Industrial laser service</a> &middot; <a href="/packaging-laser-service/">Packaging lasers</a> &middot; <a href="/scientific-laser-repair/">Scientific repair</a> &middot; <a href="/scientific-laser-systems/">Systems integration</a> &middot; <a href="/scientific-laser-repair/intake/">Request service</a></p></div>
+      <div><div class="label">Packaging</div><p><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a> &middot; <a href="/packaging-laser-service/laser-die-cutting-converting/">Die cutting and converting</a> &middot; <a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a> &middot; <a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></p></div>
+      <div><div class="label">Scientific</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonics</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and supplies</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a> &middot; <a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron</a></p></div>
     </div>
     <p class="disclaimer">PhaseX Laser Services is an independent third-party service provider. We are not an authorized service center for any laser or machine manufacturer unless expressly stated in writing, and we are not affiliated with or endorsed by any manufacturer named on this site. Manufacturer, brand and model names, including Coherent, Spectra-Physics, MKS Instruments, Onefive, NKT Photonics, Hamamatsu Photonics, Light Conversion, Continuum, Lumibird, Quantel, EKSPLA, Litron Lasers, Amplitude, TOPTICA, Menlo Systems, KMLabs, Clark-MXR, Time-Bandwidth Products and Lumentum, are used for identification only and remain the property of their respective owners. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the equipment seller or manufacturer.</p>
     <p class="copy">&copy; 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a registered DBA of CoreX Robotics Services LLC.<br>(551) 379-6083 &middot; service@phasexlaser.com</p>
