@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scientific Laser Evaluation Request | PhaseX Laser</title>
+<title>Laser Evaluation Request | Industrial, Packaging and Scientific | PhaseX Laser</title>
 <meta name="description" content="Request a diagnostic evaluation for a scientific, ultrafast or pulsed laser. Submit model, configuration, symptoms and equipment photographs.">
 <meta name="keywords" content="scientific laser evaluation request, laser repair quote, ultrafast laser diagnostic, laser service intake, research laser repair request">
 <link rel="canonical" href="https://phasexlaser.com/scientific-laser-repair/intake/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scientific Laser Evaluation Request | PhaseX Laser">
+<meta property="og:title" content="Laser Evaluation Request | PhaseX Laser">
 <meta property="og:description" content="Request a diagnostic evaluation for a scientific, ultrafast or pulsed laser. Submit model, configuration, symptoms and equipment photographs.">
 <meta property="og:url" content="https://phasexlaser.com/scientific-laser-repair/intake/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +42,7 @@
       "name": "Scientific laser evaluation request",
       "serviceType": "Scientific laser diagnostic evaluation intake",
       "provider": { "@id": "https://phasexlaser.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}],
       "description": "Intake form for scientific, ultrafast and pulsed laser diagnostic evaluation. Collects manufacturer, model, serial number, operating parameters, symptoms, failure history and equipment photographs.",
       "url": "https://phasexlaser.com/scientific-laser-repair/intake/"
     },
@@ -75,6 +75,7 @@
       <a href="/" class="nav__logo"><img src="/phasex-logo.png" alt="PhaseX Laser Services"></a>
       <ul class="nav__links">
         <li><a href="/#services">Industrial</a></li>
+        <li><a href="/packaging-laser-service/">Packaging</a></li>
         <li><a href="/scientific-laser-repair/">Laser repair</a></li>
         <li><a href="/scientific-laser-systems/">Laser systems</a></li>
         <li><a href="/scientific-laser-repair/intake/" class="is-current">Request service</a></li>
@@ -184,6 +185,15 @@
               <p class="form__grouphint">Five fields and a photograph. We review it and respond with the next step.</p>
               <div class="grid3">
                 <div class="field">
+                  <label for="etype">Equipment type <span class="req">*</span></label>
+          <select id="etype" name="Equipment type" required style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;color:var(--ink);margin-bottom:18px">
+            <option value="">Select one</option>
+            <option>Packaging or printing laser (flexo plate imager, laser die cutting, engraving, coding)</option>
+            <option>Industrial laser machine (cutting, welding, cleaning, cladding)</option>
+            <option>Scientific laser system (ultrafast, Ti:Sapphire, OPO, OPA, harmonics)</option>
+            <option>Laser source, driver or power supply only</option>
+            <option>Something else</option>
+          </select>
                   <label for="mfr">Manufacturer <span class="req">*</span></label>
                   <input type="text" id="mfr" name="Manufacturer" required placeholder="Coherent, Spectra-Physics, NKT...">
                 </div>
@@ -239,7 +249,7 @@
                 <textarea id="history" name="History" style="min-height:80px" placeholder="Exact error text if any, when it started, whether it was sudden or gradual, and any previous repair attempts."></textarea>
               </div>
               <div class="field" style="margin-top:18px">
-                <label>Can the complete system ship to New Jersey?</label>
+                <label>Can the equipment ship to our New Jersey bench, or does this need to be on site?</label>
                 <div class="radioset">
                   <label><input type="radio" name="Can ship complete system" value="Yes"> Yes</label>
                   <label><input type="radio" name="Can ship complete system" value="Partially"> Partially</label>
@@ -306,7 +316,7 @@
     <div class="footer-top">
       <div class="f-logo">
         <img src="/phasex-logo.png" alt="PhaseX Laser Services">
-        <p>Independent industrial and scientific laser service, based in Parsippany, New Jersey.</p>
+        <p>Independent industrial, packaging and scientific laser service. Based in Parsippany, New Jersey, working across the United States and Canada.</p>
       </div>
       <div class="footer-cols">
         <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
@@ -315,9 +325,9 @@
       </div>
     </div>
     <div class="footer-index">
-      <div><div class="label">Scientific laser services</div><p><a href="/scientific-laser-repair/">Repair and diagnostics</a> &middot; <a href="/scientific-laser-systems/">Systems integration</a> &middot; <a href="/scientific-laser-repair/intake/">Request service</a></p></div>
-      <div><div class="label">Technologies</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonics</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and supplies</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a></p></div>
-      <div><div class="label">Manufacturers</div><p><a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron</a></p></div>
+      <div><div class="label">Services</div><p><a href="/#services">Industrial laser service</a> &middot; <a href="/packaging-laser-service/">Packaging lasers</a> &middot; <a href="/scientific-laser-repair/">Scientific repair</a> &middot; <a href="/scientific-laser-systems/">Systems integration</a> &middot; <a href="/scientific-laser-repair/intake/">Request service</a></p></div>
+      <div><div class="label">Packaging</div><p><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a> &middot; <a href="/packaging-laser-service/laser-die-cutting-converting/">Die cutting and converting</a> &middot; <a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a> &middot; <a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></p></div>
+      <div><div class="label">Scientific</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonics</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and supplies</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a> &middot; <a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron</a></p></div>
     </div>
     <p class="disclaimer">PhaseX Laser Services is an independent third-party service provider. We are not an authorized service center for any laser or machine manufacturer unless expressly stated in writing, and we are not affiliated with or endorsed by any manufacturer named on this site. Manufacturer, brand and model names, including Coherent, Spectra-Physics, MKS Instruments, Onefive, NKT Photonics, Hamamatsu Photonics, Light Conversion, Continuum, Lumibird, Quantel, EKSPLA, Litron Lasers, Amplitude, TOPTICA, Menlo Systems, KMLabs, Clark-MXR, Time-Bandwidth Products and Lumentum, are used for identification only and remain the property of their respective owners. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the equipment seller or manufacturer.</p>
     <p class="copy">&copy; 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a registered DBA of CoreX Robotics Services LLC.<br>(551) 379-6083 &middot; service@phasexlaser.com</p>
