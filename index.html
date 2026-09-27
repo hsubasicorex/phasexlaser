@@ -272,6 +272,129 @@
     .callbar a+a{border-left:1px solid rgba(255,255,255,.15)}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness"
+      ],
+      "@id": "https://phasexlaser.com/#organization",
+      "name": "PhaseX Laser Services",
+      "legalName": "CoreX Robotics Services LLC",
+      "description": "Independent industrial, packaging and scientific laser service: installation, commissioning, retrofit and component-level repair, on site across the United States.",
+      "url": "https://phasexlaser.com/",
+      "logo": "https://phasexlaser.com/phasex-logo.png",
+      "image": "https://phasexlaser.com/phasex-logo.png",
+      "telephone": "+1-551-379-6083",
+      "email": "service@phasexlaser.com",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "239 New Road, Suite B210",
+        "addressLocality": "Parsippany",
+        "addressRegion": "NJ",
+        "postalCode": "07054",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://phasexlaser.com/#website",
+      "url": "https://phasexlaser.com/",
+      "name": "PhaseX Laser Services",
+      "publisher": {
+        "@id": "https://phasexlaser.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Industrial laser machine service and repair",
+      "serviceType": "Industrial laser service",
+      "provider": {
+        "@id": "https://phasexlaser.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "description": "Installation, commissioning, retrofit, modernization and component-level repair of industrial laser cutting, welding, cleaning and cladding systems, laser sources, cutting heads and control systems."
+    },
+    {
+      "@type": "Service",
+      "name": "Packaging and printing laser service",
+      "serviceType": "Packaging laser service",
+      "provider": {
+        "@id": "https://phasexlaser.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "url": "https://phasexlaser.com/packaging-laser-service/",
+      "description": "Independent service for flexo plate imaging lasers, laser die cutting and converting machines, gravure and rotary screen engravers, and production line coding and marking lasers."
+    },
+    {
+      "@type": "Service",
+      "name": "Scientific laser repair",
+      "serviceType": "Scientific laser service",
+      "provider": {
+        "@id": "https://phasexlaser.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "url": "https://phasexlaser.com/scientific-laser-repair/",
+      "description": "Evaluation and component-level repair of ultrafast, femtosecond, picosecond and Ti:Sapphire laser systems, harmonic generators, OPO and OPA stages, and their drivers and power supplies."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -299,6 +422,7 @@
         <li><a href="#how">How</a></li>
         <li><a href="#coverage">Coverage</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/packaging-laser-service/">Packaging</a></li>
         <li><a href="/scientific-laser-repair/">Laser repair</a></li>
         <li><a href="/scientific-laser-systems/">Laser systems</a></li>
       </ul>
@@ -328,7 +452,7 @@
         <a href="#contact" class="btn btn--primary">Request service</a>
         <a href="#services" class="btn btn--on-navy">See what we fix</a>
       </div>
-      <p class="hero__strip"><b>NJ <span class="dot">·</span> NY <span class="dot">·</span> PA <span class="dot">·</span> CT</b> rapid on-site response</p>
+      <p class="hero__strip"><b>Nationwide field service</b> <span class="dot">·</span> based in Parsippany, New Jersey</p>
     </div>
   </div>
 </section>
@@ -602,6 +726,18 @@
 </section>
 
 <!-- COVERAGE -->
+<!-- PACKAGING LASERS -->
+<section class="section section--mist" id="packaging">
+  <div class="wrap">
+    <div class="band reveal">
+      <span class="eyebrow">Packaging and printing lasers</span>
+      <h2>We service the lasers that make packaging.</h2>
+      <p>Flexo plate imaging, laser die cutting and converting, gravure and rotary screen engraving, and production line coding. Independent field service for machines that are out of warranty, out of support, or built by a company that is no longer there.</p>
+      <a href="/packaging-laser-service/" class="btn btn--primary">Packaging laser service</a>
+    </div>
+  </div>
+</section>
+
 <!-- SCIENTIFIC LASERS -->
 <section class="section" id="scientific">
   <div class="wrap">
@@ -619,11 +755,9 @@
   <div class="wrap cov reveal">
     <span class="eyebrow" style="justify-content:center">Coverage</span>
     <h2 style="font-size:2.2rem;margin-top:16px">Where we work</h2>
-    <div class="tags">
-      <span class="tag">NJ</span><span class="tag">NY</span><span class="tag">PA</span><span class="tag">CT</span>
-    </div>
-    <p>Rapid on-site response across New Jersey, New York, Pennsylvania and Connecticut.</p>
-    <p class="note">Nationwide for scheduled installations.</p>
+    <div class="tags"><span class="tag">United States</span><span class="tag">Canada</span><span class="tag">NJ base</span><span class="tag">Northeast rapid</span><span class="tag">Nationwide scheduled</span></div>
+    <p>We travel. A machine-down call anywhere in the United States or Canada is a flight and a rental car, and travel is quoted separately and clearly.</p>
+    <p class="note">Fastest response in the Northeast, where we are based. Scheduled work, installations and retrofits planned anywhere in North America.</p>
   </div>
 </section>
 
@@ -633,8 +767,8 @@
     <div class="band reveal">
       <div class="band-bg"></div>
       <span class="eyebrow">Dealers and importers</span>
-      <h2>Subcontract field execution in the Northeast</h2>
-      <p>When your team needs additional coverage for an installation, commissioning job or machine-down service call in NJ, NY, PA or CT, PhaseX executes approved field assignments under your direction. You retain all customer and warranty administration; PhaseX performs only the field scope you authorize in writing and does not assume or modify the OEM warranty.</p>
+      <h2>Subcontract field execution, nationwide</h2>
+      <p>When your team needs additional coverage for an installation, commissioning job or machine-down service call anywhere in North America, PhaseX executes approved field assignments under your direction. You retain all customer and warranty administration; PhaseX performs only the field scope you authorize in writing and does not assume or modify the OEM warranty.</p>
       <p>PhaseX will not solicit or bypass customers introduced by a partner for the assigned work.</p>
       <a href="#contact" class="btn btn--primary">Discuss a partnership</a>
     </div>
@@ -656,7 +790,7 @@
       <div class="faq__item"><button class="faq__q">Do you support laser cladding and metal deposition?</button><div class="faq__a"><p>Yes. On cladding and LMD/DED cells we provide field support on the laser and optics, powder or wire delivery, motion, shielding and the control system, within a defined scope.</p></div></div>
       <div class="faq__item"><button class="faq__q">Are you an authorized service center?</button><div class="faq__a"><p>PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only.</p></div></div>
       <div class="faq__item"><button class="faq__q">Do you work on machines under manufacturer warranty?</button><div class="faq__a"><p>Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p></div></div>
-      <div class="faq__item"><button class="faq__q">What area do you cover?</button><div class="faq__a"><p>Rapid on-site response across NJ, NY, PA and CT, with nationwide coverage for scheduled installations.</p></div></div>
+      <div class="faq__item"><button class="faq__q">What area do you cover?</button><div class="faq__a"><p>We work across the United States and Canada. Parsippany, New Jersey is the base and the Northeast gets the fastest response, but we travel for machine-down calls, installations and scheduled work anywhere in the United States and Canada. Travel is quoted separately and clearly.</p></div></div>
       <div class="faq__item"><button class="faq__q">Can you convert an older CO2 machine to fiber?</button><div class="faq__a"><p>Yes. We convert legacy CO2 machines to fiber and modernize aging Trumpf, Amada and other European and Japanese platforms with current-generation sources, cutting heads and control systems. We have done these conversions before; scope and feasibility are defined per machine.</p></div></div>
       <div class="faq__item"><button class="faq__q">How does a job start?</button><div class="faq__a"><p>Machine, fault, site conditions, required tooling and documentation are confirmed in writing before any visit. Scheduling and response time are confirmed for each assignment.</p></div></div>
     </div>
@@ -697,6 +831,7 @@
         <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
         <div><div class="label">Office</div>239 New Road, Suite B210<br>Parsippany, NJ 07054</div>
         <div><div class="label">Sections</div><a href="#services">Services</a> · <a href="#systems">Systems</a> · <a href="#brands">Brands</a> · <a href="#how">How we work</a> · <a href="#coverage">Coverage</a> · <a href="#faq">FAQ</a></div>
+        <div><div class="label">Packaging</div><a href="/packaging-laser-service/">Packaging lasers</a></div>
         <div><div class="label">Scientific lasers</div><a href="/scientific-laser-repair/">Repair and diagnostics</a> · <a href="/scientific-laser-systems/">Systems integration</a></div>
       </div>
     </div>

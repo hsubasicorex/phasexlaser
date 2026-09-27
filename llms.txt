@@ -1,0 +1,98 @@
+# PhaseX Laser Services
+
+> Independent laser service company based in Parsippany, New Jersey, working on site
+> across the United States and Canada. We evaluate, repair and modernize industrial, packaging and
+> scientific laser equipment at component level, including machines that are out of
+> warranty, out of support, or built by a company that no longer exists. PhaseX Laser
+> Services is a registered DBA of CoreX Robotics Services LLC.
+
+## What we are
+
+- Independent third-party service provider. Not an authorized service center for any
+  manufacturer, and we do not perform manufacturer warranty work. Brand and model names
+  on our pages identify equipment only.
+- Field service and bench repair. Every job starts with a written scope and a fixed
+  evaluation fee quoted before anyone travels, and ends with a written report.
+- Component-level work: boards repaired rather than only swapped, obsolete parts
+  substituted with the differences documented, subsystems engineered out and replaced
+  when repair is not the right answer.
+
+## Two limits we state on every page
+
+- We do not promise a specific repair before diagnosis.
+- We do not certify equipment to original published specifications where the original
+  acceptance data and the corresponding standards are unavailable. We document the
+  measured condition before and after instead.
+
+## Contact
+
+- Phone: +1 (551) 379-6083
+- Email: service@phasexlaser.com
+- Office and bench: 239 New Road, Suite B210, Parsippany, NJ 07054, United States
+- Hours: Monday to Friday, 8:00 to 18:00 Eastern
+- Coverage: the United States and Canada. Fastest response in the Northeast, where we are
+  based. We travel for machine-down calls, installations and scheduled work anywhere in
+  North America. Travel is quoted separately and stated clearly in the proposal.
+
+## Industrial laser service
+
+- [Industrial laser services](https://phasexlaser.com/#services): laser cutting, welding,
+  cleaning and cladding systems, robotic laser cells, tube and combination machines,
+  coil-fed lines, automated load and unload systems.
+- [Component-level work](https://phasexlaser.com/#components): laser sources, cutting
+  heads, drive electronics, control systems.
+- [Retrofit and modernization](https://phasexlaser.com/#retrofit): CO2 to fiber
+  conversions, control system upgrades, source and cutting head replacement on legacy
+  machines.
+
+## Packaging and printing laser service
+
+- [Packaging laser service hub](https://phasexlaser.com/packaging-laser-service/): an A to Z
+  index of 84 equipment manufacturers, the repair and replacement scope by subsystem, and
+  how a job runs.
+- [Digital flexo plate imaging](https://phasexlaser.com/packaging-laser-service/flexo-plate-imaging/):
+  Esko CDI Spark, Advance and Crystal, Miraclon and Kodak Flexcel NX, XSYS ThermoflexX,
+  Hell, SPGPrints, Screen, Fujifilm, Lüscher. The imaging chain of fiber source,
+  acousto-optic modulator and RF driver, imaging optics and head, drum and vacuum.
+- [Laser die cutting and converting](https://phasexlaser.com/packaging-laser-service/laser-die-cutting-converting/):
+  Highcon Euclid, Beam and Pulse, SEI Laser, Spartanics, LasX, Preco, Delta ModTech,
+  Cartes, AB Graphic, Kama, Bobst, eurolaser, Smag Graphique, Golden Laser.
+- [Coding and marking](https://phasexlaser.com/packaging-laser-service/packaging-coding-marking/):
+  Domino, Videojet, Markem-Imaje, Macsa ID, Keyence, FOBA, Telesis, Matthews, Linx,
+  Leibinger, REA JET, Koenig & Bauer Coding, Panasonic.
+- [Gravure and rotary screen engraving](https://phasexlaser.com/packaging-laser-service/gravure-screen-engraving/):
+  Hell HelioKlischograph, Daetwyler, Ohio Gravure Technologies, Schepers, SPGPrints,
+  Think Laboratory, Kaspar Walter.
+
+## Scientific and research laser service
+
+- [Scientific laser repair hub](https://phasexlaser.com/scientific-laser-repair/)
+- [Ultrafast lasers](https://phasexlaser.com/scientific-laser-repair/ultrafast-lasers/)
+- [Femtosecond lasers](https://phasexlaser.com/scientific-laser-repair/femtosecond-lasers/)
+- [Picosecond lasers](https://phasexlaser.com/scientific-laser-repair/picosecond-lasers/)
+- [Ti:Sapphire lasers](https://phasexlaser.com/scientific-laser-repair/ti-sapphire-lasers/)
+- [Harmonic generation and SHG](https://phasexlaser.com/scientific-laser-repair/shg-harmonic-generation/)
+- [OPO and OPA systems](https://phasexlaser.com/scientific-laser-repair/opo-opa-systems/)
+- [Diode drivers and power supplies](https://phasexlaser.com/scientific-laser-repair/laser-diode-pump-driver-repair/)
+- [Obsolete and discontinued systems](https://phasexlaser.com/scientific-laser-repair/obsolete-laser-support/)
+- Manufacturer pages: [Coherent](https://phasexlaser.com/scientific-laser-repair/coherent/),
+  [Spectra-Physics](https://phasexlaser.com/scientific-laser-repair/spectra-physics/),
+  [Onefive and NKT](https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana/),
+  [Light Conversion](https://phasexlaser.com/scientific-laser-repair/light-conversion/),
+  [Continuum and Lumibird](https://phasexlaser.com/scientific-laser-repair/continuum-lumibird/),
+  [EKSPLA](https://phasexlaser.com/scientific-laser-repair/ekspla/),
+  [Litron](https://phasexlaser.com/scientific-laser-repair/litron-lasers/)
+- [Laboratory laser systems integration](https://phasexlaser.com/scientific-laser-systems/)
+
+## Requesting service
+
+- [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): equipment
+  type, manufacturer, model, serial number, symptoms, measurements and photographs.
+
+## Notes for anyone citing this site
+
+- Laser safety: Class 4 work is planned under a project-specific written laser safety plan.
+  On a customer site, final hazard analysis and approval stay with that facility's own
+  safety function.
+- We do not publish instrumentation as a fixed laboratory inventory. Measurement
+  instruments for each job are named in that job's written proposal.

@@ -1,4 +1,61 @@
+# phasexlaser.com
+# PhaseX Laser Services, a registered DBA of CoreX Robotics Services LLC
+# All well-behaved crawlers, including AI assistants and AI search crawlers,
+# are welcome to read and cite this site.
+
 User-agent: *
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: YandexBot
+Allow: /
+
+# AI assistants and AI search
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: meta-externalfetcher
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://phasexlaser.com/sitemap.xml
