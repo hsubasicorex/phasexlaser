@@ -179,6 +179,7 @@ footer .f-logo p{max-width:290px}
    A decorative accent that differs by page category so the sections are not
    visually identical. Abstract line work only, never presented as data. */
 .phero[data-cat]::before{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;z-index:1;pointer-events:none;opacity:.5}
+.phero[data-cat="packaging"]::before{background:repeating-linear-gradient(90deg,rgba(250,109,8,.34) 0 3px,transparent 3px 13px),linear-gradient(90deg,rgba(255,255,255,.14),transparent)}
 .phero[data-cat="technology"]::before{
   background:repeating-linear-gradient(90deg,rgba(255,255,255,.13) 0 1px,transparent 1px 34px)}
 .phero[data-cat="manufacturer"]::before{
