@@ -448,7 +448,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .nav__links > li:nth-child(3) > .nav__menu > li:has(b){grid-column:1 / -1}
 @media(max-width:1060px){
   .nav.open .nav__menu{max-height:none;overflow:visible}
-  .nav.open .nav__links > li:nth-child(3) > .nav__menu{display:block;min-width:0;max-width:none}
+  .nav.open .nav__links > li:nth-child(3).is-open > .nav__menu{display:block;min-width:0;max-width:none}
 }
 
 /* urgent link, CoreX-style */
@@ -457,3 +457,29 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .nav__urgent .dotpulse{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto}
 @media(max-width:1240px){.nav__phone{display:none}}
 @media(max-width:1160px){.nav__urgent{display:none}}
+
+/* navigation polish */
+.nav__links > li > a.is-current,.nav__links > li > button.is-current{color:var(--navy)}
+.nav__links > li > a.is-current::after,.nav__links > li > button.is-current::after{content:"";position:absolute;left:13px;right:13px;bottom:-2px;height:2px;background:var(--orange);border-radius:2px}
+.nav__links > li > a,.nav__links > li > button{position:relative}
+.nav__links > li > button[aria-expanded="true"]{color:var(--orange);background:var(--mist)}
+.nav__links > li > a:focus-visible,.nav__links > li > button:focus-visible,.nav__menu a:focus-visible,.nav__urgent:focus-visible,.nav__toggle:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:9px}
+.nav__links > li.is-open > .nav__menu{opacity:1;visibility:visible;transform:none}
+.nav__caret{transition:transform .16s}
+.nav__links > li > button[aria-expanded="true"] .nav__caret{transform:rotate(-135deg) translateY(-2px)}
+.nav__toggle span{transition:transform .2s,opacity .2s}
+.nav.open .nav__toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .nav__toggle span:nth-child(2){opacity:0}
+.nav.open .nav__toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body.nav-locked{overflow:hidden}
+@media(max-width:1060px){
+  .nav.open .nav__menu{display:none}
+  .nav.open .nav__links > li.is-open > .nav__menu{display:block}
+  .nav.open .nav__caret{display:inline-block;margin-left:auto;transform:rotate(45deg) translateY(-2px)}
+  .nav.open .nav__links > li.is-open > button .nav__caret{transform:rotate(-135deg) translateY(-2px)}
+  .nav.open .nav__links > li > button{justify-content:space-between}
+  .nav.open .nav__links > li > a.is-current::after,.nav.open .nav__links > li > button.is-current::after{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav__menu,.nav__caret,.nav__toggle span{transition:none}
+}
