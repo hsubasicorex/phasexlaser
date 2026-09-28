@@ -6,357 +6,20 @@
 <title>Industrial and Scientific Laser Service | PhaseX Laser</title>
 <meta name="description" content="Independent laser service in New Jersey. Installation, commissioning, repair and retrofit for industrial fiber lasers, plus scientific laser service.">
 <link rel="canonical" href="https://phasexlaser.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PhaseX Laser Services">
+<meta property="og:url" content="https://phasexlaser.com/">
+<meta property="og:title" content="Industrial and Scientific Laser Service | PhaseX Laser">
+<meta property="og:description" content="Independent laser service in New Jersey. Installation, commissioning, repair and retrofit for industrial fiber lasers, plus scientific laser service.">
+<meta property="og:image" content="https://phasexlaser.com/phasex-logo.png">
+<meta name="twitter:card" content="summary">
+
 <meta name="keywords" content="laser service New Jersey, fiber laser repair, laser cutting machine repair, laser marking service, laser welding repair, scientific laser repair, research laser service, NJ NY PA CT">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#0D2A46;
-    --orange:#FA6D08;
-    --steel:#5A6B7A;
-    --mist:#F2F5F8;
-    --ink:#1A2B3C;
-    --line:#DCE3EA;
-    --navy-2:#123457;
-    --maxw:1200px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Inter,Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-
-  /* engineered eyebrow */
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
-  .eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);display:inline-block}
-  .eyebrow.on-dark{color:var(--orange)}
-
-  h1,h2,h3{color:var(--navy);line-height:1.1;font-weight:800;letter-spacing:-.022em}
-  .section{padding:96px 0;position:relative}
-  .section--mist{background:var(--mist)}
-  .section--grid{background:
-    radial-gradient(circle at 1px 1px, rgba(13,42,70,.05) 1px, transparent 0) 0 0/26px 26px,
-    var(--mist)}
-  .section--navy{background:var(--navy);color:#fff}
-  .section--navy h2,.section--navy h3{color:#fff}
-  .section-head{max-width:720px;margin-bottom:52px}
-  .section-head .eyebrow{margin-bottom:18px}
-  .section-head h2{font-size:2.3rem;margin-bottom:14px}
-  .section-head p{color:var(--steel);font-size:1.06rem}
-  .section--navy .section-head p{color:#b6c4d2}
-
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.94rem;padding:14px 26px;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:.18s;letter-spacing:.01em}
-  .btn--primary{background:var(--orange);color:#fff}
-  .btn--primary:hover{background:#e05f00;transform:translateY(-1px)}
-  .btn--ghost{background:transparent;border-color:var(--line);color:var(--navy)}
-  .btn--ghost:hover{border-color:var(--navy)}
-  .btn--on-navy{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
-  .btn--on-navy:hover{border-color:#fff;background:rgba(255,255,255,.06)}
-
-  /* reveal */
-  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-  .js .reveal.in{opacity:1;transform:none}
-
-  /* ---------- TOP UTILITY BAR ---------- */
-  .topbar{background:var(--ink);color:#aebccb;font-size:.76rem;letter-spacing:.04em}
-  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
-  .topbar b{color:#fff;font-weight:600}
-  .topbar__r{display:flex;gap:22px}
-  .topbar a:hover{color:#fff}
-
-  /* ---------- HEADER ---------- */
-  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-  .nav__logo img{height:40px;width:auto}
-  .nav__links{display:flex;gap:32px;list-style:none}
-  .nav__links a{font-weight:600;font-size:.9rem;color:var(--ink);transition:.15s;position:relative;padding:4px 0}
-  .nav__links a:hover{color:var(--orange)}
-  .nav__right{display:flex;align-items:center;gap:22px}
-  .nav__phone{font-weight:800;color:var(--navy);white-space:nowrap;font-size:1rem}
-  .nav__toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
-  .nav__toggle span{width:24px;height:2px;background:var(--navy);display:block}
-
-  /* ---------- HERO ---------- */
-  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
-  .hero__media{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy)}
-  .hero__media video{width:100%;height:100%;object-fit:cover;display:block}
-  .hero__overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:linear-gradient(90deg,rgba(9,29,50,.96) 0%,rgba(9,29,50,.82) 36%,rgba(9,29,50,.42) 66%,rgba(9,29,50,.18) 100%)}
-  .hero__overlay::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(9,29,50,.4),transparent 26%,transparent 62%,rgba(9,29,50,.72))}
-  .hero__inner{position:relative;z-index:2;padding:120px 0 100px;max-width:780px}
-  .hero .eyebrow{color:#9fb2c4;margin-bottom:24px}
-  .hero .eyebrow::before{background:var(--orange)}
-  .hero h1{color:#fff;font-size:3.5rem;font-weight:900;margin-bottom:26px;letter-spacing:-.03em}
-  .hero p.lead{color:#cdd8e2;font-size:1.14rem;max-width:650px;margin-bottom:38px}
-  .hero__btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
-  .hero__strip{display:flex;align-items:center;gap:16px;font-size:.9rem;font-weight:600;letter-spacing:.05em;color:#9fb2c4;border-top:1px solid rgba(255,255,255,.14);padding-top:24px}
-  .hero__strip b{color:#fff;letter-spacing:.08em}
-  .hero__strip .dot{color:var(--orange)}
-
-  /* ---------- PLATFORM STRIP ---------- */
-  .platforms{background:var(--ink);color:#fff;padding:30px 0;border-top:1px solid rgba(255,255,255,.06)}
-  .platforms__row{display:flex;align-items:center;justify-content:space-between;gap:18px 40px;flex-wrap:wrap}
-  .platforms__label{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7d8fa1;white-space:nowrap}
-  .platforms__names{display:flex;gap:14px 30px;flex-wrap:wrap;align-items:center}
-  .platforms__names span{font-weight:700;font-size:1.05rem;color:#e3eaf1;letter-spacing:.01em}
-
-  /* ---------- SERVICE CARDS ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-  .card{background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 32px;position:relative;transition:.2s}
-  .card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s}
-  .card:hover{background:#fbfcfd}
-  .card:hover::before{transform:scaleX(1)}
-  .card__top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
-  .card__icon{width:52px;height:52px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .card__icon svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .card__no{font-size:.78rem;font-weight:800;letter-spacing:.1em;color:var(--line)}
-  .card:hover .card__no{color:var(--orange)}
-  .card h3{font-size:1.14rem;margin-bottom:10px}
-  .card p{color:var(--steel);font-size:.94rem}
-
-  /* ---------- SPLIT (WHY) ---------- */
-  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
-  .split__text .eyebrow{margin-bottom:18px}
-  .split__text h2{font-size:2.3rem;margin-bottom:20px}
-  .split__text p{color:var(--steel);margin-bottom:16px}
-  .split__text .cred{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
-  .split__text .cred div{font-size:.86rem;color:var(--steel)}
-  .split__text .cred b{display:block;color:var(--navy);font-weight:800;font-size:.94rem;letter-spacing:.01em;margin-bottom:2px}
-  .figure{position:relative}
-  .figure img{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:12px;display:block}
-  .figure::after{content:"";position:absolute;left:18px;top:18px;width:46px;height:46px;border-left:2px solid var(--orange);border-top:2px solid var(--orange);opacity:.9}
-  .figure figcaption{position:absolute;left:0;bottom:0;background:var(--navy);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.03em;padding:12px 18px;border-radius:0 10px 0 12px}
-  .figure--contain img{object-fit:contain;height:auto;min-height:auto;background:#fff;border:1px solid var(--line)}
-
-  /* ---------- HOW WE WORK ---------- */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
-  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:34px 30px;position:relative}
-  .step__n{font-size:2.6rem;font-weight:900;color:var(--mist);line-height:1;margin-bottom:16px;-webkit-text-stroke:1px var(--line)}
-  .step__num{font-size:.72rem;font-weight:800;letter-spacing:.16em;color:var(--orange);text-transform:uppercase;margin-bottom:14px}
-  .step h3{font-size:1.16rem;margin-bottom:10px}
-  .step p{color:var(--steel);font-size:.94rem}
-
-  /* ---------- COVERAGE ---------- */
-  .cov{text-align:center}
-  .cov .tags{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:26px 0 20px}
-  .tag{background:var(--navy);color:#fff;font-weight:800;letter-spacing:.06em;padding:16px 30px;border-radius:8px;font-size:1.1rem;position:relative}
-  .cov p{color:var(--steel);max-width:600px;margin:0 auto}
-  .cov .note{margin-top:12px;font-size:.95rem;color:var(--navy);font-weight:700}
-
-  /* ---------- DEALERS BAND ---------- */
-  .band{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;border-radius:16px;padding:60px 52px;position:relative;overflow:hidden}
-  .band::after{content:"";position:absolute;top:-30%;right:-4%;width:42%;height:170%;
-    background:linear-gradient(115deg,transparent 58%,rgba(250,109,8,.9) 59%,rgba(250,109,8,.9) 60.2%,transparent 61%);opacity:.5}
-  .band .eyebrow{color:#9fb2c4;margin-bottom:16px}
-  .band h2{color:#fff;font-size:2rem;margin-bottom:18px;max-width:640px}
-  .band p{color:#c7d2dd;max-width:700px;margin-bottom:14px;position:relative;z-index:2}
-  .band .btn{margin-top:14px;position:relative;z-index:2}
-  .band .band-bg{position:absolute;inset:0;z-index:0;background:url('dealers-bg.jpg') center/cover;opacity:.55}
-  .band .band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(9,29,50,.9),rgba(9,29,50,.66))}
-  .band .eyebrow,.band h2{position:relative;z-index:2}
-  #how{position:relative;overflow:hidden;background:var(--navy)}
-  #how .how-bg{position:absolute;inset:0;z-index:0;background:url('how-bg.jpg') center/cover}
-  #how .how-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,50,.9),rgba(9,29,50,.86))}
-  #how .wrap{position:relative;z-index:1}
-  #how .section-head h2{color:#fff}
-  #how .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(3px)}
-  #how .step h3{color:#fff}
-  #how .step p{color:#c7d2dd}
-  #how .step__n{color:rgba(255,255,255,.16);-webkit-text-stroke:1px rgba(255,255,255,.22)}
-  .compgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .compcard{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
-  .compcard img{width:100%;height:290px;object-fit:cover;display:block;transition:transform .35s}
-  .compcard:hover img{transform:scale(1.05)}
-  .compcard figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(9,29,50,.92));color:#fff;font-weight:700;font-size:.92rem;letter-spacing:.02em;padding:30px 18px 15px}
-  @media(max-width:960px){.compgrid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:640px){.compgrid{grid-template-columns:1fr}}
-
-  /* ---------- FAQ ---------- */
-  .faq{max-width:840px;margin:0 auto}
-  .faq__item{border-bottom:1px solid var(--line)}
-  .faq__q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:24px 44px 24px 0;font-size:1.06rem;font-weight:700;color:var(--navy);position:relative}
-  .faq__q::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;font-weight:400;color:var(--orange);transition:.2s}
-  .faq__item.open .faq__q::after{content:"\2013"}
-  .faq__a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-  .faq__a p{color:var(--steel);padding:0 0 24px;font-size:.98rem}
-
-  /* ---------- CONTACT ---------- */
-  #contact{position:relative;overflow:hidden}
-  #contact .contact-bg{position:absolute;inset:0;z-index:0;background:url('contact-bg.jpg') center/cover}
-  #contact .contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,29,50,.95),rgba(9,29,50,.86) 50%,rgba(9,29,50,.74))}
-  #contact .wrap{position:relative;z-index:1}
-  .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;margin-bottom:36px}
-  .contact-grid > div{background:rgba(9,29,50,.55);padding:26px 24px}
-  .contact-grid .label{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#9fb2c4;margin-bottom:12px}
-  .contact-grid .val{color:#fff;font-weight:700;font-size:1.06rem}
-  .contact-grid .val span{display:block;font-weight:400;color:#cdd8e2;font-size:.95rem}
-  .contact-grid a.val:hover{color:var(--orange)}
-  .contact-cta{display:flex;gap:14px;flex-wrap:wrap}
-
-  /* ---------- FOOTER ---------- */
-  footer.site{background:var(--ink);color:#9fb2c4;padding:60px 0 32px;font-size:.9rem}
-  .tagline{font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:24px;letter-spacing:.01em}
-  .tagline b{color:var(--orange)}
-  .footer-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
-  footer .f-logo img{height:34px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
-  footer .f-logo p{max-width:290px}
-  .footer-cols{display:flex;gap:56px;flex-wrap:wrap}
-  .footer-cols .label{color:#fff;font-weight:700;margin-bottom:12px;font-size:.82rem;letter-spacing:.06em}
-  .footer-cols a:hover{color:#fff}
-  .disclaimer{padding-top:28px;font-size:.8rem;line-height:1.75;color:#7d8e9c;max-width:920px}
-  .copy{margin-top:18px;font-size:.82rem;color:#6f8093}
-
-  /* ---------- LASER SYSTEMS (machine types) ---------- */
-  .systems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .sys{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 28px;position:relative;transition:.2s;overflow:hidden}
-  .sys::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .25s}
-  .sys:hover{box-shadow:0 14px 34px rgba(13,42,70,.10);transform:translateY(-2px)}
-  .sys:hover::before{transform:scaleY(1)}
-  .sys__ic{width:46px;height:46px;border-radius:10px;background:var(--mist);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-  .sys__ic svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .sys h3{font-size:1.1rem;margin-bottom:9px}
-  .sys p{color:var(--steel);font-size:.92rem;margin-bottom:13px}
-  .sys .bl{font-size:.78rem;color:var(--navy);font-weight:700;letter-spacing:.02em;border-top:1px solid var(--line);padding-top:11px}
-  .sys .bl span{color:var(--steel);font-weight:400}
-  @media(max-width:960px){.systems{grid-template-columns:1fr}}
-
-  /* ---------- BRANDS ---------- */
-  .brands{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  .brandcat{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:#fff}
-  .brandcat h3{font-size:.98rem;margin-bottom:2px;color:var(--navy);display:flex;align-items:center;gap:9px}
-  .brandcat h3::before{content:"";width:16px;height:2px;background:var(--orange);flex:0 0 auto}
-  .brandcat .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
-  .chip{background:var(--mist);border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:.82rem;padding:6px 12px;border-radius:20px;white-space:nowrap}
-  .brandnote{margin-top:22px;font-size:.82rem;color:var(--steel);max-width:820px}
-  @media(max-width:640px){.brands{grid-template-columns:1fr}}
-
-  /* ---------- MOBILE CALL BAR ---------- */
-  .callbar{display:none}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media(max-width:960px){
-    .cards{grid-template-columns:repeat(2,1fr)}
-    .steps{grid-template-columns:1fr}
-    .split{grid-template-columns:1fr;gap:36px}
-    .contact-grid{grid-template-columns:repeat(2,1fr)}
-    .hero h1{font-size:2.6rem}
-    .section{padding:70px 0}
-    .topbar{display:none}
-  }
-  @media(max-width:1000px){
-    .nav__links{display:none}
-    .nav__toggle{display:flex}
-    .nav.open .nav__links{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12);z-index:60}
-    .nav.open .nav__links li{padding:13px 0;border-bottom:1px solid var(--mist)}
-    .nav__right{gap:16px}
-  }
-  @media(max-width:640px){
-    .nav__phone{display:none}
-    .nav__right .btn{display:none}
-    .nav__logo img{height:32px}
-    .nav{height:64px}
-    .nav.open .nav__links{top:64px}
-    .cards{grid-template-columns:1fr}
-    .contact-grid{grid-template-columns:1fr}
-    .hero h1{font-size:2.15rem}
-    .hero__inner{padding:80px 0 84px}
-    .band{padding:38px 26px}
-    .section-head h2{font-size:1.75rem}
-    body{padding-bottom:62px}
-    .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--navy);border-top:2px solid var(--orange)}
-    .callbar a{flex:1;text-align:center;padding:16px 4px;color:#fff;font-weight:700;font-size:.88rem}
-    .callbar a.primary{background:var(--orange)}
-    .callbar a+a{border-left:1px solid rgba(255,255,255,.15)}
-  }
-
-/* dropdown navigation */
-.nav{display:flex;align-items:center;gap:22px;height:76px}
-.nav__logo{flex:0 0 auto}
-.nav__logo img{height:42px;width:auto;display:block}
-.nav__links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
-.nav__links > li{position:relative}
-.nav__links > li > a,.nav__links > li > button{display:flex;align-items:center;gap:7px;font:inherit;font-weight:600;font-size:.9rem;color:var(--ink);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;line-height:1.2}
-.nav__links > li > a:hover,.nav__links > li > button:hover,.nav__links > li:hover > button{color:var(--orange);background:var(--mist)}
-.nav__caret{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.5;flex:0 0 auto}
-.nav__menu{display:none;position:absolute;top:calc(100% + 10px);left:0;min-width:286px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 20px 44px rgba(13,42,70,.15);padding:9px;list-style:none;margin:0;z-index:80}
-.nav__links > li.is-open > .nav__menu{display:block;animation:navMenuIn .16s ease}
-@keyframes navMenuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
-.nav__menu li{list-style:none}
-.nav__menu a{display:block;padding:9px 13px;border-radius:9px;font-size:.88rem;font-weight:600;color:var(--ink);white-space:nowrap}
-.nav__menu a:hover{background:var(--mist);color:var(--orange)}
-.nav__menu .navlead{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);font-weight:800;padding:9px 13px 5px}
-.nav__menu .navsep{height:1px;background:var(--line);margin:7px 5px}
-.nav__right{display:flex;align-items:center;gap:18px;margin-left:auto;flex:0 0 auto}
-@media(max-width:1060px){
-  .nav__links{display:none}
-  .nav__toggle{display:flex}
-  .nav.open .nav__links{display:block;position:absolute;top:76px;left:0;right:0;background:#fff;padding:6px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(13,42,70,.14);z-index:70;max-height:calc(100vh - 76px);overflow-y:auto}
-  .nav.open .nav__links > li{border-bottom:1px solid var(--mist);padding:0}
-  .nav.open .nav__links > li > a,.nav.open .nav__links > li > button{padding:15px 0;width:100%;font-size:1rem}
-  .nav.open .nav__caret{display:none}
-  .nav.open .nav__links > li.is-open > .nav__menu{position:static;box-shadow:none;border:0;padding:0 0 12px;min-width:0;background:none}
-  .nav.open .nav__menu a{padding:8px 0 8px 15px;font-weight:500;font-size:.92rem;color:var(--steel);white-space:normal}
-  .nav.open .nav__menu .navlead,.nav.open .nav__menu .navsep{display:none}
-  .nav__right{gap:14px}
-}
-@media(max-width:640px){
-  .nav__logo img{height:32px}
-  .nav{height:64px}
-  .nav.open .nav__links{top:64px;max-height:calc(100vh - 64px)}
-}
-
-
-/* dropdown navigation: tall menu handling */
-.nav__menu{max-height:calc(100vh - 118px);overflow-y:auto;overscroll-behavior:contain}
-@media(min-width:1061px){
-  /* transparent hit-test bridge across the 10px gap between the button and its menu */
-  .nav__links > li.is-open::after{content:"";position:absolute;left:0;right:0;top:100%;height:14px;z-index:79}
-  .nav__links > li:nth-child(3).is-open > .nav__menu{min-width:524px;max-width:calc(100vw - 48px);display:grid;grid-template-columns:1fr 1fr;gap:0 10px;align-content:start}
-  .nav__links > li:nth-child(3) > .nav__menu > .navlead,
-  .nav__links > li:nth-child(3) > .nav__menu > .navsep,
-  .nav__links > li:nth-child(3) > .nav__menu > li:has(b){grid-column:1 / -1}
-}
-@media(max-width:1060px){
-  .nav.open .nav__menu{max-height:none;overflow:visible}
-}
-
-
-/* urgent link, CoreX-style */
-.nav__urgent{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.86rem;color:var(--orange);white-space:nowrap;padding:8px 13px;border:1px solid rgba(250,109,8,.4);border-radius:999px;background:rgba(250,109,8,.06)}
-.nav__urgent:hover{background:rgba(250,109,8,.12);border-color:var(--orange)}
-.nav__urgent .dotpulse{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto}
-@media(max-width:1240px){.nav__phone{display:none}}
-@media(max-width:1160px){.nav__urgent{display:none}}
-
-
-/* navigation polish */
-.nav__links > li > a.is-current,.nav__links > li > button.is-current{color:var(--navy)}
-.nav__links > li > a.is-current::after,.nav__links > li > button.is-current::after{content:"";position:absolute;left:13px;right:13px;bottom:-2px;height:2px;background:var(--orange);border-radius:2px}
-.nav__links > li > a,.nav__links > li > button{position:relative}
-.nav__links > li > button[aria-expanded="true"]{color:var(--orange);background:var(--mist)}
-.nav__links > li > a:focus-visible,.nav__links > li > button:focus-visible,.nav__menu a:focus-visible,.nav__urgent:focus-visible,.nav__toggle:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:9px}
-.nav__caret{transition:transform .16s}
-.nav__links > li > button[aria-expanded="true"] .nav__caret{transform:rotate(-135deg) translateY(-2px)}
-.nav__toggle span{transition:transform .2s,opacity .2s}
-.nav.open .nav__toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav.open .nav__toggle span:nth-child(2){opacity:0}
-.nav.open .nav__toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-body.nav-locked{overflow:hidden}
-@media(max-width:1060px){
-  .nav.open .nav__caret{display:inline-block;margin-left:auto;transform:rotate(45deg) translateY(-2px)}
-  .nav.open .nav__links > li.is-open > button .nav__caret{transform:rotate(-135deg) translateY(-2px)}
-  .nav.open .nav__links > li > button{justify-content:space-between}
-  .nav.open .nav__links > li > a.is-current::after,.nav.open .nav__links > li > button.is-current::after{display:none}
-}
-@media(prefers-reduced-motion:reduce){
-  .nav__menu,.nav__caret,.nav__toggle span{transition:none}
-  .nav__links > li.is-open > .nav__menu{animation:none}
-}
-
-</style>
+<link rel="stylesheet" href="/assets/phasex.css">
+<link rel="stylesheet" href="/assets/home.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -486,10 +149,11 @@ body.nav-locked{overflow:hidden}
 <!-- TOP UTILITY BAR -->
 <div class="topbar">
   <div class="wrap">
-    <span><b>Independent industrial, packaging and scientific laser service</b> · United States and Canada</span>
+    <span><b>Independent industrial, packaging and scientific laser service</b> &middot; United States and Canada</span>
     <span class="topbar__r">
-      <span>Mon–Fri 8:00–18:00 ET</span>
+      <span>Mon&ndash;Fri 8:00&ndash;18:00 ET</span>
       <a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a>
+      <a href="tel:+15513796083">(551) 379-6083</a>
     </span>
   </div>
 </div>
@@ -498,14 +162,14 @@ body.nav-locked{overflow:hidden}
 <header class="site">
   <div class="wrap">
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="#top" class="nav__logo"><img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser Services"></a>
+      <a href="/" class="nav__logo"><img src="/phasex-logo.png" alt="PhaseX Laser Services"></a>
       <ul class="nav__links">
-        <li><button type="button">Industrial<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Industrial lasers</li><li><a href="#services">Service scope</a></li><li><a href="#systems">Systems we build</a></li><li><a href="#brands">Brands and platforms</a></li><li><a href="#retrofit">Retrofit and modernization</a></li><li><a href="#components">Component-level repair</a></li></ul></li><li><button type="button">Packaging<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Packaging and printing</li><li><a href="/packaging-laser-service/"><b>Packaging laser service</b></a></li><li class="navsep"></li><li><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a></li><li><a href="/packaging-laser-service/laser-die-cutting-converting/">Laser die cutting and converting</a></li><li><a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a></li><li><a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></li><li class="navsep"></li><li><a href="/packaging-laser-service/#brands">Brands A to Z, 84 manufacturers</a></li></ul></li><li><button type="button">Scientific<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Scientific and research</li><li><a href="/scientific-laser-repair/"><b>Scientific laser repair</b></a></li><li class="navsep"></li><li><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a></li><li><a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond lasers</a></li><li><a href="/scientific-laser-repair/picosecond-lasers/">Picosecond lasers</a></li><li><a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire lasers</a></li><li><a href="/scientific-laser-repair/shg-harmonic-generation/">Harmonic generation</a></li><li><a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a></li><li><a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and power supplies</a></li><li><a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a></li><li class="navsep"></li><li class="navlead">Manufacturers</li><li><a href="/scientific-laser-repair/coherent/">Coherent</a></li><li><a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a></li><li><a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive and NKT</a></li><li><a href="/scientific-laser-repair/light-conversion/">Light Conversion</a></li><li><a href="/scientific-laser-repair/continuum-lumibird/">Continuum and Lumibird</a></li><li><a href="/scientific-laser-repair/ekspla/">EKSPLA</a></li><li><a href="/scientific-laser-repair/litron-lasers/">Litron</a></li><li class="navsep"></li><li><a href="/scientific-laser-systems/"><b>Laboratory systems integration</b></a></li></ul></li><li><button type="button">Company<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Company</li><li><a href="#why">Why PhaseX</a></li><li><a href="#how">How we work</a></li><li><a href="#coverage">Coverage, US and Canada</a></li><li><a href="#faq">Questions we get asked</a></li><li><a href="/scientific-laser-repair/intake/">Request an evaluation</a></li><li><a href="#contact">Contact</a></li></ul></li>
+        <li><button type="button" class="is-current">Industrial<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Industrial lasers</li><li><a href="/#services">Service scope</a></li><li><a href="/#systems">Systems we build</a></li><li><a href="/#brands">Brands and platforms</a></li><li><a href="/#retrofit">Retrofit and modernization</a></li><li><a href="/#components">Component-level repair</a></li></ul></li><li><button type="button">Packaging<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Packaging and printing</li><li><a href="/packaging-laser-service/"><b>Packaging laser service</b></a></li><li class="navsep"></li><li><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a></li><li><a href="/packaging-laser-service/laser-die-cutting-converting/">Laser die cutting and converting</a></li><li><a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a></li><li><a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></li><li class="navsep"></li><li><a href="/packaging-laser-service/#brands">Brands A to Z, 84 entries</a></li></ul></li><li><button type="button">Scientific<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Scientific and research</li><li><a href="/scientific-laser-repair/"><b>Scientific laser repair</b></a></li><li class="navsep"></li><li><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a></li><li><a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond lasers</a></li><li><a href="/scientific-laser-repair/picosecond-lasers/">Picosecond lasers</a></li><li><a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire lasers</a></li><li><a href="/scientific-laser-repair/shg-harmonic-generation/">Harmonic generation</a></li><li><a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a></li><li><a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and power supplies</a></li><li><a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a></li><li><a href="/scientific-laser-systems/">Systems integration</a></li><li class="navsep"></li><li class="navlead">Manufacturers</li><li><a href="/scientific-laser-repair/coherent/">Coherent</a></li><li><a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a></li><li><a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive and NKT</a></li><li><a href="/scientific-laser-repair/light-conversion/">Light Conversion</a></li><li><a href="/scientific-laser-repair/continuum-lumibird/">Continuum and Lumibird</a></li><li><a href="/scientific-laser-repair/ekspla/">EKSPLA</a></li><li><a href="/scientific-laser-repair/litron-lasers/">Litron</a></li><li class="navsep"></li><li><a href="/scientific-laser-systems/"><b>Laboratory systems integration</b></a></li></ul></li><li><button type="button">Resources &amp; Company<span class="nav__caret" aria-hidden="true"></span></button><ul class="nav__menu"><li class="navlead">Resources and company</li><li><a href="/#why">Why PhaseX</a></li><li><a href="/#how">How we work</a></li><li><a href="/#coverage">Coverage, US and Canada</a></li><li><a href="/#faq">Questions we get asked</a></li><li><a href="/blog/">Notes</a></li><li><a href="/preventive-maintenance/">Preventive maintenance</a></li><li><a href="/symptom-index/">Symptom index</a></li><li><a href="/scientific-laser-repair/intake/">Request an evaluation</a></li><li><a href="/#contact">Contact</a></li></ul></li>
       </ul>
       <div class="nav__right">
         <a href="tel:+15513796083" class="nav__urgent"><span class="dotpulse" aria-hidden="true"></span>Machine down?</a>
         <a href="tel:+15513796083" class="nav__phone">+1 (551) 379-6083</a>
-        <a href="#contact" class="btn btn--primary">Request service</a>
+        <a href="/scientific-laser-repair/intake/?sector=industrial" class="btn btn--primary">Request service</a>
         <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-controls="nav"><span></span><span></span><span></span></button>
       </div>
     </nav>
@@ -543,6 +207,19 @@ body.nav-locked{overflow:hidden}
     </div>
   </div>
 </div>
+
+<!-- SECTORS -->
+<section class="section" id="sectors">
+<div class="wrap">
+<div class="section-head reveal"><span class="eyebrow">Three kinds of laser, one service company</span><h2>Where does your machine sit?</h2><p>Independent service across the United States and Canada. Pick the one that matches your equipment, or start from <a href="/symptom-index/">what the machine is doing</a>.</p></div>
+<div class="cards reveal">
+<div class="card"><div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></div><span class="card__no">01</span></div><h3>Industrial laser machines</h3><p>Fiber and CO2 cutting, welding, cleaning and cladding machines. Installation and commissioning, component-level repair, control and drive retrofit, cutting heads, sources, chillers and gas paths.</p><p class="card__go"><a href="/#services">Industrial service scope</a> <a href="/scientific-laser-repair/intake/?sector=industrial">Request service</a></p></div>
+<div class="card"><div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"/></svg></div><span class="card__no">02</span></div><h3>Packaging and printing lasers</h3><p>Flexo plate imagers, laser die cutting and converting, coding and marking, gravure and screen engraving, and the laser cleaning cells beside them. 84 brands and platforms documented.</p><p class="card__go"><a href="/packaging-laser-service/">Packaging laser service</a> <a href="/scientific-laser-repair/intake/?sector=packaging">Request service</a></p></div>
+<div class="card"><div class="card__top"><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M9 2h6M10 2v6L5 20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1L14 8V2"/></svg></div><span class="card__no">03</span></div><h3>Scientific laser systems</h3><p>Ultrafast, Ti:Sapphire, picosecond, OPO and OPA, harmonic stages, diode drivers and power supplies, including instruments the manufacturer no longer supports.</p><p class="card__go"><a href="/scientific-laser-repair/">Scientific laser repair</a> <a href="/scientific-laser-repair/intake/?sector=scientific">Request service</a></p></div>
+</div>
+<p class="tnote" style="margin-top:16px">Rather not wait for the call? <a href="/preventive-maintenance/">Monthly and quarterly preventive maintenance programs</a> put the machines you depend on on a schedule, with an equipment record and written findings after every visit.</p>
+</div>
+</section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
@@ -901,139 +578,33 @@ body.nav-locked{overflow:hidden}
     <div class="tagline"><b>Machines don't wait.</b></div>
     <div class="footer-top">
       <div class="f-logo">
-        <img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser, Industrial Laser Services">
-        <p>Independent industrial fiber laser service, based in Parsippany, New Jersey.</p>
+        <img src="/phasex-logo.png" alt="PhaseX Laser Services">
+        <p>Independent industrial, packaging and scientific laser service. Based in Parsippany, New Jersey, working across the United States and Canada.</p>
       </div>
       <div class="footer-cols">
         <div><div class="label">Contact</div><a href="tel:+15513796083">(551) 379-6083</a><br><a href="mailto:service@phasexlaser.com">service@phasexlaser.com</a></div>
         <div><div class="label">Office</div>239 New Road, Suite B210<br>Parsippany, NJ 07054</div>
-        <div><div class="label">Sections</div><a href="#services">Services</a> · <a href="#systems">Systems</a> · <a href="#brands">Brands</a> · <a href="#how">How we work</a> · <a href="#coverage">Coverage</a> · <a href="#faq">FAQ</a></div>
-        <div><div class="label">Packaging</div><a href="/packaging-laser-service/">Overview</a> · <a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a> · <a href="/packaging-laser-service/laser-die-cutting-converting/">Die cutting</a> · <a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a> · <a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen</a></div>
-        <div><div class="label">Scientific lasers</div><a href="/scientific-laser-repair/">Repair and diagnostics</a> · <a href="/scientific-laser-systems/">Systems integration</a></div>
+        <div><div class="label">Industrial</div><a href="/#services">Services</a> &middot; <a href="/#systems">Systems</a> &middot; <a href="/#brands">Brands</a> &middot; <a href="/#coverage">Coverage</a></div>
       </div>
     </div>
-    <p class="disclaimer">PhaseX Laser is an independent service provider. We are not an authorized service center for any machine manufacturer unless expressly stated in writing. Manufacturer and brand names are used for identification only. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the machine seller or manufacturer.</p>
-    <p class="copy">© 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a division of CoreX Robotics Services LLC.<br>(551) 379-6083 · service@phasexlaser.com</p>
+    <div class="footer-index">
+      <div><div class="label">Services</div><p><a href="/#services">Industrial laser service</a> &middot; <a href="/packaging-laser-service/">Packaging lasers</a> &middot; <a href="/scientific-laser-repair/">Scientific repair</a> &middot; <a href="/symptom-index/">Symptom index</a> &middot; <a href="/blog/">Notes</a> &middot; <a href="/scientific-laser-systems/">Systems integration</a> &middot; <a href="/preventive-maintenance/">Preventive maintenance</a> &middot; <a href="/scientific-laser-repair/intake/?sector=industrial">Request service</a></p></div>
+      <div><div class="label">Packaging</div><p><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a> &middot; <a href="/packaging-laser-service/laser-die-cutting-converting/">Die cutting and converting</a> &middot; <a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a> &middot; <a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></p></div>
+      <div><div class="label">Scientific</div><p><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a> &middot; <a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond</a> &middot; <a href="/scientific-laser-repair/picosecond-lasers/">Picosecond</a> &middot; <a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire</a> &middot; <a href="/scientific-laser-repair/shg-harmonic-generation/">SHG and harmonics</a> &middot; <a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA</a> &middot; <a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and supplies</a> &middot; <a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a> &middot; <a href="/scientific-laser-repair/coherent/">Coherent</a> &middot; <a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a> &middot; <a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive / NKT</a> &middot; <a href="/scientific-laser-repair/light-conversion/">Light Conversion</a> &middot; <a href="/scientific-laser-repair/continuum-lumibird/">Continuum / Lumibird</a> &middot; <a href="/scientific-laser-repair/ekspla/">EKSPLA</a> &middot; <a href="/scientific-laser-repair/litron-lasers/">Litron</a></p></div>
+    </div>
+    <p class="disclaimer">PhaseX Laser Services is an independent third-party service provider. We are not an authorized service center for any laser or machine manufacturer unless expressly stated in writing, and we are not affiliated with or endorsed by any manufacturer named on this site. Manufacturer, brand and model names, including Coherent, Spectra-Physics, MKS Instruments, Onefive, NKT Photonics, Hamamatsu Photonics, Light Conversion, Continuum, Lumibird, Quantel, EKSPLA, Litron Lasers, Amplitude, TOPTICA, Menlo Systems, KMLabs, Clark-MXR, Time-Bandwidth Products and Lumentum, are used for identification only and remain the property of their respective owners. Work on equipment under an active manufacturer warranty is performed only within a scope authorized in writing by the equipment seller or manufacturer.</p>
+    <p class="copy">&copy; 2026 CoreX Robotics Services LLC. PhaseX Laser Services is a registered DBA of CoreX Robotics Services LLC.<br>(551) 379-6083 &middot; service@phasexlaser.com</p>
   </div>
 </footer>
 
 <!-- MOBILE CALL BAR -->
 <div class="callbar">
-  <a href="#contact" class="primary">Request service</a>
+  <a href="/scientific-laser-repair/intake/?sector=industrial" class="primary">Request service</a>
   <a href="tel:+15513796083">Call</a>
   <a href="mailto:service@phasexlaser.com">Email</a>
 </div>
 
-<script>
-(function(){
-  var nav=document.getElementById('nav'), toggle=document.getElementById('navToggle');
-  if(!nav) return;
-  var groups=[].slice.call(nav.querySelectorAll('.nav__links > li')).filter(function(li){
-    return li.querySelector(':scope > button') && li.querySelector(':scope > .nav__menu');
-  });
-  var mq=window.matchMedia('(max-width:1060px)');
-  var escLi=null; /* only the group closed by Escape is suppressed, and only until the user leaves it */
-
-  function btnOf(li){ return li.querySelector(':scope > button'); }
-  function closeOne(li){
-    li.classList.remove('is-open');
-    li.__hoverOpened=false;
-    var b=btnOf(li); if(b) b.setAttribute('aria-expanded','false');
-  }
-  function closeAll(except){ groups.forEach(function(li){ if(li!==except) closeOne(li); }); }
-  function openOne(li){
-    closeAll(li);
-    li.classList.add('is-open');
-    var b=btnOf(li); if(b) b.setAttribute('aria-expanded','true');
-  }
-
-  groups.forEach(function(li){
-    var btn=btnOf(li);
-    btn.setAttribute('aria-haspopup','true');
-    btn.setAttribute('aria-expanded','false');
-
-    btn.addEventListener('click',function(e){
-      e.preventDefault(); e.stopPropagation();
-      escLi=null;
-      if(li.__hoverOpened){ li.__hoverOpened=false; return; }
-      if(li.classList.contains('is-open')) closeOne(li); else openOne(li);
-    });
-
-    li.addEventListener('mouseenter',function(){
-      if(mq.matches) return;
-      if(li===escLi) return;
-      if(!li.classList.contains('is-open')){ openOne(li); li.__hoverOpened=true; }
-    });
-    li.addEventListener('mouseleave',function(){
-      if(mq.matches) return;
-      if(li===escLi) escLi=null;
-      closeOne(li);
-    });
-
-    li.addEventListener('focusin',function(){
-      if(mq.matches) return;
-      if(li===escLi) return;
-      if(!li.classList.contains('is-open')) openOne(li);
-    });
-    li.addEventListener('focusout',function(){
-      if(mq.matches) return;
-      setTimeout(function(){
-        if(!li.contains(document.activeElement)){
-          if(li===escLi) escLi=null;
-          closeOne(li);
-        }
-      },0);
-    });
-  });
-
-  function closeNav(){
-    closeAll();
-    nav.classList.remove('open');
-    document.body.classList.remove('nav-locked');
-    if(toggle) toggle.setAttribute('aria-expanded','false');
-  }
-
-  document.addEventListener('click',function(e){ if(!nav.contains(e.target)) { escLi=null; closeNav(); } });
-
-  document.addEventListener('keydown',function(e){
-    if(e.key!=='Escape' && e.key!=='Esc') return;
-    var openLi=null;
-    groups.forEach(function(li){ if(li.classList.contains('is-open')) openLi=li; });
-    var wasMobileMenu=nav.classList.contains('open');
-    escLi=openLi;
-    closeNav();
-    if(wasMobileMenu && toggle){ toggle.focus(); }
-    else if(openLi){ var b=btnOf(openLi); if(b) b.focus(); }
-  });
-
-  if(toggle){
-    toggle.setAttribute('aria-expanded','false');
-    toggle.addEventListener('click',function(e){
-      e.stopPropagation();
-      escLi=null;
-      var open=nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded',String(open));
-      document.body.classList.toggle('nav-locked',open);
-      if(!open) closeAll();
-    });
-  }
-
-  nav.querySelectorAll('.nav__links a').forEach(function(a){ a.addEventListener('click',closeNav); });
-  mq.addEventListener('change',function(){ escLi=null; closeNav(); });
-})();
-  var hv=document.getElementById('heroVideo');
-  if(hv){var sr=function(){try{hv.playbackRate=1.4;}catch(e){}};hv.addEventListener('loadedmetadata',sr);sr();}
-  document.querySelectorAll('.faq__q').forEach(function(q){
-    q.addEventListener('click',function(){
-      var item=q.parentElement,a=q.nextElementSibling,open=item.classList.contains('open');
-      document.querySelectorAll('.faq__item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq__a').style.maxHeight=null;});
-      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
-    });
-  });
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-</script>
+<script src="/assets/phasex.js"></script>
+<script src="/assets/home.js"></script>
 </body>
 </html>

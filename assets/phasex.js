@@ -95,3 +95,166 @@
   nav.querySelectorAll('.nav__links a').forEach(function(a){ a.addEventListener('click',closeNav); });
   mq.addEventListener('change',function(){ escLi=null; closeNav(); });
 })();
+
+/* Packaging brands and platforms list: search, sector filter and reset.
+   The complete list is already in the HTML. This only narrows what is shown,
+   and every value is handled as text, never as markup. */
+(function(){
+  var list=document.getElementById('mlist'), tools=document.getElementById('mtools');
+  if(!list||!tools) return;
+  var q=document.getElementById('mq'), sec=document.getElementById('msec'),
+      reset=document.getElementById('mreset'), count=document.getElementById('mcount'),
+      none=document.getElementById('mnone');
+  var rows=[].slice.call(list.children).map(function(li){
+    return {el:li, sector:li.getAttribute('data-sector')||'', k:(li.textContent||'').toLowerCase()};
+  });
+  var total=rows.length;
+  tools.hidden=false;
+
+  function apply(){
+    var text=(q.value||'').toLowerCase().trim();
+    var words=text?text.split(/\s+/):[];
+    var want=sec.value||'';
+    var shown=0;
+    rows.forEach(function(r){
+      var ok=(!want||r.sector===want);
+      for(var i=0;ok&&i<words.length;i++){ if(r.k.indexOf(words[i])<0) ok=false; }
+      r.el.hidden=!ok; if(ok) shown++;
+    });
+    count.textContent=(shown===total)
+      ? (total+' entries')
+      : (shown+' of '+total+' entries shown');
+    if(none) none.hidden=(shown!==0);
+  }
+  function clear(){ q.value=''; sec.value=''; apply(); q.focus(); }
+
+  q.addEventListener('input',apply);
+  sec.addEventListener('change',apply);
+  reset.addEventListener('click',clear);
+  q.addEventListener('keydown',function(e){ if(e.key==='Escape'){ e.stopPropagation(); clear(); } });
+  apply();
+})();
+
+/* Intake form: preselect from the link that brought the visitor here, show the
+   sector-specific guidance only when it applies, and check attachments against the
+   form service's documented 10 MB total before anything is sent.
+   Query values are only ever assigned to form field values or compared as
+   strings. Nothing from the URL is written into the page as markup. */
+(function(){
+  var form=document.getElementById('intakeForm');
+  if(!form) return;
+  var etype=document.getElementById('etype'),
+      filesErr=document.getElementById('filesErr'), formErr=document.getElementById('formErr');
+  /* Content blocks and nav items that belong to one sector only.
+     data-sector-content, never data-sector: the <option> elements in the equipment
+     select carry data-sector so the URL can preselect one, and hiding those would
+     leave the customer with no equipment to choose. */
+  var scoped=[].slice.call(document.querySelectorAll('[data-sector-content]'));
+  var fileInputs=['files','files2','files3'].map(function(id){return document.getElementById(id);})
+                 .filter(function(el){return el;});
+  var LIMIT=10*1024*1024; /* FormSubmit documents 10 MB as the total across all file fields */
+  var OK_EXT=['jpg','jpeg','png','gif','webp','heic','heif','bmp','tif','tiff',
+              'pdf','csv','txt','doc','docx','xls','xlsx'];
+
+  function sectorOf(){
+    if(!etype) return '';
+    var o=etype.options[etype.selectedIndex];
+    return (o && o.getAttribute('data-sector')) || '';
+  }
+  /* A hidden field must not be submitted, so it is disabled as well as hidden.
+     Disabling keeps the typed value in place, so it comes back if the visitor
+     switches back to that sector. */
+  function syncSector(){
+    var now=sectorOf();
+    scoped.forEach(function(el){
+      var off=(el.getAttribute('data-sector-content')!==now);
+      el.hidden=off;
+      [].slice.call(el.querySelectorAll('input,select,textarea')).forEach(function(f){
+        f.disabled=off;
+      });
+    });
+  }
+
+  /* preselect from ?sector=&manufacturer=&model=&urgency=&intent= */
+  try{
+    var q=new URLSearchParams(window.location.search);
+    var sec=q.get('sector');
+    if(sec && etype){
+      for(var i=0;i<etype.options.length;i++){
+        if(etype.options[i].getAttribute('data-sector')===sec){ etype.selectedIndex=i; break; }
+      }
+    }
+    [['manufacturer','mfr'],['model','model'],['city','city'],['serial','serial']].forEach(function(pair){
+      var v=q.get(pair[0]), el=document.getElementById(pair[1]);
+      if(v && el && !el.value) el.value=v;           /* value assignment only, never innerHTML */
+    });
+    var us=document.getElementById('urgency');
+    var urgencyMap={'machine-stopped':'Machine stopped',
+                    'production-running':'Production running with a problem',
+                    'planned':'Planned work'};
+    function pick(sel,want){
+      if(!sel||!want) return;
+      for(var j=0;j<sel.options.length;j++){ if(sel.options[j].value===want){ sel.selectedIndex=j; return; } }
+    }
+    var u=q.get('urgency');
+    if(u) pick(us,urgencyMap[u]||u);
+    /* ?intent=maintenance arrives from the preventive maintenance page */
+    if(q.get('intent')==='maintenance'){
+      var pref=document.getElementById('maintPref');
+      var wanted={'monthly':'Monthly preventive maintenance',
+                  'quarterly':'Quarterly preventive maintenance'}[q.get('program')]
+                 || 'Recommend a program';
+      pick(pref,wanted);
+      if(!u) pick(us,'Planned work');
+      var block=document.getElementById('maintBlock');
+      if(block) block.setAttribute('data-intent','maintenance');
+    }
+  }catch(e){ /* a malformed query must never stop the form from working */ }
+
+  if(etype) etype.addEventListener('change',syncSector);
+  syncSector();
+
+  function extOf(name){
+    var d=String(name).lastIndexOf('.');
+    return d<0?'':String(name).slice(d+1).toLowerCase();
+  }
+  function checkFiles(){
+    var total=0, badType=[];
+    fileInputs.forEach(function(el){
+      for(var i=0;i<el.files.length;i++){
+        var f=el.files[i]; total+=f.size;
+        if(OK_EXT.indexOf(extOf(f.name))<0) badType.push(f.name);
+      }
+    });
+    var msg='';
+    if(badType.length){
+      msg='These files are not a type we can accept: '+badType.join(', ')+
+          '. Accepted types are images, PDF, CSV, text, Word and Excel.';
+    }else if(total>LIMIT){
+      msg='The attachments add up to '+(total/1048576).toFixed(1)+
+          ' MB. The form service accepts 10 MB in total across all three fields. '+
+          'Remove a file, or send the request without attachments and reply to our response.';
+    }
+    if(filesErr){ filesErr.textContent=msg; filesErr.hidden=!msg; }
+    fileInputs.forEach(function(el){
+      if(msg){ el.setAttribute('aria-invalid','true'); el.setAttribute('aria-describedby','filesErr'); }
+      else { el.removeAttribute('aria-invalid'); }
+    });
+    return !msg;
+  }
+  fileInputs.forEach(function(el){ el.addEventListener('change',checkFiles); });
+
+  form.addEventListener('submit',function(e){
+    if(!checkFiles()){
+      e.preventDefault();
+      if(formErr){
+        formErr.textContent='Nothing has been sent. Please fix the attachments above and try again.';
+        formErr.hidden=false;
+      }
+      if(filesErr) filesErr.scrollIntoView({block:'center'});
+      if(fileInputs[0]) fileInputs[0].focus();
+      return;
+    }
+    if(formErr) formErr.hidden=true;
+  });
+})();

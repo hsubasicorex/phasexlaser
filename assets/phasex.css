@@ -235,7 +235,13 @@ footer .f-logo p{max-width:290px}
 .prose section:last-child{margin-bottom:0}
 
 /* ---------- SPEC TABLE ---------- */
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:18px;background:#fff}
+/* Grid and flex children default to min-width:auto, which means they cannot shrink
+   below their content's min-content width. table.spec carries min-width:560px, so
+   without min-width:0 here the table pushes the whole prose column wider than the
+   viewport and the page scrolls sideways instead of the table. This is the fix for
+   that: only the wrapper scrolls. */
+.doc > *,.prose,.tablewrap{min-width:0}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:12px;margin-bottom:18px;background:#fff}
 /* table-layout:fixed so column widths come from the table box and can never
    overflow it; the wrapper scrolls horizontally below 560px instead */
 table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:560px;table-layout:fixed}
@@ -460,7 +466,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .nav__urgent:hover{background:rgba(250,109,8,.12);border-color:var(--orange)}
 .nav__urgent .dotpulse{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto}
 @media(max-width:1240px){.nav__phone{display:none}}
-@media(max-width:1160px){.nav__urgent{display:none}}
+@media(max-width:1460px){.nav__urgent{display:none}}
 
 /* navigation polish */
 .nav__links > li > a.is-current,.nav__links > li > button.is-current{color:var(--navy)}
@@ -481,7 +487,80 @@ body.nav-locked{overflow:hidden}
   .nav.open .nav__links > li > button{justify-content:space-between}
   .nav.open .nav__links > li > a.is-current::after,.nav.open .nav__links > li > button.is-current::after{display:none}
 }
+
+/* ---- header fit ----------------------------------------------------------
+   The row is logo + four menu groups + Machine down pill + phone number + CTA,
+   and .wrap caps the content box at 1200px minus 56px of padding at every
+   desktop width. The sum did not fit that box, so the CTA sat outside the wrap
+   at wide viewports and pushed the document past the viewport at 1440.
+
+   The redundant element is the phone NUMBER text: the pill beside it is the
+   same tel: link, and the topbar carries the number and the email on every
+   page. Removing that text from the row, plus tighter gaps and padding, brings
+   the row inside the box with room to spare. The pill now appears only at
+   1461px and up, so it never competes with the CTA. Nothing is clipped and
+   nothing is hidden behind overflow.
+
+   Phone access after this change: the Machine down pill (tel:) at 1461px and
+   up, the topbar tel: link at every width, and the sticky call bar on mobile.
+--------------------------------------------------------------------------- */
+@media(min-width:1061px){
+  .nav{gap:16px;min-width:0;flex-wrap:nowrap}
+  .nav__logo{flex:0 0 auto;min-width:0}
+  .nav__links{min-width:0;flex:0 1 auto}
+  .nav__links > li > a,.nav__links > li > button{padding:9px 10px}
+  .nav__right{gap:14px;flex:0 0 auto}
+  .nav__right .btn{padding:12px 20px;white-space:nowrap}
+  /* redundant beside the pill and the topbar link, and it is what overflowed */
+  .nav__phone{display:none}
+}
+@media(min-width:1061px) and (max-width:1200px){
+  /* no spare padding to give away once the box is the viewport minus 56px */
+  .nav{gap:12px}
+  .nav__links > li > a,.nav__links > li > button{padding:9px 8px}
+  .nav__right{gap:12px}
+}
+
 @media(prefers-reduced-motion:reduce){
   .nav__menu,.nav__caret,.nav__toggle span{transition:none}
   .nav__links > li.is-open > .nav__menu{animation:none}
 }
+
+/* ---- packaging brands and platforms list (generated block) ---- */
+.mtools{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 18px}
+.mtools__f{display:flex;flex-direction:column;gap:6px;flex:1 1 220px;min-width:0}
+.mtools__f>span{font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--steel)}
+.mtools input,.mtools select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;color:var(--ink)}
+.mtools input:focus-visible,.mtools select:focus-visible{outline:2px solid var(--orange);outline-offset:1px}
+.mtools .btn{flex:0 0 auto}
+.mtools__c{flex:1 1 100%;margin:0;font-size:.86rem;color:var(--steel)}
+.mlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.mrow{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fff;min-width:0}
+.mrow__h{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between}
+.mrow__h b{font-size:1.02rem;color:var(--navy)}
+.mrow__tag{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--steel);background:var(--mist);border-radius:99px;padding:3px 9px}
+.mrow__p{margin:8px 0 10px;font-size:.92rem;line-height:1.5;overflow-wrap:anywhere}
+.mrow__a{margin:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.86rem}
+.mrow__a a{font-weight:600}
+.mnone{margin:0;padding:14px 16px;border:1px dashed var(--line);border-radius:12px;color:var(--steel)}
+@media(max-width:640px){
+  .mlist{grid-template-columns:1fr;gap:10px}
+  .mrow{padding:13px 14px}
+  .mrow__h{gap:4px}
+  .mrow__h b{font-size:1rem}
+  .mtools .btn{width:100%}
+}
+
+/* ---- intake form additions ---- */
+.form select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;color:var(--ink)}
+.form select:focus-visible{outline:2px solid var(--orange);outline-offset:1px}
+.form__err{margin:8px 0 0;padding:10px 12px;border:1px solid #c0392b;border-left-width:4px;border-radius:8px;background:#fdf3f2;color:#8e2a20;font-size:.9rem;font-weight:600}
+.form__group[data-sector-content][hidden]{display:none}
+.form input[aria-invalid="true"],.form select[aria-invalid="true"],.form textarea[aria-invalid="true"]{border-color:#c0392b}
+
+/* ---- article figures ---- */
+.fig{margin:26px 0;padding:0}
+.fig{min-width:0;max-width:100%}
+.fig svg{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.fig figcaption{margin-top:10px;font-size:.86rem;line-height:1.5;color:var(--steel)}
+@media(max-width:640px){.fig{margin:20px 0}.fig figcaption{font-size:.82rem}}

@@ -84,9 +84,37 @@
   [Litron](https://phasexlaser.com/scientific-laser-repair/litron-lasers/)
 - [Laboratory laser systems integration](https://phasexlaser.com/scientific-laser-systems/)
 
+## Notes
+
+- [Notes index](https://phasexlaser.com/blog/): short pieces by PhaseX Laser Services on
+  identifying equipment and describing a fault usefully. No repair procedures, and no article
+  diagnoses a machine from a single symptom.
+- [The same flexo plate complaint, three different machines to look at](https://phasexlaser.com/blog/flexo-plate-imaging-lams-til-direct-engraving/): A shallow or inconsistent plate can come from the imager, the exposure step or the processor, and which of those exist at all depends on the platemaking route you run.
+- [Is it a marking problem or an inspection problem? The answer changes the service call](https://phasexlaser.com/blog/co2-fiber-uv-coding-laser-service/): A code that a person can read and a code the vision system accepts are two different observations. Separating them, and naming the laser family and the substrate, is what makes a coder service request useful.
+- [Machine, laser source, controller: three identities on one converting line](https://phasexlaser.com/blog/converting-machine-builder-laser-source-service/): The name on a converting machine, the laser source inside it and the controller on its operator panel are three separate pieces of information. Knowing which one you are looking at shortens a service request.
+- [A sealed ultrafast laser is not an unrepairable one](https://phasexlaser.com/blog/ultrafast-laser-low-output-system-architecture/): Low output from an ultrafast system says little about which part failed, and a closed enclosure says nothing about whether it can be repaired. What helps is identifying the installed architecture.
+
+## Planned maintenance
+
+- [Preventive maintenance programs](https://phasexlaser.com/preventive-maintenance/): monthly and
+  quarterly service programs for industrial, packaging and scientific equipment. Both are real visit
+  cadences, not billing labels. The interval for each machine is set against its operating hours,
+  environment, condition and the manufacturer's own stated requirements, so neither cadence is presented
+  as a universal requirement. Deliverables are an equipment record, written findings after every visit,
+  an open-items list with priorities and the next planned date. No service-level agreement, response-time
+  commitment, uptime figure, certification or price is stated. Planned maintenance and corrective repair
+  are separate decisions with separate approvals, and one-off service continues unchanged.
+
+## Finding the right page from a symptom
+
+- [Laser symptom index](https://phasexlaser.com/symptom-index/): what owners and operators
+  actually describe, across packaging, industrial and scientific equipment, each entry linking to
+  the section that covers that equipment. It is a route into the right page, not a diagnosis:
+  no single symptom identifies a fault on this equipment, and the page says so.
+
 ## Requesting service
 
-- [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): equipment
+- [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): one form for all three sectors, five required fields, equipment
   type, manufacturer, model, serial number, symptoms, measurements and photographs.
 
 ## Notes for anyone citing this site
