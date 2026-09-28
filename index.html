@@ -271,6 +271,42 @@
     .callbar a.primary{background:var(--orange)}
     .callbar a+a{border-left:1px solid rgba(255,255,255,.15)}
   }
+
+/* dropdown navigation */
+.nav{display:flex;align-items:center;gap:22px;height:76px}
+.nav__logo{flex:0 0 auto}
+.nav__logo img{height:42px;width:auto;display:block}
+.nav__links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav__links > li{position:relative}
+.nav__links > li > a,.nav__links > li > button{display:flex;align-items:center;gap:7px;font:inherit;font-weight:600;font-size:.9rem;color:var(--ink);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;line-height:1.2}
+.nav__links > li > a:hover,.nav__links > li > button:hover,.nav__links > li:hover > button{color:var(--orange);background:var(--mist)}
+.nav__caret{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.5;flex:0 0 auto}
+.nav__menu{position:absolute;top:calc(100% + 10px);left:0;min-width:286px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 20px 44px rgba(13,42,70,.15);padding:9px;list-style:none;margin:0;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s,transform .16s,visibility .16s;z-index:80}
+.nav__links > li:hover > .nav__menu,.nav__links > li:focus-within > .nav__menu{opacity:1;visibility:visible;transform:none}
+.nav__menu li{list-style:none}
+.nav__menu a{display:block;padding:9px 13px;border-radius:9px;font-size:.88rem;font-weight:600;color:var(--ink);white-space:nowrap}
+.nav__menu a:hover{background:var(--mist);color:var(--orange)}
+.nav__menu .navlead{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);font-weight:800;padding:9px 13px 5px}
+.nav__menu .navsep{height:1px;background:var(--line);margin:7px 5px}
+.nav__right{display:flex;align-items:center;gap:18px;margin-left:auto;flex:0 0 auto}
+@media(max-width:1060px){
+  .nav__links{display:none}
+  .nav__toggle{display:flex}
+  .nav.open .nav__links{display:block;position:absolute;top:76px;left:0;right:0;background:#fff;padding:6px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(13,42,70,.14);z-index:70;max-height:calc(100vh - 76px);overflow-y:auto}
+  .nav.open .nav__links > li{border-bottom:1px solid var(--mist);padding:0}
+  .nav.open .nav__links > li > a,.nav.open .nav__links > li > button{padding:15px 0;width:100%;font-size:1rem}
+  .nav.open .nav__caret{display:none}
+  .nav.open .nav__menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0 0 12px;min-width:0;background:none}
+  .nav.open .nav__menu a{padding:8px 0 8px 15px;font-weight:500;font-size:.92rem;color:var(--steel);white-space:normal}
+  .nav.open .nav__menu .navlead,.nav.open .nav__menu .navsep{display:none}
+  .nav__right{gap:14px}
+}
+@media(max-width:640px){
+  .nav__logo img{height:32px}
+  .nav{height:64px}
+  .nav.open .nav__links{top:64px;max-height:calc(100vh - 64px)}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -413,18 +449,9 @@
 <header class="site">
   <div class="wrap">
     <nav class="nav" id="nav">
-      <a href="#top" class="nav__logo"><img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser, Industrial Laser Services"></a>
+      <a href="#top" class="nav__logo"><img src="https://phasexlaser.com/phasex-logo.png" alt="PhaseX Laser Services"></a>
       <ul class="nav__links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#systems">Systems</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#why">Why</a></li>
-        <li><a href="#how">How</a></li>
-        <li><a href="#coverage">Coverage</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="/packaging-laser-service/">Packaging</a></li>
-        <li><a href="/scientific-laser-repair/">Laser repair</a></li>
-        <li><a href="/scientific-laser-systems/">Laser systems</a></li>
+        <li><button type="button">Industrial<span class="nav__caret"></span></button><ul class="nav__menu"><li class="navlead">Industrial lasers</li><li><a href="#services">Service scope</a></li><li><a href="#systems">Systems we build</a></li><li><a href="#brands">Brands and platforms</a></li><li><a href="#retrofit">Retrofit and modernization</a></li><li><a href="#how">How we work</a></li></ul></li><li><button type="button">Packaging<span class="nav__caret"></span></button><ul class="nav__menu"><li class="navlead">Packaging and printing</li><li><a href="/packaging-laser-service/"><b>Packaging laser service</b></a></li><li class="navsep"></li><li><a href="/packaging-laser-service/flexo-plate-imaging/">Flexo plate imaging</a></li><li><a href="/packaging-laser-service/laser-die-cutting-converting/">Laser die cutting and converting</a></li><li><a href="/packaging-laser-service/packaging-coding-marking/">Coding and marking</a></li><li><a href="/packaging-laser-service/gravure-screen-engraving/">Gravure and screen engraving</a></li></ul></li><li><button type="button">Scientific<span class="nav__caret"></span></button><ul class="nav__menu"><li class="navlead">Scientific and research</li><li><a href="/scientific-laser-repair/"><b>Scientific laser repair</b></a></li><li class="navsep"></li><li><a href="/scientific-laser-repair/ultrafast-lasers/">Ultrafast lasers</a></li><li><a href="/scientific-laser-repair/femtosecond-lasers/">Femtosecond lasers</a></li><li><a href="/scientific-laser-repair/picosecond-lasers/">Picosecond lasers</a></li><li><a href="/scientific-laser-repair/ti-sapphire-lasers/">Ti:Sapphire lasers</a></li><li><a href="/scientific-laser-repair/shg-harmonic-generation/">Harmonic generation</a></li><li><a href="/scientific-laser-repair/opo-opa-systems/">OPO and OPA systems</a></li><li><a href="/scientific-laser-repair/laser-diode-pump-driver-repair/">Drivers and power supplies</a></li><li><a href="/scientific-laser-repair/obsolete-laser-support/">Obsolete systems</a></li><li class="navsep"></li><li class="navlead">Manufacturers</li><li><a href="/scientific-laser-repair/coherent/">Coherent</a></li><li><a href="/scientific-laser-repair/spectra-physics/">Spectra-Physics</a></li><li><a href="/scientific-laser-repair/onefive-nkt-katana/">Onefive and NKT</a></li><li><a href="/scientific-laser-repair/light-conversion/">Light Conversion</a></li><li><a href="/scientific-laser-repair/continuum-lumibird/">Continuum and Lumibird</a></li><li><a href="/scientific-laser-repair/ekspla/">EKSPLA</a></li><li><a href="/scientific-laser-repair/litron-lasers/">Litron</a></li><li class="navsep"></li><li><a href="/scientific-laser-systems/"><b>Laboratory systems integration</b></a></li></ul></li><li><a href="#coverage">Coverage</a></li><li><a href="/scientific-laser-repair/intake/">Request evaluation</a></li>
       </ul>
       <div class="nav__right">
         <a href="tel:+15513796083" class="nav__phone">+1 (551) 379-6083</a>
