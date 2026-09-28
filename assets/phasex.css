@@ -439,3 +439,14 @@ table.spec td.hit{color:var(--orange);font-weight:700}
   .nav{height:64px}
   .nav.open .nav__links{top:64px;max-height:calc(100vh - 64px)}
 }
+
+/* dropdown navigation: tall menu handling */
+.nav__menu{max-height:calc(100vh - 118px);overflow-y:auto;overscroll-behavior:contain}
+.nav__links > li:nth-child(3) > .nav__menu{min-width:524px;max-width:calc(100vw - 48px);display:grid;grid-template-columns:1fr 1fr;gap:0 10px;align-content:start}
+.nav__links > li:nth-child(3) > .nav__menu > .navlead,
+.nav__links > li:nth-child(3) > .nav__menu > .navsep,
+.nav__links > li:nth-child(3) > .nav__menu > li:has(b){grid-column:1 / -1}
+@media(max-width:1060px){
+  .nav.open .nav__menu{max-height:none;overflow:visible}
+  .nav.open .nav__links > li:nth-child(3) > .nav__menu{display:block;min-width:0;max-width:none}
+}
