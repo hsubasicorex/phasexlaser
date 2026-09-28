@@ -450,3 +450,10 @@ table.spec td.hit{color:var(--orange);font-weight:700}
   .nav.open .nav__menu{max-height:none;overflow:visible}
   .nav.open .nav__links > li:nth-child(3) > .nav__menu{display:block;min-width:0;max-width:none}
 }
+
+/* urgent link, CoreX-style */
+.nav__urgent{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.86rem;color:var(--orange);white-space:nowrap;padding:8px 13px;border:1px solid rgba(250,109,8,.4);border-radius:999px;background:rgba(250,109,8,.06)}
+.nav__urgent:hover{background:rgba(250,109,8,.12);border-color:var(--orange)}
+.nav__urgent .dotpulse{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto}
+@media(max-width:1240px){.nav__phone{display:none}}
+@media(max-width:1160px){.nav__urgent{display:none}}
