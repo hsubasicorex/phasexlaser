@@ -45,6 +45,27 @@
   conversions, control system upgrades, source and cutting head replacement on legacy
   machines.
 
+## Industrial laser service
+
+- [Industrial laser service and repair](https://phasexlaser.com/industrial-laser-service/): the hub for
+  industrial laser technical services. Cutting, welding, marking and engraving, cleaning, cladding, CO2
+  systems, installation, commissioning and relocation, each as its own section, plus component-level
+  repair scope and a repair-or-replace table.
+- [Laser source repair](https://phasexlaser.com/industrial-laser-service/laser-source-repair/): fiber and
+  CO2 sources, also called laser generators. No output, low power, protection trips, power supplies and
+  driver electronics, delivery cables and connectors. IPG, Raycus, MAX Photonics, JPT, GW LaserTech,
+  nLIGHT and more.
+- [Laser cutting head repair](https://phasexlaser.com/industrial-laser-service/laser-cutting-head-repair/):
+  collimators, focus modules, protective windows, nozzles and capacitive height sensing. Raytools,
+  Precitec, WSX, BOCI, OSPRI, Laser Mechanisms, HIGHYAG.
+- [Laser cutting machine repair](https://phasexlaser.com/industrial-laser-service/laser-cutting-machine-repair/):
+  machine-down and performance work on flat-bed, tube, combination and coil-fed machines, CNC and drives,
+  assist gas, extraction, chilling and safety circuits, including imported machines and machines whose
+  builder no longer exists.
+- [Laser retrofit and modernization](https://phasexlaser.com/industrial-laser-service/laser-retrofit/):
+  control and drive chain replacement, source replacement, CO2 to fiber conversion, and the repair,
+  retrofit or replace comparison stated in writing.
+
 ## Packaging and printing laser service
 
 - [Packaging laser service hub](https://phasexlaser.com/packaging-laser-service/): an A to Z
