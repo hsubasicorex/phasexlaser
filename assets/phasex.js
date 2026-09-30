@@ -209,6 +209,46 @@
       var block=document.getElementById('maintBlock');
       if(block) block.setAttribute('data-intent','maintenance');
     }
+    /* ?intent=parts arrives from the parts evaluation page and from a machine row.
+       The symptoms field stays required: a parts enquiry still needs a sentence
+       about what the part is for, and relaxing validation for one query value is
+       how a form starts arriving empty. Only the wording changes. */
+    /* Someone who knows the part but not the machine could not submit at all:
+       Manufacturer and Model are required. Removing `required` would let the fault
+       path arrive empty too, so instead the checkbox fills both with a real value
+       and makes them readonly. readonly still submits; disabled does not, which
+       would have failed validation AND dropped the answer. */
+    var noMachine=document.getElementById('noMachine');
+    if(noMachine){
+      var mfrEl=document.getElementById('mfr'), modelEl=document.getElementById('model');
+      var kept={mfr:'',model:''};
+      noMachine.addEventListener('change',function(){
+        if(!mfrEl||!modelEl) return;
+        if(noMachine.checked){
+          kept.mfr=mfrEl.value; kept.model=modelEl.value;
+          mfrEl.value='Not known'; modelEl.value='Not known';
+          mfrEl.readOnly=true; modelEl.readOnly=true;
+        }else{
+          mfrEl.readOnly=false; modelEl.readOnly=false;
+          if(mfrEl.value==='Not known') mfrEl.value=kept.mfr;
+          if(modelEl.value==='Not known') modelEl.value=kept.model;
+        }
+      });
+    }
+    if(q.get('intent')==='parts'){
+      var pblock=document.getElementById('partsBlock');
+      if(pblock) pblock.setAttribute('data-intent','parts');
+      var hint=document.getElementById('symptomsHint');
+      if(hint) hint.textContent='You are asking about a part. Say what the part is for '
+        +'and what the machine is doing now, or write that there is no fault and it is '
+        +'a spare. Either answer is useful; an empty box is not.';
+      var slabel=document.querySelector('label[for="symptoms"]');
+      if(slabel) slabel.textContent='What the part is for, or the fault behind it';
+      var nm=document.getElementById('noMachine');
+      if(nm&&nm.parentNode&&nm.parentNode.parentNode)
+        nm.parentNode.parentNode.setAttribute('data-intent','parts');
+      if(!u) pick(us,'Planned work');
+    }
   }catch(e){ /* a malformed query must never stop the form from working */ }
 
   if(etype) etype.addEventListener('change',syncSector);

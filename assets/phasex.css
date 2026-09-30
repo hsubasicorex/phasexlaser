@@ -564,3 +564,89 @@ body.nav-locked{overflow:hidden}
 .fig svg{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
 .fig figcaption{margin-top:10px;font-size:.86rem;line-height:1.5;color:var(--steel)}
 @media(max-width:640px){.fig{margin:20px 0}.fig figcaption{font-size:.82rem}}
+
+/* glossary. A definition list rather than cards: the content is 100+ short
+   entries, and a reader scans them. Two columns from 900px keeps the page
+   short enough to scroll, and min-width:0 keeps a long term from forcing the
+   grid wider than its column, which is the shrink bug this project already
+   shipped once. */
+.glist{display:grid;grid-template-columns:1fr;gap:0;margin:0;padding:0;min-width:0}
+.gterm{min-width:0;padding:18px 0;border-top:1px solid var(--line)}
+.gterm:first-child{border-top:0;padding-top:4px}
+.gterm dt{margin:0 0 6px;font-size:1.02rem;line-height:1.35;min-width:0}
+.gterm dt b{font-weight:800}
+.gterm__aka{display:block;margin-top:3px;font-size:.82rem;font-weight:500;
+  letter-spacing:.02em;color:var(--steel)}
+.gterm dd{margin:0;font-size:.95rem;line-height:1.62;color:var(--ink);min-width:0}
+@media(min-width:900px){
+  .glist{grid-template-columns:1fr 1fr;column-gap:40px}
+  .gterm{border-top:1px solid var(--line)}
+}
+@media(max-width:640px){
+  .gterm{padding:15px 0}
+  .gterm dt{font-size:.98rem}
+  .gterm dd{font-size:.92rem;line-height:1.58}
+}
+
+/* measurement notice. Not a modal and not a wall: measurement is already off, so
+   there is nothing to block. It sits bottom-left, above the mobile call bar
+   (z-index 60, so this is 59 and the bar stays reachable), and on a narrow screen
+   it clears the bar's height rather than covering it. Buttons are real <button>
+   elements built by analytics.js, so they are keyboard reachable and there is no
+   inline script on any page. */
+.cnotice{position:fixed;z-index:59;left:18px;bottom:18px;max-width:420px;
+  background:#fff;border:1px solid var(--line);border-left:3px solid var(--orange);
+  border-radius:0 12px 12px 0;padding:18px 20px;box-shadow:0 10px 34px rgba(13,42,70,.16);
+  min-width:0}
+.cnotice__text{font-size:.88rem;line-height:1.55;color:var(--steel);margin:0 0 14px}
+.cnotice__text a{color:var(--navy);font-weight:700;border-bottom:1.5px solid var(--orange)}
+.cnotice__act{display:flex;gap:10px;flex-wrap:wrap}
+.cnotice__act .btn{padding:10px 16px;font-size:.84rem}
+@media(max-width:1060px){
+  .cnotice{left:12px;right:12px;max-width:none;bottom:74px}
+}
+@media(max-width:400px){
+  .cnotice{padding:15px 16px}
+  .cnotice__text{font-size:.84rem}
+  .cnotice__act .btn{flex:1;text-align:center}
+}
+
+/* scope blocks under the A-Z list. Written once per equipment class and linked
+   from each row, so the same paragraphs are not repeated 84 times. min-width:0
+   on every grid child, for the reason the shrink guards exist. */
+.mscopes{margin:30px 0 0;min-width:0}
+.mscopes>h3{font-size:1.2rem;margin:0 0 8px}
+.mscopes__i{font-size:.9rem;line-height:1.6;color:var(--steel);margin:0 0 20px}
+.mscope{border:1px solid var(--line);border-left:3px solid var(--orange);
+  border-radius:0 12px 12px 0;padding:20px 22px;margin:0 0 14px;background:#fff;min-width:0}
+.mscope__h{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px;min-width:0}
+.mscope__h b{font-size:1.02rem;color:var(--navy);min-width:0}
+.mscope__lead{font-size:.93rem;line-height:1.62;color:var(--steel);margin:0 0 16px}
+.mscope__g{display:grid;grid-template-columns:1fr;gap:18px;min-width:0}
+.mscope__g>div{min-width:0}
+.mscope__g .label{font-size:.7rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--navy);margin:0 0 7px}
+.mscope__g .label+.label{margin-top:16px}
+.mscope__g ul{margin:0 0 0 18px;padding:0}
+.mscope__g li{font-size:.9rem;line-height:1.55;color:var(--steel);margin-bottom:5px}
+.mscope__g p{font-size:.9rem;line-height:1.58;color:var(--steel);margin:0}
+.mscope__src{margin:16px 0 0;font-size:.84rem;color:var(--steel)}
+.mscope__src a{color:var(--navy);font-weight:700;border-bottom:1.5px solid var(--orange)}
+.mrow__scope{font-weight:700}
+@media(min-width:820px){.mscope__g{grid-template-columns:1.05fr 1fr;column-gap:34px}}
+@media(max-width:640px){.mscope{padding:17px 18px}.mscope__lead{font-size:.9rem}}
+
+/* a form group the query string has pointed at. Same treatment for the
+   maintenance and the parts group, so arriving from either page lands the reader
+   on the right block without hiding the rest of the form. */
+.form__group[data-intent]{border-left:3px solid var(--orange);
+  padding-left:18px;background:var(--mist);border-radius:0 10px 10px 0}
+
+/* a checkbox that is a real answer rather than a setting. Given its own line so
+   the label wraps as prose, and a visible readonly state on the two fields it
+   fills, so nobody thinks the form has frozen. */
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;line-height:1.5;
+  color:var(--ink);cursor:pointer}
+.chk input{margin-top:3px;flex:0 0 auto;width:16px;height:16px;accent-color:var(--orange)}
+.field input[readonly]{background:var(--mist);color:var(--steel);cursor:default}
+.field[data-intent="parts"]{border-left:3px solid var(--orange);padding-left:16px}

@@ -34,7 +34,7 @@
   based. We travel for machine-down calls, installations and scheduled work anywhere in
   North America. Travel is quoted separately and stated clearly in the proposal.
 
-## Industrial laser service
+## Industrial laser service, sections on the home page
 
 - [Industrial laser services](https://phasexlaser.com/#services): laser cutting, welding,
   cleaning and cladding systems, robotic laser cells, tube and combination machines,
@@ -45,7 +45,7 @@
   conversions, control system upgrades, source and cutting head replacement on legacy
   machines.
 
-## Industrial laser service
+## Industrial laser service, dedicated pages
 
 - [Industrial laser service and repair](https://phasexlaser.com/industrial-laser-service/): the hub for
   industrial laser technical services. Cutting, welding, marking and engraving, cleaning, cladding, CO2
@@ -67,6 +67,13 @@
   retrofit or replace comparison stated in writing.
 
 ## Packaging and printing laser service
+
+- [Brands A to Z with service scope per class](https://phasexlaser.com/packaging-laser-service/#scopes):
+  84 documented manufacturers and platforms, each linked to one of seven equipment-class
+  scope statements that name the separately serviceable subsystems, what the customer
+  receives in writing, and what has to be confirmed before a price. The scope is written
+  once per class rather than repeated per brand, because it is a property of the machine
+  and not of the badge on it.
 
 - [Packaging laser service hub](https://phasexlaser.com/packaging-laser-service/): an A to Z
   index of 84 equipment manufacturers, the repair and replacement scope by subsystem, and
@@ -133,10 +140,47 @@
   the section that covers that equipment. It is a route into the right page, not a diagnosis:
   no single symptom identifies a fault on this equipment, and the page says so.
 
+## Spare and replacement parts
+
+- [Laser spare part evaluation](https://phasexlaser.com/laser-parts-evaluation/): the route
+  for someone holding a part rather than a broken machine. Send the number exactly as
+  printed, a photograph of the label, what it sits in and how many are needed; the answer
+  is a written statement of what can be established and whether repair, a substitute or a
+  replacement is the sensible route. Built for parts the machine builder has stopped
+  offering, and for parts whose maker no longer exists. There is deliberately no stock
+  list, no price list and no delivery promise on that page, because none of those are
+  knowable before the part is identified, and no claim of manufacturer authority.
+- Part numbers on this equipment are frequently the machine builder's number rather than
+  the component maker's, and the two do not always look different. That ambiguity is the
+  single most useful thing a photograph of the label resolves.
+
+## Vocabulary and definitions
+
+- [Laser service glossary](https://phasexlaser.com/laser-service-glossary/): 102 terms
+  used on industrial, packaging and scientific laser equipment, defined for equipment
+  owners and maintenance staff rather than for physicists. Beam and pulse properties,
+  sources and gain media, beam delivery and heads, motion and control, process results
+  visible on a part, packaging and printing equipment, service and lifecycle vocabulary,
+  and safety terms. Each entry says what the thing is and why it matters to whoever keeps
+  the machine running; none of them describes how work is carried out. Published as a
+  schema.org DefinedTermSet, so an individual definition can be cited on its own.
+
 ## Requesting service
 
 - [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): one form for all three sectors, five required fields, equipment
   type, manufacturer, model, serial number, symptoms, measurements and photographs.
+
+## Privacy, measurement and what this site collects
+
+- [Privacy and your information](https://phasexlaser.com/privacy/): the two places this
+  site collects anything, the service request form and website measurement, what is
+  deliberately kept out of measurement, and how to ask us to change or delete what we
+  hold. Nothing typed into the form and no machine identifier reaches measurement:
+  the measurement script keeps four intent parameters from a page address and drops
+  every other one, including any added later.
+- A page here loads only files from phasexlaser.com plus one analytics script. There are
+  no advertising or tracking pixels, no embedded frames, no social widgets and no
+  externally hosted fonts.
 
 ## Notes for anyone citing this site
 
