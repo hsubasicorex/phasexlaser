@@ -146,10 +146,12 @@
   for someone holding a part rather than a broken machine. Send the number exactly as
   printed, a photograph of the label, what it sits in and how many are needed; the answer
   is a written statement of what can be established and whether repair, a substitute or a
-  replacement is the sensible route. Built for parts the machine builder has stopped
-  offering, and for parts whose maker no longer exists. There is deliberately no stock
-  list, no price list and no delivery promise on that page, because none of those are
-  knowable before the part is identified, and no claim of manufacturer authority.
+  replacement is the sensible route. Coverage: laser sources, diode drivers and power
+  supplies, control and interface boards, cutting and marking heads, optics, delivery
+  fibers and high-power connectors, and parts for machines the builder has stopped
+  supporting or whose maker no longer exists, which is the normal case here rather than
+  the exception. Availability and timing depend on the specific part and are stated with
+  the written quote, not ahead of it. No manufacturer authority is claimed.
 - Part numbers on this equipment are frequently the machine builder's number rather than
   the component maker's, and the two do not always look different. That ambiguity is the
   single most useful thing a photograph of the label resolves.
@@ -167,8 +169,14 @@
 
 ## Requesting service
 
-- [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): one form for all three sectors, five required fields, equipment
-  type, manufacturer, model, serial number, symptoms, measurements and photographs.
+- [Evaluation request form](https://phasexlaser.com/scientific-laser-repair/intake/): one
+  form for all three sectors and for parts. Five required fields, then equipment type,
+  manufacturer, model and serial number, what the equipment is doing, and up to three
+  attachments for photographs of the label, the part or the fault. A part section sits with
+  the core fields for anyone asking about a component rather than a machine visit, and a
+  single checkbox covers the case where the part is in hand but the machine manufacturer
+  and model are not known, so that enquiry is not blocked. Arriving from a maintenance,
+  repair or parts page pre-selects the matching section.
 
 ## Privacy, measurement and what this site collects
 

@@ -55,9 +55,9 @@
       <p class="lead">Independent evaluation and repair for the KATANA 10 HP picosecond platform. Call us when output has collapsed, a setpoint no longer changes the beam, or the model designation does not match what the system is doing. The configuration is verified from the physical labels first, and you get written findings before any repair.</p>
       <div class="phero__btns">
         <a href="/scientific-laser-repair/intake/?sector=scientific" class="btn btn--primary">Request service</a>
-        <a href="#tree" class="btn btn--on-navy">Diagnostic decision tree</a>
+        <a href="#tree" class="btn btn--on-navy">What the evaluation covers</a>
       </div>
-      <div class="phero__facts"><div><b>Status</b>Listed obsolete by the current product owner</div><div><b>Method</b>Configuration verified before diagnosis</div><div><b>Deliverable</b>Written findings before any repair</div></div>
+      <div class="phero__facts"><div><b>Status</b>Listed obsolete by the current product owner</div><div><b>Scope</b>Platform and configuration identified from the equipment itself</div><div><b>Deliverable</b>Written findings before any repair</div></div>
     </div>
   </div>
 </section>
@@ -165,98 +165,64 @@
             <div class="branch">
               <div class="branch__n">01</div>
               <div>
-                <h4>No output, or output far below the expected level</h4>
-                <p>The system powers up and reports normally, but measured optical power is a small fraction of what the laboratory expects, or is at the detector noise floor.</p>
+                <h3>No output, or output far below the expected level</h3>
+                <p>The system powers up and reports normally, but measured optical power is a small fraction of what the laboratory expects, or is so low it cannot be distinguished from none.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">02</div>
               <div>
-                <h4>Setpoint changes but optical power does not</h4>
+                <h3>Setpoint changes but optical power does not</h3>
                 <p>Commanding a new output or current value from the front panel or from software changes the displayed value, while measured optical power stays where it was. Covered in detail below.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">03</div>
               <div>
-                <h4>Trigger and timing operate but no optical pulse is present</h4>
+                <h3>Trigger and timing operate but no optical pulse is present</h3>
                 <p>Repetition rate and synchronization outputs behave normally. This confirms the timing electronics are running. It does not confirm that optical pulses exist, because the timing path and the optical generation path are separate.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">04</div>
               <div>
-                <h4>Fundamental present, converted output low</h4>
+                <h3>Fundamental present, converted output low</h3>
                 <p>Measurable infrared power at the fundamental with disproportionately low visible output. This is the genuine conversion-stage case, and it is distinguished from the others by the fundamental power actually reaching the stage.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">05</div>
               <div>
-                <h4>Conversion-stage temperature instability</h4>
+                <h3>Conversion-stage temperature instability</h3>
                 <p>Crystal oven temperature that will not settle, oscillates, or drifts against its setpoint. A different failure from a stage that simply holds a flat temperature.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">06</div>
               <div>
-                <h4>Pump driver and amplifier faults</h4>
+                <h3>Pump driver and amplifier faults</h3>
                 <p>Pump-current driver failures, protection trips, degraded pump diodes, or a fault in the amplification chain that the control layer does not report as an error.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">07</div>
               <div>
-                <h4>Controller and communication faults</h4>
+                <h3>Controller and communication faults</h3>
                 <p>Serial or software control that appears to work while the lower-level controller is unresponsive, and readback values that turn out to be echoes of commanded values rather than measurements.</p>
               </div>
             </div>
             <div class="branch">
               <div class="branch__n">08</div>
               <div>
-                <h4>Silent protection states</h4>
+                <h3>Silent protection states</h3>
                 <p>An internal interlock or protection condition limiting power with no error, no warning and no alarm presented to the operator.</p>
               </div>
             </div>
           </div>
         </section><div class="cta" style="margin:44px 0 0"><div><h3>Is this what your system is doing?</h3><p>Send the model, a photograph of the product label and the symptoms. We review it and respond with the next step.</p></div><div class="cta__act"><a href="/scientific-laser-repair/intake/?sector=scientific" class="btn btn--primary">Request service</a><a href="tel:+15513796083" class="btn btn--ghost">Call (551) 379-6083</a></div></div>
 
-        <section id="case">
-          <h2>The low-output case in detail</h2>
-          <p>This is the pattern we are contacted about most often on this platform, and it is worth setting out the reasoning, because the obvious conclusion is usually the wrong one.</p>
-          <h3>The reported pattern</h3>
-          <ul>
-            <li>A small measured power at the visible wavelength, in the region of a milliwatt</li>
-            <li>A similarly small residual reading at the infrared fundamental from the same output port</li>
-            <li>Commanded output or current changes the displayed value but not the measured optical power</li>
-            <li>Conversion-stage crystal temperature essentially constant when current is changed</li>
-            <li>No error, no warning, and apparently normal repetition rate and timing</li>
-          </ul>
-
-          <h3>What these two readings do and do not establish</h3>
-          <p>Second-harmonic generation cannot produce more converted power than the fundamental delivered into it. Past that limit, how much converts depends on the conditions at the crystal, and a well-matched stage can convert most of what reaches it. So two readings of similar magnitude at one output port are not on their own evidence of a fault: the residual fundamental left downstream of an efficient stage is a different quantity from the fundamental arriving at its input, and until it is known which one the number describes, the comparison settles nothing. What the reported pattern does is leave four possibilities open, and all four have to be separated rather than assumed:</p>
-          <ol>
-            <li><strong>Both readings are at or near the detector noise floor.</strong> In that case the honest interpretation is that there is effectively no output at either wavelength, and the conversion stage is not the subject at all.</li>
-            <li><strong>The measurement setup is producing invalid numbers.</strong> A fiber-coupled power meter used on a free-space beam will collect an unknown fraction of the light, and a sensor calibrated for one wavelength will misreport another. Neither reading supports a conclusion until the detection is appropriate to the beam and to each of the two wavelengths.</li>
-            <li><strong>The two readings do not describe the same optical path.</strong> Residual pump leakage, scattered light, or a second port can produce a reading that has nothing to do with the fundamental arriving at the conversion stage.</li><li><strong>The conversion stage is doing its job.</strong> Where the readings are valid and the stage is efficient, little fundamental remains downstream of it, so a small residual beside a modest converted output can describe a working stage fed by a low input, or a working stage measured on the wrong side of it. This case is included in scope and is not assumed away.</li>
-          </ol><p class="tnote"><b>Source note.</b> High conversion efficiency is achievable in a well-matched stage. One published example, in a different system and a different pulse regime from the platforms on this page, reports 720 mJ at 532 nm from 900 mJ at 1064 nm in a single KTP crystal, an energy conversion efficiency of 80 per cent, using an injection-seeded Q-switched Nd:YAG source at 10 Hz (A. J. W. Brown, M. S. Bowers, K. W. Kangas and C. H. Fisher, <em>Optics Letters</em> 17, 109, 1992). It is cited to show that a high conversion figure is physically ordinary, not as a performance figure for any system we service. What a given stage achieves depends on its own design and operating conditions.</p>
-
-          <h3>Why a flat crystal temperature is not evidence of a failed crystal</h3>
-          <p>A temperature-stabilized crystal oven exists to hold its setpoint. When significant optical power passes through the crystal, the resulting heat load is visible as a disturbance the controller has to work against. When little or no fundamental arrives, there is no meaningful load to disturb. A temperature that does not move when the current command changes is therefore consistent with an absent fundamental, and it is a weak indicator of crystal failure. A genuine conversion-stage fault more often shows as temperature that will not reach or hold setpoint, or as poor conversion in the presence of a confirmed, healthy fundamental.</p>
-
-          <h3>Why normal timing does not prove the laser is lasing</h3>
-          <p>On a seeded, externally triggerable architecture, the timing and synchronization electronics run independently of whether the seed diode is emitting and whether the amplifier chain is delivering gain. A clean repetition-rate indication and a normal sync output tell you the trigger board is alive. The presence of an actual optical pulse train is a separate measurement, made with a suitable fast photodetector on the real beam.</p>
-
-          <h3>Why a changing display is not a changing current</h3>
-          <p>Systems of this generation frequently display the commanded setpoint rather than a measured value. If the command reaches the display layer but not the current driver, or if the driver is sitting in a limited or protection state, the panel will read exactly as expected while nothing changes physically. A displayed value is therefore not evidence on its own. Whether the readback path is a real measurement or an echo of the command is one of the things the evaluation establishes, and it is stated in the written findings.</p>
-
-          <div class="notice">
-            <div class="label">The working conclusion</div>
-            <p>On this symptom pattern, the system usually retains its control and timing functions while optical power generation is absent or strongly suppressed. The fault is far more likely to sit upstream, in the seed, the seed driver, the pump, the pump driver, the amplifier chain or the fiber path, than in the frequency-conversion stage. The conversion stage cannot be judged at all until the true fundamental power reaching it has been measured.</p>
-          </div>
-        </section>
-
-        <section id="tree">
+        <section id="case"><div class="wrap"><div class="section-head"><span class="eyebrow">The common case</span><h2>The low-output case, and why the obvious part is the wrong order</h2></div><p>This is the pattern we are contacted about most on this platform. It is worth setting out because the intuitive conclusion costs money: owners order a conversion crystal, fit it, and the machine behaves exactly as it did.</p><h3>What you see</h3><ul><li>A small power reading at the visible wavelength, in the region of a milliwatt</li><li>A similarly small residual reading at the infrared fundamental from the same output port</li><li>Commanding more output or more current moves the displayed value but not the optical power</li><li>Conversion-stage crystal temperature essentially constant when the current is changed</li><li>No error, no warning, and apparently normal repetition rate and timing</li></ul><h3>Why that does not point at the crystal</h3><p>Second-harmonic generation cannot produce more converted power than the fundamental delivered into it, and past that limit a well-matched stage converts most of what reaches it. So an efficient stage fed with very little leaves very little behind, and two small readings at one port describe a healthy stage starved of input just as readily as a failed one. On its own the pattern does not distinguish them, which is precisely why it is a poor basis for a parts order.</p><p>A flat crystal temperature points the same way rather than at the crystal. A temperature-stabilised oven exists to hold its setpoint; significant optical power passing through the crystal is a heat load the controller has to work against. Little or no arriving fundamental means little to work against, so a temperature that does not move when the command changes is consistent with an absent fundamental. Normal timing points the same way again: on a seeded, externally triggerable architecture the trigger and synchronisation electronics run whether or not the seed is emitting and the amplifier chain is delivering gain, so a clean repetition rate tells you the timing board is alive and nothing more. And systems of this generation frequently display a commanded setpoint rather than a sensed value, so a panel that reads correctly is not evidence that anything physical changed.</p><h3>What the evaluation covers, and what you get</h3><p>Every subsystem the pattern leaves open is in scope: the seed and its driver, the pump and its driver, the amplifier chain, the fibre path, the conversion stage itself, and the control and readback path in both directions &mdash; that last one because on this generation of controller a healthy laser reporting a false low value and a degraded laser reporting a healthy one are both seen. The conversion stage is included and is not assumed away.</p><p>You receive written findings naming the subsystem the fault sits in, before any repair is quoted, and nothing is repaired, substituted or modified without your written approval of the scope and the price. The instruments used on your system are named in that proposal with their calibration status, so you know what produced the figures in your report.</p><div class="notice"><div class="label">Source note</div><p>High conversion efficiency is achievable in a well-matched stage. One published example, in a different system and a different pulse regime from the platforms on this page, reports 720&nbsp;mJ at 532&nbsp;nm from 900&nbsp;mJ at 1064&nbsp;nm in a single KTP crystal, an energy conversion efficiency of 80 per cent, using an injection-seeded Q-switched Nd:YAG source at 10&nbsp;Hz (A. J. W. Brown, M. S. Bowers, K. W. Kangas and C. H. Fisher, <i>Optics Letters</i> <b>17</b>, 109, 1992). It is cited to show that a high conversion figure is physically ordinary, not as a performance figure for any system we service. What a given stage achieves depends on its own design and operating conditions.</p></div></div></section>
+<section id="tree">
           <h2>What the evaluation covers</h2><p>On this platform the evaluation covers the actual configuration as labelled rather than as recorded, the validity of the measurement arrangement itself, and the fundamental power reaching the conversion stage. That last figure is what separates a conversion-stage question from everything upstream of it, and it is why a case can resolve differently from the way it was first described.</p><p>Coverage also includes the command path alongside the drive current actually present at the hardware, the optical pulse train independently of the timing electronics, the seed, pump, amplifier and fiber path as separable subsystems, and the feedback path in both directions. That last item is in scope because on this generation of controller a healthy laser reporting a false low value and a degraded laser reporting a healthy one are both seen. The findings name which subsystem the fault sits in.</p><p>You receive written findings before any repair is quoted, and no repair, substitution or modification happens without your written approval of the scope and the price.</p>
         </section>
 

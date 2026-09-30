@@ -269,7 +269,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .branches{display:grid;gap:0;border-top:1px solid var(--line)}
 .branch{border-bottom:1px solid var(--line);padding:22px 0 22px 0;display:grid;grid-template-columns:54px minmax(0,1fr);gap:18px;align-items:start}
 .branch__n{font-size:.74rem;font-weight:800;letter-spacing:.1em;color:var(--orange);padding-top:4px}
-.branch h4{margin:0 0 6px;font-size:1.02rem;color:var(--navy);font-weight:800}
+.branch h3{margin:0 0 6px;font-size:1.02rem;color:var(--navy);font-weight:800}
 .branch p{margin:0;color:var(--steel);font-size:.94rem}
 
 /* ---------- STEP LIST ---------- */
