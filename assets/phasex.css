@@ -6,6 +6,33 @@
    ============================================================ */
 
 :root{
+  /* ---- STICKY HEADER GEOMETRY, one source --------------------------------
+     header.site is position:sticky, and nothing compensated for it. A real
+     click on #services at 390px landed with targetTop at -0.24px while the
+     sticky headerBottom was 111px, so the heading the visitor asked for sat
+     entirely underneath the header. The site has used CSS
+     scroll-behavior:smooth from the start and no JavaScript scrollTo, which
+     is why scroll-padding-top on the scroll container is the whole fix - the
+     browser applies it to hash navigation and to the smooth scroll alike.
+
+     The header is built from parts, so the parts are the variables and the
+     total is derived from them. Nothing here is a hand-copied number:
+       --nav-h    the nav row, 76px, 64px on phones
+       --lang-h   the mobile language strip INCLUDING its 1px border-top; 0
+                  on desktop where the strip is display:none
+       --hdr-h    nav + strip + the header's own 1px border-bottom
+     At 390px that is 64 + 47 + 1 = 112px, against the 111px a browser
+     measured - one pixel of slack in the safe direction.
+
+     --anchor-offset adds a small breathing gap so the heading is not flush
+     against the header edge. .prose section used to carry its own hard-coded
+     scroll-margin-top:96px, which was wrong on mobile and is now derived from
+     the same source. */
+  --nav-h:76px;
+  --lang-h:0px;
+  --hdr-h:calc(var(--nav-h) + var(--lang-h) + 1px);
+  --anchor-offset:calc(var(--hdr-h) + 12px);
+
   --navy:#0D2A46;
   --orange:#FA6D08;
   --steel:#5A6B7A;
@@ -16,7 +43,24 @@
   --maxw:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:var(--anchor-offset)}
+/* ONE mechanism, not two. scroll-padding-top on the scroll container and
+   scroll-margin-top on the target are ADDITIVE, not redundant - I called
+   them belt and braces, which was simply wrong about how they compose.
+   With both in place a real click on #services at 390px put the heading
+   at targetTop 247.76 against a header bottom of 111: a gap of 136.76px
+   where about 25 was intended, and the same in all four languages. The
+   overlap was fixed and replaced by an equally visible hole.
+
+   scroll-padding-top is the one that stays, because it belongs to the
+   scroll container and therefore applies to EVERY in-page target at
+   once - hash navigation, a smooth click, a back-button restore - with
+   no list of element types to keep complete. The 28 .mscope <div id>
+   targets on the packaging hub are covered by it for free, which is
+   why the per-type scroll-margin list that used to sit here is gone
+   rather than extended. Any scroll-margin-top on an in-page target is
+   now a second compensation by definition, and gate_anchor_offset
+   refuses it. */
 body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Inter,Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -57,7 +101,7 @@ h1,h2,h3{color:var(--navy);line-height:1.15;font-weight:800;letter-spacing:-.022
 
 /* ---------- HEADER ---------- */
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
 .nav__logo img{height:40px;width:auto}
 .nav__links{display:flex;gap:28px;list-style:none}
 .nav__links a{font-weight:600;font-size:.9rem;color:var(--ink);transition:.15s;position:relative;padding:4px 0}
@@ -231,7 +275,8 @@ footer .f-logo p{max-width:290px}
 .prose strong{color:var(--navy);font-weight:700}
 .prose a{color:var(--navy);font-weight:600;border-bottom:1.5px solid var(--orange)}
 .prose a:hover{color:var(--orange)}
-.prose section{margin-bottom:56px;scroll-margin-top:96px}
+.prose section{margin-bottom:56px}  /* no scroll-margin-top: html's scroll-padding-top already offsets
+     every in-page target, and adding it here would offset twice */
 .prose section:last-child{margin-bottom:0}
 
 /* ---------- SPEC TABLE ---------- */
@@ -373,7 +418,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 @media(max-width:1000px){
   .nav__links{display:none}
   .nav__toggle{display:flex}
-  .nav.open .nav__links{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12);z-index:60}
+  .nav.open .nav__links{display:flex;position:absolute;top:var(--nav-h);left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 30px rgba(13,42,70,.12);z-index:60}
   .nav.open .nav__links li{padding:13px 0;border-bottom:1px solid var(--mist)}
   .nav__right{gap:16px}
 }
@@ -383,8 +428,10 @@ table.spec td.hit{color:var(--orange);font-weight:700}
      only the logo and the menu and stops competing for width */
   .nav__right .btn{display:none}
   .nav__logo img{height:32px}
-  .nav{height:64px}
-  .nav.open .nav__links{top:64px}
+  /* the variable, not a second copy of the height: --hdr-h and the panel
+     offset both follow from it */
+  :root{--nav-h:64px}
+  .nav.open .nav__links{top:var(--nav-h)}
   .tiles,.tiles--2,.tiles--3,.tiles--4{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
   .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
@@ -412,7 +459,7 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 }
 
 /* dropdown navigation */
-.nav{display:flex;align-items:center;gap:22px;height:76px}
+.nav{display:flex;align-items:center;gap:22px;height:var(--nav-h)}
 .nav__logo{flex:0 0 auto}
 .nav__logo img{height:42px;width:auto;display:block}
 .nav__links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
@@ -430,9 +477,14 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .nav__menu .navsep{height:1px;background:var(--line);margin:7px 5px}
 .nav__right{display:flex;align-items:center;gap:18px;margin-left:auto;flex:0 0 auto}
 @media(max-width:1060px){
+  /* The mobile language strip becomes visible at this breakpoint, so this is
+     where its contribution to the sticky header height is declared. The strip
+     itself reads the same variable for its own height, so the number exists
+     once: 46px of row plus its 1px border-top. */
+  :root{--lang-h:47px}
   .nav__links{display:none}
   .nav__toggle{display:flex}
-  .nav.open .nav__links{display:block;position:absolute;top:76px;left:0;right:0;background:#fff;padding:6px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(13,42,70,.14);z-index:70;max-height:calc(100vh - 76px);overflow-y:auto}
+  .nav.open .nav__links{display:block;position:absolute;top:var(--nav-h);left:0;right:0;background:#fff;padding:6px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(13,42,70,.14);z-index:70;max-height:calc(100vh - var(--nav-h));overflow-y:auto}
   .nav.open .nav__links > li{border-bottom:1px solid var(--mist);padding:0}
   .nav.open .nav__links > li > a,.nav.open .nav__links > li > button{padding:15px 0;width:100%;font-size:1rem}
   .nav.open .nav__caret{display:none}
@@ -443,8 +495,9 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 }
 @media(max-width:640px){
   .nav__logo img{height:32px}
-  .nav{height:64px}
-  .nav.open .nav__links{top:64px;max-height:calc(100vh - 64px)}
+  :root{--nav-h:64px}
+  .nav.open .nav__links{top:var(--nav-h);
+    max-height:calc(100vh - var(--nav-h))}
 }
 
 /* dropdown navigation: tall menu handling */
