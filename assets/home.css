@@ -136,7 +136,7 @@
 
   .platforms__row{display:flex;align-items:center;justify-content:space-between;gap:18px 40px;flex-wrap:wrap}
 
-  .platforms__label{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7d8fa1;white-space:nowrap}
+  .platforms__label{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7d8fa1}
 
   .platforms__names{display:flex;gap:14px 30px;flex-wrap:wrap;align-items:center}
 
@@ -235,7 +235,20 @@
 
   .band .btn{margin-top:14px;position:relative;z-index:2}
 
-  .band .band-bg{position:absolute;inset:0;z-index:0;background:url('dealers-bg.jpg') center/cover;opacity:.55}
+  /* The three background files DO exist on the live server, at the repository
+     ROOT: a fresh clone of main at 98475f91 carries how-bg.jpg, dealers-bg.jpg
+     and contact-bg.jpg beside index.html. The 404s a real browser measured were
+     a PATH defect, not a missing asset - this stylesheet is served from
+     /assets/, so url('how-bg.jpg') resolves to /assets/how-bg.jpg, which has
+     never existed. Three failed requests on every home-page view, in all four
+     languages, since the stylesheet was written.
+     My first reaction was to delete the references and keep the gradient. That
+     was wrong for the same reason deleting the broken img tags was wrong: the
+     asset exists and somebody chose it, so removing it would have quietly
+     stripped three real background images off the live design. The reference is
+     repaired with ../ instead, and the three files are carried in the release
+     candidate and checked by gate_assets. */
+  .band .band-bg{position:absolute;inset:0;z-index:0;background:url('../dealers-bg.jpg') center/cover;opacity:.55}
 
   .band .band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(9,29,50,.9),rgba(9,29,50,.66))}
 
@@ -243,7 +256,7 @@
 
   #how{position:relative;overflow:hidden;background:var(--navy)}
 
-  #how .how-bg{position:absolute;inset:0;z-index:0;background:url('how-bg.jpg') center/cover}
+  #how .how-bg{position:absolute;inset:0;z-index:0;background:url('../how-bg.jpg') center/cover}
 
   #how .how-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,50,.9),rgba(9,29,50,.86))}
 
@@ -291,7 +304,7 @@
   
   #contact{position:relative;overflow:hidden}
 
-  #contact .contact-bg{position:absolute;inset:0;z-index:0;background:url('contact-bg.jpg') center/cover}
+  #contact .contact-bg{position:absolute;inset:0;z-index:0;background:url('../contact-bg.jpg') center/cover}
 
   #contact .contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,29,50,.95),rgba(9,29,50,.86) 50%,rgba(9,29,50,.74))}
 

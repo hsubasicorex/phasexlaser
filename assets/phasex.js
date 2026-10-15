@@ -1,3 +1,4 @@
+(function(w){w.PXT=function(k,d,a){try{var t=w.__PX_I18N,v=t&&t[k];if(!v)return d;if(a)for(var i=0;i<a.length;i++)v=v.replace('{'+i+'}',a[i]);return v;}catch(e){return d;}};})(window);
 /* PhaseX Laser Services - shared page behavior */
 (function(){
   var nav=document.getElementById('nav'), toggle=document.getElementById('navToggle');
@@ -122,8 +123,8 @@
       r.el.hidden=!ok; if(ok) shown++;
     });
     count.textContent=(shown===total)
-      ? (total+' entries')
-      : (shown+' of '+total+' entries shown');
+      ? PXT('filter.all',(total+' entries'),[total])
+      : PXT('filter.some',(shown+' of '+total+' entries shown'),[shown,total]);
     if(none) none.hidden=(shown!==0);
   }
   function clear(){ q.value=''; sec.value=''; apply(); q.focus(); }
@@ -239,11 +240,11 @@
       var pblock=document.getElementById('partsBlock');
       if(pblock) pblock.setAttribute('data-intent','parts');
       var hint=document.getElementById('symptomsHint');
-      if(hint) hint.textContent='You are asking about a part. Say what the part is for '
+      if(hint) hint.textContent=PXT('parts.hint','You are asking about a part. Say what the part is for '
         +'and what the machine is doing now, or write that there is no fault and it is '
-        +'a spare. Either answer is useful; an empty box is not.';
+        +'a spare. Either answer is useful; an empty box is not.');
       var slabel=document.querySelector('label[for="symptoms"]');
-      if(slabel) slabel.textContent='What the part is for, or the fault behind it';
+      if(slabel) slabel.textContent=PXT('parts.label','What the part is for, or the fault behind it');
       var nm=document.getElementById('noMachine');
       if(nm&&nm.parentNode&&nm.parentNode.parentNode)
         nm.parentNode.parentNode.setAttribute('data-intent','parts');
@@ -268,12 +269,12 @@
     });
     var msg='';
     if(badType.length){
-      msg='These files are not a type we can accept: '+badType.join(', ')+
-          '. Accepted types are images, PDF, CSV, text, Word and Excel.';
+      msg=PXT('files.badtype','These files are not a type we can accept: ')+badType.join(', ')+
+          PXT('files.accepted','. Accepted types are images, PDF, CSV, text, Word and Excel.');
     }else if(total>LIMIT){
-      msg='The attachments add up to '+(total/1048576).toFixed(1)+
-          ' MB. The form service accepts 10 MB in total across all three fields. '+
-          'Remove a file, or send the request without attachments and reply to our response.';
+      msg=PXT('files.toobig','The attachments add up to ')+(total/1048576).toFixed(1)+
+          PXT('files.limit',' MB. The form service accepts 10 MB in total across all three fields. '+
+          'Remove a file, or send the request without attachments and reply to our response.');
     }
     if(filesErr){ filesErr.textContent=msg; filesErr.hidden=!msg; }
     fileInputs.forEach(function(el){
@@ -288,7 +289,7 @@
     if(!checkFiles()){
       e.preventDefault();
       if(formErr){
-        formErr.textContent='Nothing has been sent. Please fix the attachments above and try again.';
+        formErr.textContent=PXT('form.blocked','Nothing has been sent. Please fix the attachments above and try again.');
         formErr.hidden=false;
       }
       if(filesErr) filesErr.scrollIntoView({block:'center'});

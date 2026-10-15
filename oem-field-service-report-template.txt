@@ -1,0 +1,193 @@
+PHASEX LASER SERVICES
+FIELD SERVICE REPORT -- BLANK TEMPLATE
+
+This is the blank template of the report an equipment manufacturer, distributor
+or importer receives after each field visit. It is published so you can see the
+deliverable before you engage anyone.
+
+What this template is not: it is not a procedure, and it contains no settings,
+parameter values, measurement points, test order or calibration method. Those
+belong to the engineer and to the service documentation you supply, and they are
+not published. The template describes what you receive, not how the work is done.
+
+This template is published in English only. The page that links to it is
+available in English, French, Spanish and German, and a report can be delivered
+in English on any engagement; ask about other languages when the scope is agreed.
+
+PhaseX Laser Services is an independent service provider and is not affiliated
+with, endorsed by or authorized by any manufacturer. Manufacturer, brand and
+model names are used only to identify equipment.
+
+================================================================================
+1. VISIT IDENTIFICATION
+================================================================================
+
+  Report reference ..................  ____________________________________
+  Date of visit ....................  ____________________________________
+  Site / city / state ..............  ____________________________________
+  Engagement reference (yours) .....  ____________________________________
+  Attending as .....................  [ ] PhaseX, named     [ ] white label
+  Visit type .......................  [ ] installation      [ ] commissioning
+                                      [ ] evaluation        [ ] field repair
+                                      [ ] operator handoff  [ ] follow-up
+  Engineer .........................  ____________________________________
+
+================================================================================
+2. EQUIPMENT IDENTIFICATION
+================================================================================
+
+  Machine make and model ...........  ____________________________________
+  Machine serial number ............  ____________________________________
+  Laser source make and model ......  ____________________________________
+  Source serial number .............  ____________________________________
+  Control platform on the panel ....  ____________________________________
+  Software / firmware as found .....  ____________________________________
+  Configuration as found ...........  [ ] matches your records
+                                      [ ] differs from your records, see 7
+  Hours / counter as found .........  ____________________________________
+
+================================================================================
+3. CONDITION AS REPORTED
+================================================================================
+
+  Reported by ......................  [ ] end customer  [ ] you  [ ] both
+  The fault in the customer's words:
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  Alarms or messages present on arrival:
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  Production status on arrival .....  [ ] running  [ ] degraded  [ ] stopped
+
+================================================================================
+4. SCOPE OF THIS VISIT
+================================================================================
+
+  Scope agreed in writing before dispatch ....  [ ] yes   [ ] no
+  Scope reference / date ...................... ____________________________
+
+  The scope as agreed:
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  Changed on site? .............  [ ] no
+                                  [ ] yes, approved by ______________________
+                                      at _______________ (time)
+
+================================================================================
+5. OBSERVATION CATEGORIES
+================================================================================
+
+  For each category: NOT IN SCOPE / NO FINDING / FINDING / UNABLE TO ASSESS.
+  "FINDING" and "UNABLE TO ASSESS" are written up in section 7.
+
+  Electrical and power distribution ...........  ______________________
+  Control, interface and software .............  ______________________
+  Motion, drives and mechanics ................  ______________________
+  Laser source and its supply .................  ______________________
+  Beam delivery and optics ....................  ______________________
+  Cooling and thermal .........................  ______________________
+  Gas, extraction and consumables .............  ______________________
+  Safety circuits and interlocks ..............  ______________________
+  Installation and site conditions ............  ______________________
+  Operator practice and handling ..............  ______________________
+
+================================================================================
+6. WORK PERFORMED
+================================================================================
+
+  Checks carried out, and what each one established:
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  Readings recorded during the visit ......  [ ] attached   [ ] none taken
+  Adjustments made ........................  [ ] none  [ ] listed below
+  ______________________________________________________________________
+
+  Parts changed on this visit:
+
+  Part / description                      Qty    Source of part
+  ____________________________________   ____   __________________________
+  ____________________________________   ____   __________________________
+
+  Functional test performed ...............  [ ] yes   [ ] no, reason in 7
+  Acceptance criteria used (stated by you)   ____________________________
+  Result ..................................  [ ] met  [ ] partly met  [ ] not met
+
+================================================================================
+7. OPEN ITEMS AND WHAT WOULD CLOSE THEM
+================================================================================
+
+  No.  Open item                                 What would close it
+  ___  _______________________________________   ____________________________
+  ___  _______________________________________   ____________________________
+  ___  _______________________________________   ____________________________
+
+  Items outside the agreed scope, reported for information only:
+
+  ______________________________________________________________________
+
+================================================================================
+8. RECOMMENDED NEXT ACTION
+================================================================================
+
+  Recommendation ...........  [ ] none required
+                              [ ] parts, then a second visit
+                              [ ] bench or workshop work
+                              [ ] action by you or the manufacturer
+                              [ ] action by the end customer
+
+  Parts identified for the next step:
+
+  Part / description                      Qty    Identified from
+  ____________________________________   ____   __________________________
+  ____________________________________   ____   __________________________
+
+  Quotation to follow ......  [ ] yes, by __________   [ ] not requested
+
+================================================================================
+9. DOCUMENTATION SUPPLIED WITH THIS REPORT
+================================================================================
+
+  [ ] Photographs of equipment, labels and fault displays ....  count ______
+  [ ] Configuration and parameter backup, as found ...........  file ________
+  [ ] Configuration and parameter backup, on completion ......  file ________
+  [ ] Alarm or log export ....................................  file ________
+  [ ] Your own report form, completed ........................  ref _________
+  [ ] Other ..................................................  ____________
+
+================================================================================
+10. ACCEPTANCE
+================================================================================
+
+  Engineer
+    Name ...........  ______________________________________
+    Signature ......  ______________________________________
+    Date ...........  ______________________________________
+
+  Customer or site representative
+    Name ...........  ______________________________________
+    Role ...........  ______________________________________
+    Signature ......  ______________________________________
+    Date ...........  ______________________________________
+
+  Signature here records attendance and the condition reported at handover.
+  It is not an acceptance of liability by either party, and it does not
+  replace the acceptance terms in the written scope.
+
+================================================================================
+
+PhaseX Laser Services, a registered DBA of CoreX Robotics Services LLC
+239 New Road, Suite B210, Parsippany, NJ 07054
+(732) 516-8880  --  service@phasexlaser.com
+
+Blank template. No customer data, no measured values and no machine-specific
+content appear in this file.

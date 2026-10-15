@@ -650,3 +650,32 @@ body.nav-locked{overflow:hidden}
 .chk input{margin-top:3px;flex:0 0 auto;width:16px;height:16px;accent-color:var(--orange)}
 .field input[readonly]{background:var(--mist);color:var(--steel);cursor:default}
 .field[data-intent="parts"]{border-left:3px solid var(--orange);padding-left:16px}
+
+/* Carried from the deployed site, which announced a phone-number change the
+   working tree did not have. The old number appears here and nowhere else, with
+   its end date, which is why the global replacement runs before this block is
+   inserted. */
+.pbanner{background:var(--navy,#102640);color:#fff;font-size:.86rem;
+  line-height:1.45}
+.pbanner .wrap{padding:9px 20px}
+.pbanner p{margin:0}
+/* Both numbers are tel: links, as they are on the deployed page. Underlined
+   rather than colour-only, because the banner sits on navy and a colour
+   shift alone would not meet the non-colour-cue requirement. The tap area
+   is raised with padding on the inline box so a thumb can reach it; the
+   sentence still wraps as one block. */
+.pbanner a{color:#fff;text-decoration:underline;text-underline-offset:2px;
+  padding:2px 1px;white-space:nowrap}
+.pbanner a:hover{text-decoration-thickness:2px}
+.pbanner a:focus-visible{outline:2px solid var(--orange);outline-offset:2px;
+  border-radius:4px}
+
+/* Browser-measured at 390px: the French home page had scrollWidth 399 against a
+   clientWidth of 390, and the German one 394. The culprit was this label, which
+   carried white-space:nowrap - "SOURCES & PLATEFORMES QUE NOUS SERVONS" cannot
+   fit on one line at that width. The nowrap is removed in assets/home.css.
+   Browser-measured: the menu toggle hit box was 28px tall - three 2px bars, two
+   5px gaps and 6px of padding. Bars unchanged, hit box raised to the accessible
+   minimum. Behaviour, id and aria are untouched. */
+.nav__toggle{min-width:44px;min-height:44px;align-items:center;
+  justify-content:center;padding:0}

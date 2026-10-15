@@ -1,3 +1,4 @@
+(function(w){w.PXT=function(k,d,a){try{var t=w.__PX_I18N,v=t&&t[k];if(!v)return d;if(a)for(var i=0;i<a.length;i++)v=v.replace('{'+i+'}',a[i]);return v;}catch(e){return d;}};})(window);
 /* PhaseX Laser Services — measurement, and the choice that governs it.
  *
  * Measurement is OFF for every visitor on a first visit, wherever they are. No
@@ -254,16 +255,16 @@
     box.id = NOTICE_ID;
     box.className = 'cnotice';
     box.setAttribute('role', 'region');
-    box.setAttribute('aria-label', 'Website measurement choice');
+    box.setAttribute('aria-label', PXT('consent.aria','Website measurement choice'));
     var p = document.createElement('p');
     p.className = 'cnotice__text';
     p.appendChild(document.createTextNode(
-      'Measurement is off. We would like to count page views and whether a '
+      PXT('consent.body','Measurement is off. We would like to count page views and whether a '
       + 'service request was sent, so we know which pages are worth writing. '
-      + 'No advertising, and nothing you type in a form. '));
+      + 'No advertising, and nothing you type in a form. ')));
     var link = document.createElement('a');
     link.href = '/privacy/';
-    link.appendChild(document.createTextNode('What is collected'));
+    link.appendChild(document.createTextNode(PXT('consent.link','What is collected')));
     p.appendChild(link);
     p.appendChild(document.createTextNode('.'));
     var acts = document.createElement('div');
@@ -272,12 +273,12 @@
     yes.type = 'button';
     yes.className = 'btn btn--primary';
     yes.setAttribute('data-analytics-allow', '');
-    yes.appendChild(document.createTextNode('Allow analytics'));
+    yes.appendChild(document.createTextNode(PXT('consent.allow','Allow analytics')));
     var no = document.createElement('button');
     no.type = 'button';
     no.className = 'btn btn--ghost';
     no.setAttribute('data-analytics-decline', '');
-    no.appendChild(document.createTextNode('Decline'));
+    no.appendChild(document.createTextNode(PXT('consent.decline','Decline')));
     acts.appendChild(yes);
     acts.appendChild(no);
     box.appendChild(p);
@@ -290,13 +291,13 @@
     if (st === 'unset') showNotice(); else removeNotice();
 
     var words = {
-      granted: 'Measurement is on for this browser. You can switch it off here.',
-      denied: 'Measurement is off on this browser.',
-      unset: 'Measurement is off until you choose to allow it.',
-      globalPrivacyControl: 'Your browser sends Global Privacy Control, so '
-        + 'measurement is off and we do not ask.',
-      doNotTrack: 'Your browser sends Do Not Track, so measurement is off and '
-        + 'we do not ask.'
+      granted: PXT('status.granted','Measurement is on for this browser. You can switch it off here.'),
+      denied: PXT('status.denied','Measurement is off on this browser.'),
+      unset: PXT('status.unset','Measurement is off until you choose to allow it.'),
+      globalPrivacyControl: PXT('status.gpc','Your browser sends Global Privacy Control, so '
+        + 'measurement is off and we do not ask.'),
+      doNotTrack: PXT('status.dnt','Your browser sends Do Not Track, so measurement is off and '
+        + 'we do not ask.')
     };
     var status = document.querySelectorAll('[data-analytics-status]');
     for (var i = 0; i < status.length; i++) status[i].textContent = words[st];
@@ -331,16 +332,16 @@
     var ok = allowing ? grant() : deny();
     say(!ok
       ? (allowing
-         ? 'Measurement stays off. Either your browser refuses tracking at its own '
+         ? PXT('result.allow_failed','Measurement stays off. Either your browser refuses tracking at its own '
            + 'level, or it would not let this page remember the choice. Nothing has '
-           + 'been loaded.'
-         : 'Measurement is off on this page now, but your browser would not let us '
-           + 'remember the choice, so it will ask again on the next page.')
+           + 'been loaded.')
+         : PXT('result.deny_failed','Measurement is off on this page now, but your browser would not let us '
+           + 'remember the choice, so it will ask again on the next page.'))
       : allowing
-        ? 'Thank you. Measurement is on for this browser from now, and you can '
-          + 'switch it off on this page at any time.'
-        : 'Measurement is off, on this page immediately, and the analytics cookies '
-          + 'this site can see have been deleted.');
+        ? PXT('result.allowed','Thank you. Measurement is on for this browser from now, and you can '
+          + 'switch it off on this page at any time.')
+        : PXT('result.declined','Measurement is off, on this page immediately, and the analytics cookies '
+          + 'this site can see have been deleted.'));
   }, false);
 
   /* ---- intent signals, all behind send() --------------------------------- */
