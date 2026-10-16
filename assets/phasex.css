@@ -243,7 +243,26 @@ footer .f-logo p{max-width:290px}
 .crumb{background:var(--mist);border-bottom:1px solid var(--line);font-size:.82rem;color:var(--steel)}
 .crumb .wrap{padding-top:13px;padding-bottom:13px}
 .crumb a:hover{color:var(--orange)}
-.crumb span.sep{color:var(--line);margin:0 8px}
+/* The separator is an ATOMIC inline, so the line may break at its edges.
+   This is the whole fix for a real 320px overflow Codex measured in Chrome on
+   two German routes: scrollWidth 323 against clientWidth 320, and 361 against
+   320. The markup is `</span><b>Laseranlagen…` with no whitespace between the
+   two, so "/Laseranlagen" was ONE unbreakable run - the browser had no
+   permission to start the final label on a new line and ran it off the
+   viewport. The label itself was wrapping correctly; it was the join that
+   could not break. Measured at 320px before and after: the <b> keeps its two
+   line fragments and its right edge moves from 323.2 to 242.1 (battery) and
+   from 360.8 to 274.2 (robotic).
+   display:inline-block costs nothing visually - the margins are unchanged -
+   and it repairs every breadcrumb on the site at once, with no edit to any of
+   the 184 generated pages. */
+.crumb span.sep{color:var(--line);margin:0 8px;display:inline-block}
+/* The safety net, for the case the break opportunity above cannot help: a
+   single German compound longer than the whole line. overflow-wrap only acts
+   on a word that cannot fit by itself, so normal wrapping is untouched. It is
+   not overflow-x:hidden - nothing is concealed, the word is broken and stays
+   readable. */
+.crumb b,.crumb a{overflow-wrap:break-word}
 .crumb b{color:var(--navy);font-weight:600}
 
 /* ---------- ARTICLE LAYOUT ---------- */
@@ -407,7 +426,6 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 }
 @media(max-width:960px){
   .section{padding:64px 0}
-  .topbar{display:none}
   .tiles,.tiles--3,.tiles--4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .phero h1{font-size:2.25rem}
@@ -482,6 +500,14 @@ table.spec td.hit{color:var(--orange);font-weight:700}
      itself reads the same variable for its own height, so the number exists
      once: 46px of row plus its 1px border-top. */
   :root{--lang-h:47px}
+  /* The topbar goes with it. It used to hide at 960px while .langbar--m
+     appeared at 1060px, so from 961 to 1060 the page showed TWO language
+     selectors at once - the topbar copy and the header-row copy - and the
+     1024px tablet in landscape sat in the middle of that band. A real browser
+     measured both at 1060px: top=179x44 together with mob=1060x46. The topbar
+     hiding and --lang-h appearing are one decision, so they live in one
+     block. */
+  .topbar{display:none}
   .nav__links{display:none}
   .nav__toggle{display:flex}
   .nav.open .nav__links{display:block;position:absolute;top:var(--nav-h);left:0;right:0;background:#fff;padding:6px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 14px 34px rgba(13,42,70,.14);z-index:70;max-height:calc(100vh - var(--nav-h));overflow-y:auto}

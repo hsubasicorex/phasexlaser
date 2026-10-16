@@ -418,3 +418,89 @@
 .footer-cols div{max-width:none}
 .card__go{padding-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem}
 .card__go a{font-weight:700}
+
+/* ============================================================
+   SYSTEMS SHOWCASE
+   Five equipment families, one at a time, on the home page.
+
+   WHY IT IS BUILT THIS WAY. The only moving image on the site was a
+   sheet-metal cutter, which reads the company's scope as narrower than it
+   is. The replacement had to show five families without becoming a consumer
+   carousel and without shipping media we have no licence for, so:
+
+   - Progressive enhancement, not a JS widget. WITHOUT JavaScript every slide
+     is visible, stacked, and fully readable - which is also what a crawler
+     and an answer engine get. JavaScript adds .vshow--js, and only then does
+     one-at-a-time behaviour switch on. A broken script leaves a readable
+     page, never a blank stage.
+   - The media is an <img> with explicit width and height and a fixed 16/9
+     aspect-ratio box, so the slot reserves its space before anything loads
+     and contributes no layout shift.
+   - A <video> is an UPGRADE applied at runtime to a slide that declares an
+     approved clip, never markup that ships empty. Today no slide declares
+     one, so nothing large is fetched on any device.
+   - Motion is one slow cross-fade. Under prefers-reduced-motion the
+     auto-advance stops and the transition is removed; the control strip is
+     still there, so the reader selects panels by hand.
+   ============================================================ */
+.vshow{background:var(--navy);color:#fff;padding:84px 0 92px;position:relative}
+.vshow .eyebrow{color:#9fb2c4}
+.vshow .eyebrow::before{background:var(--orange)}
+.vshow h2{color:#fff;font-size:2.3rem;font-weight:900;letter-spacing:-.02em;
+  margin:18px 0 16px;max-width:760px}
+.vshow .lead{color:#cdd8e2;max-width:680px;margin-bottom:38px}
+
+.vshow__stage{position:relative}
+.vshow__slides{list-style:none;margin:0;padding:0}
+.vshow__slide{margin:0 0 40px}
+.vshow__slide figure{margin:0 0 20px}
+
+/* the media slot reserves its space before anything loads */
+.vshow__media{position:relative;display:block;width:100%;aspect-ratio:16/9;
+  background:#0a1f35;border:1px solid rgba(255,255,255,.14);border-radius:12px;
+  overflow:hidden}
+.vshow__media img,.vshow__media video{width:100%;height:100%;display:block;
+  object-fit:cover;background:#fff}
+.vshow__media video{position:absolute;inset:0}
+
+.vshow figcaption{color:#9fb2c4;font-size:.86rem;line-height:1.6;
+  margin-top:12px;max-width:760px}
+.vshow__fam{display:block;font-size:.76rem;font-weight:800;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.vshow__copy p{color:#e3eaf1;font-size:1.04rem;max-width:620px;
+  margin-bottom:18px}
+
+/* control strip: always present, because it is the manual path */
+.vshow__ctl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:28px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.14)}
+.vshow__btn{min-width:48px;min-height:48px;display:inline-flex;
+  align-items:center;justify-content:center;background:rgba(255,255,255,.06);
+  color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:8px;
+  font-size:1.05rem;font-weight:700;cursor:pointer;padding:0 14px}
+.vshow__btn:hover{background:rgba(255,255,255,.14)}
+.vshow__btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.vshow__dots{display:flex;gap:8px;list-style:none;margin:0 0 0 auto;padding:0;
+  flex-wrap:wrap}
+.vshow__dot{min-width:48px;min-height:48px;display:inline-flex;
+  align-items:center;justify-content:center;background:none;color:#9fb2c4;
+  border:1px solid rgba(255,255,255,.22);border-radius:8px;cursor:pointer;
+  font-size:.82rem;font-weight:700;padding:0 10px}
+.vshow__dot[aria-current="true"]{color:#fff;background:rgba(250,109,8,.22);
+  border-color:var(--orange)}
+.vshow__dot:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.vshow__status{margin-top:14px;font-size:.84rem;color:#9fb2c4}
+
+/* one at a time, only once JavaScript has said it can manage it */
+.vshow--js .vshow__slide{display:none;margin-bottom:0}
+.vshow--js .vshow__slide.is-current{display:block;animation:vshow-in .5s ease}
+@keyframes vshow-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .vshow--js .vshow__slide.is-current{animation:none}
+}
+
+@media(max-width:760px){
+  .vshow{padding:60px 0 68px}
+  .vshow h2{font-size:1.75rem}
+  .vshow__dots{margin-left:0;width:100%}
+}

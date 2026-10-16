@@ -66,6 +66,27 @@
   control and drive chain replacement, source replacement, CO2 to fiber conversion, and the repair,
   retrofit or replace comparison stated in writing.
 
+## Laser equipment classes, by application
+
+- [Laser systems we service, by application](https://phasexlaser.com/industrial-laser-service/applications/):
+  the index of equipment classes, ordered by what a stoppage costs their owners. Each page states what is
+  in scope, what is not, and who owns the result. French, Spanish and German: /fr/, /es/ and /de/ under
+  the same path.
+- [Semiconductor and wafer laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/semiconductor-wafer-laser-equipment-service/):
+  wafer-level and advanced-packaging tools. Source interface, beam delivery outside the sealed module,
+  scanner, stage and motion, machine controller, safety chain, extraction and utilities. A sealed or
+  proprietary optical module is not opened: it is replaced or routed to the OEM. Lithography and EUV
+  platforms are declined. Process qualification belongs to the fab.
+- [Battery and e-mobility laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/battery-emobility-laser-equipment-service/):
+  busbar welding, cell and module sealing, tray lines and hairpin stator welding. Fiber source,
+  programmable optics, fixtures, sensor and vision interfaces, cell control, extraction. Weld procedure
+  qualification and the production record stay with the manufacturer.
+- [Robotic welding, cladding and deposition cell service](https://phasexlaser.com/industrial-laser-service/applications/robotic-welding-cladding-ded-service/):
+  laser cladding, directed energy deposition and robotic welding cells. High-power source, beam delivery
+  and head, powder or wire delivery, robot and motion, shielding gas, cell control and interlocks.
+  Metallurgical and dimensional qualification of a deposited layer is the customer's; where the component
+  is a certified part it belongs to the certificate holder and the regulator.
+
 ## OEM and distributor field service
 
 - [OEM and distributor field service support](https://phasexlaser.com/oem-distributor-field-service-support/):
