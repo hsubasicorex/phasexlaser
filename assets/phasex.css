@@ -117,7 +117,8 @@ footer.site{background:var(--ink);color:#9fb2c4;padding:60px 0 32px;font-size:.9
 .tagline{font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:24px;letter-spacing:.01em}
 .tagline b{color:var(--orange)}
 .footer-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
-footer .f-logo img{height:34px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
+footer .f-logo{min-width:0}
+footer .f-logo img{height:34px;width:auto;max-width:100%;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
 footer .f-logo p{max-width:290px}
 .footer-cols{display:flex;gap:56px;flex-wrap:wrap}
 .footer-cols .label{color:#fff;font-weight:700;margin-bottom:12px;font-size:.82rem;letter-spacing:.06em}

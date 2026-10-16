@@ -334,7 +334,9 @@
 
   .footer-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
 
-  footer .f-logo img{height:34px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
+  footer .f-logo{min-width:0}
+
+  footer .f-logo img{height:34px;width:auto;max-width:100%;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}
 
   footer .f-logo p{max-width:290px}
 
