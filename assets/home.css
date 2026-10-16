@@ -504,3 +504,43 @@
   .vshow h2{font-size:1.75rem}
   .vshow__dots{margin-left:0;width:100%}
 }
+
+/* Four-scene video hero. Stable company scope stays above the changing scene. */
+.hero__clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .75s ease}
+.hero__clip.is-current{opacity:1}
+.hero__inner{max-width:850px;padding-top:78px;padding-bottom:54px}
+.hero p.lead{max-width:790px;margin-bottom:24px}
+.hero__stage{position:relative;max-width:760px;border-left:3px solid var(--orange);padding:17px 0 4px 22px;margin:0 0 24px}
+.hero__scenes{display:grid}
+.hero__scene{grid-area:1/1;margin:0 0 12px}
+.hero--js .hero__scene{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(30px);transition:opacity .42s ease,transform .42s ease,visibility 0s linear .42s}
+.hero--js .hero__scene.is-current{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
+.hero__fam{font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin:0 0 5px}
+.hero__scene-line{font-size:1rem;line-height:1.55;color:#dbe5ee;max-width:720px;margin:0 0 14px}
+.hero__stage .hero__btns{margin-bottom:0}
+.hero__stage .btn{padding:10px 18px;font-size:.86rem}
+.hero__controls{display:flex;align-items:center;gap:9px;margin-top:6px}
+.hero__dot{width:34px;height:4px;border:0;border-radius:99px;background:rgba(255,255,255,.38);cursor:pointer;padding:0;transition:background .2s,width .2s}
+.hero__dot.is-current{width:52px;background:var(--orange)}
+.hero__dot:focus-visible,.hero__toggle:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.hero__toggle{width:34px;height:34px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(7,25,43,.58);color:#fff;display:grid;place-items:center;cursor:pointer;margin-left:3px}
+.hero__toggle span{width:10px;height:13px;border-left:3px solid currentColor;border-right:3px solid currentColor}
+.hero__toggle[hidden]{display:none}
+.hero.is-paused .hero__toggle span{width:0;height:0;border:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid currentColor;margin-left:3px}
+.hero__strip{margin-top:0;padding-top:16px}
+.hero__media-note{max-width:760px;color:#9fb2c4;font-size:.73rem;line-height:1.45;margin:12px 0 0}
+@media(max-width:640px){
+ .hero__inner{padding-top:58px;padding-bottom:46px}.hero p.lead{font-size:1rem;margin-bottom:20px}.hero__stage{padding-left:16px}
+ .hero__scene-line{font-size:.94rem}.hero__stage .hero__btns{gap:8px}.hero__stage .btn{padding:9px 12px;font-size:.79rem}.hero__strip{gap:8px;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.hero__clip,.hero--js .hero__scene{transition:none}}
+@media(min-width:961px){
+  .hero__inner{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);grid-template-rows:auto auto auto auto auto;column-gap:52px;align-items:start}
+  .hero__inner>.eyebrow{grid-column:1;grid-row:1}
+  .hero__inner>h1{grid-column:1;grid-row:2;font-size:3.15rem}
+  .hero__inner>p.lead{grid-column:1;grid-row:3;margin-bottom:22px}
+  .hero__inner>.hero__strip{grid-column:1;grid-row:4}
+  .hero__stage{grid-column:2;grid-row:1/5;align-self:center;margin:0;padding:24px 22px 18px;background:rgba(7,25,43,.68);border-radius:0 10px 10px 0;box-shadow:0 18px 48px rgba(0,0,0,.22);backdrop-filter:blur(3px)}
+  .hero__inner>.hero__media-note{grid-column:2;grid-row:5;margin-top:12px}
+}
+.hero__status{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}

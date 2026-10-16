@@ -25,7 +25,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/phasex-logo.png">
 <link rel="stylesheet" href="/assets/phasex.css">
-<link rel="stylesheet" href="/assets/home.css">
+<link rel="stylesheet" href="/assets/home.css?v=20261016-hero5">
 <script src="/assets/analytics.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://phasexlaser.com/#webpage", "url": "https://phasexlaser.com/", "name": "Laser Technical Services | Industrial, Packaging and Scientific Laser Repair | PhaseX Laser", "isPartOf": {"@id": "https://phasexlaser.com/#website"}, "about": {"@id": "https://phasexlaser.com/#organization"}, "publisher": {"@id": "https://phasexlaser.com/#organization"}, "inLanguage": "en"}, {"@type": ["Organization", "LocalBusiness"], "@id": "https://phasexlaser.com/#organization", "name": "PhaseX Laser Services", "legalName": "CoreX Robotics Services LLC", "description": "Independent industrial, packaging and scientific laser service: installation, commissioning, retrofit and component-level repair, on site across the United States.", "url": "https://phasexlaser.com/", "logo": "https://phasexlaser.com/phasex-logo.png", "image": "https://phasexlaser.com/phasex-logo.png", "telephone": "+1-732-516-8880", "email": "service@phasexlaser.com", "priceRange": "$$$", "address": {"@type": "PostalAddress", "streetAddress": "239 New Road, Suite B210", "addressLocality": "Parsippany", "addressRegion": "NJ", "postalCode": "07054", "addressCountry": "US"}, "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}], "knowsLanguage": ["en", "fr", "es", "de"], "sameAs": ["https://www.linkedin.com/company/phasexlaser/"]}, {"@type": "WebSite", "@id": "https://phasexlaser.com/#website", "url": "https://phasexlaser.com/", "name": "PhaseX Laser Services", "publisher": {"@id": "https://phasexlaser.com/#organization"}, "inLanguage": "en"}, {"@type": "Service", "name": "Industrial laser service", "serviceType": "Industrial laser service", "provider": {"@id": "https://phasexlaser.com/#organization"}, "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}], "description": "Installation, commissioning, retrofit, modernization and component-level repair of industrial laser cutting, welding, cleaning and cladding systems, laser sources, cutting heads and control systems.", "@id": "https://phasexlaser.com/#service-industrial-laser-machine-service-and-repair"}, {"@type": "Service", "name": "Packaging laser service", "serviceType": "Packaging laser service", "provider": {"@id": "https://phasexlaser.com/#organization"}, "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}], "url": "https://phasexlaser.com/packaging-laser-service/", "description": "Independent service for flexo plate imaging lasers, laser die cutting and converting machines, gravure and rotary screen engravers, and production line coding and marking lasers.", "@id": "https://phasexlaser.com/#service-packaging-and-printing-laser-service"}, {"@type": "Service", "name": "Scientific laser repair", "serviceType": "Scientific laser service", "provider": {"@id": "https://phasexlaser.com/#organization"}, "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Country", "name": "Canada"}], "url": "https://phasexlaser.com/scientific-laser-repair/", "description": "Evaluation and component-level repair of ultrafast, femtosecond, picosecond and Ti:Sapphire laser systems, harmonic generators, OPO and OPA stages, and their drivers and power supplies.", "@id": "https://phasexlaser.com/#service-scientific-laser-repair"}]}</script>
 <style>.langbar{display:flex;gap:2px;align-items:center;flex:0 0 auto}.langbar a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 8px;font-size:.74rem;font-weight:800;letter-spacing:.08em;color:#fff;opacity:.62;text-decoration:none;border-radius:6px}.langbar a:hover{opacity:1}.langbar a[aria-current]{opacity:1;background:rgba(255,255,255,.16)}.langbar a:focus-visible{outline:2px solid var(--orange);outline-offset:2px;opacity:1}@media(max-width:1060px){.langbar{gap:1px}.langbar a{padding:0 4px;font-size:.7rem}}@media(max-width:380px){.langbar{gap:0}.langbar a{padding:0 2px;letter-spacing:.02em;font-size:.66rem}}.langbar--m{display:none}@media(max-width:1060px){header.site .langbar--m{display:flex;align-items:stretch;gap:0;height:calc(var(--lang-h, 47px) - 1px);padding:0 20px;background:var(--mist,#f4f6f8);border-top:1px solid var(--line)}header.site .langbar--m a{flex:0 0 auto;min-width:52px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 12px;font-size:.8rem;font-weight:700;letter-spacing:.08em;color:var(--steel,#5b6470);opacity:1;text-decoration:none;border-radius:0;background:none;border-bottom:2px solid transparent}header.site .langbar--m a:hover,header.site .langbar--m a:focus-visible{color:var(--navy,#102640)}header.site .langbar--m a[aria-current]{color:var(--navy,#102640);background:none;border-bottom-color:var(--orange)}}</style>
@@ -68,10 +68,11 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero__media">
-    <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="/hero-poster.jpg" width="1920" height="1080">
-      <source src="/hero.mp4" type="video/mp4">
-    </video>
+  <div class="hero__media" aria-hidden="true">
+    <video class="hero__clip is-current" muted loop playsinline preload="none" width="1920" height="1080" poster="/hero-poster.jpg" data-poster="/hero-poster.jpg" data-src="/hero.mp4" aria-label="Laser cutting machinery in operation."></video>
+    <video class="hero__clip" muted loop playsinline preload="none" width="1920" height="1080" data-poster="/assets/media/optical-bench-poster.jpg" data-src="/assets/media/optical-bench.mp4" aria-label="Scientific laser equipment on an optical table."></video>
+    <video class="hero__clip" muted loop playsinline preload="none" width="1920" height="1080" data-poster="/assets/media/packaging-cardboard-laser-poster.jpg" data-src="/assets/media/packaging-cardboard-laser.mp4" aria-label="A laser head cutting precise lines into packaging-grade cardboard."></video>
+    <video class="hero__clip" muted loop playsinline preload="none" width="1920" height="1080" data-poster="/assets/media/cladding-cell-poster.jpg" data-src="/assets/media/cladding-cell.mp4" aria-label="A laser cladding and deposition cell in operation."></video>
   </div>
   <div class="hero__overlay"></div>
   <div class="wrap">
@@ -79,11 +80,40 @@
       <span class="eyebrow">Independent Industrial Laser Service · New Jersey</span>
       <h1>Industrial laser service engineered for uptime.</h1>
       <p class="lead">PhaseX provides independent laser technical services across the United States and Canada. We install, commission, relocate and repair industrial laser machinery: fiber cutting, marking and engraving, cleaning, welding and cladding systems, robotic cells and automated loading lines. We service the parts most owners cannot get serviced locally, including laser sources, power supplies, scan heads and fiber delivery cables. On site, from New Jersey.</p>
-      <div class="hero__btns">
-        <a href="#contact" class="btn btn--primary">Request service</a>
-        <a href="#services" class="btn btn--on-navy">See what we fix</a>
+      <div class="hero__stage" data-dwell="13000" data-status-playing="Scene {n} of {total}: {family}" data-status-paused="Paused on scene {n} of {total}: {family}" data-label-play="Play the video scenes" data-label-pause="Pause the video scenes" tabindex="-1">
+        <div class="hero__scenes">
+          <div class="hero__scene is-current" data-family="Laser cutting machines">
+            <p class="hero__fam">Laser cutting machines</p>
+            <p class="hero__scene-line">Field service for the source, beam delivery, cutting head, motion, controls and the machine systems that determine whether a part can ship.</p>
+            <div class="hero__btns"><a href="/industrial-laser-service/laser-cutting-machine-repair/" class="btn btn--primary">Explore cutting-machine service</a><a href="/scientific-laser-repair/intake/?sector=industrial" class="btn btn--on-navy">Request service</a></div>
+          </div>
+          <div class="hero__scene" data-family="Scientific laser systems">
+            <p class="hero__fam">Scientific laser systems</p>
+            <p class="hero__scene-line">Independent evaluation and repair for ultrafast, Ti:Sapphire, picosecond, OPO and OPA systems, harmonic stages, drivers and power supplies.</p>
+            <div class="hero__btns"><a href="/scientific-laser-repair/" class="btn btn--primary">Explore scientific laser repair</a><a href="/scientific-laser-repair/intake/?sector=scientific" class="btn btn--on-navy">Request service</a></div>
+          </div>
+          <div class="hero__scene" data-family="Packaging and printing lines">
+            <p class="hero__fam">Packaging and printing lines</p>
+            <p class="hero__scene-line">Service for plate imagers, laser converting, coding and marking, engraving systems and the production equipment around them.</p>
+            <div class="hero__btns"><a href="/packaging-laser-service/" class="btn btn--primary">Explore packaging laser service</a><a href="/scientific-laser-repair/intake/?sector=packaging" class="btn btn--on-navy">Request service</a></div>
+          </div>
+          <div class="hero__scene" data-family="Laser welding, cladding and DED cells">
+            <p class="hero__fam">Laser welding, cladding and DED cells</p>
+            <p class="hero__scene-line">Service across the source, beam path, process head, feed path, motion, controls, safety chain and cell integration.</p>
+            <div class="hero__btns"><a href="/industrial-laser-service/applications/robotic-welding-cladding-ded-service/" class="btn btn--primary">Explore cladding and DED service</a><a href="/scientific-laser-repair/intake/?sector=industrial" class="btn btn--on-navy">Request service</a></div>
+          </div>
+        </div>
+        <div class="hero__controls" aria-label="Choose a video scene">
+          <button class="hero__dot is-current" type="button" data-go="0" aria-label="Show laser cutting machines" aria-current="true"></button>
+          <button class="hero__dot" type="button" data-go="1" aria-label="Show scientific laser systems"></button>
+          <button class="hero__dot" type="button" data-go="2" aria-label="Show packaging and printing lines"></button>
+          <button class="hero__dot" type="button" data-go="3" aria-label="Show laser welding, cladding and DED cells"></button>
+          <button class="hero__toggle" type="button" data-act="toggle" aria-label="Pause the video scenes"><span aria-hidden="true"></span></button>
+        </div>
+        <p class="hero__status sr-only" aria-live="off"></p>
       </div>
       <p class="hero__strip"><b>Nationwide field service</b> <span class="dot">·</span> based in Parsippany, New Jersey</p>
+      <p class="hero__media-note">Licensed representative footage of the equipment classes shown. Not a PhaseX facility and not a record of completed work.</p>
     </div>
   </div>
 </section>
@@ -602,7 +632,7 @@
 
 <script src="/assets/phasex.js"></script>
 <script src="/assets/home.js"></script>
-  <script src="/assets/showcase.js" defer></script>
-  <script src="/assets/hero-video.js" defer></script>
+  <script src="/assets/showcase.js?v=20261016-hero5" defer></script>
+  <script src="/assets/hero-video.js?v=20261016-hero5" defer></script>
 </body>
 </html>

@@ -66,7 +66,7 @@
   var i = 0;
   var timer = null;
   var onScreen = true;
-  var userPaused = reduce;          // reduced motion starts paused, by choice
+  var userPaused = true;            // manual by default; the hero owns automatic motion
   var DWELL = 7000;
 
   stage.classList.add('vshow--js');
