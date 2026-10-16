@@ -25,7 +25,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
 
-  
+
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
 
   .eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);display:inline-block}
@@ -73,17 +73,17 @@
   .btn--on-navy:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 
 
-  
+
   /* Only assets/home.js sets html.reveal-on, and only just before it starts observing.
    If that script never runs, nothing here applies and every section stays visible. */
 .reveal-on .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .reveal-on .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal-on .reveal{opacity:1;transform:none;transition:none}}
 
-  
 
 
-  
+
+
   .topbar{background:var(--ink);color:#aebccb;font-size:.76rem;letter-spacing:.04em}
 
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
@@ -95,11 +95,11 @@
   .topbar a:hover{color:#fff}
 
 
-  
+
   header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 
 
-  
+
   .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
 
   .hero__media{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy)}
@@ -131,7 +131,7 @@
   .hero__strip .dot{color:var(--orange)}
 
 
-  
+
   .platforms{background:var(--ink);color:#fff;padding:30px 0;border-top:1px solid rgba(255,255,255,.06)}
 
   .platforms__row{display:flex;align-items:center;justify-content:space-between;gap:18px 40px;flex-wrap:wrap}
@@ -143,7 +143,7 @@
   .platforms__names span{font-weight:700;font-size:1.05rem;color:#e3eaf1;letter-spacing:.01em}
 
 
-  
+
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 
   .card{background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 32px;position:relative;transition:.2s}
@@ -169,7 +169,7 @@
   .card p{color:var(--steel);font-size:.94rem}
 
 
-  
+
   .split{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
 
   .split__text .eyebrow{margin-bottom:18px}
@@ -195,7 +195,7 @@
   .figure--contain img{object-fit:contain;height:auto;min-height:auto;background:#fff;border:1px solid var(--line)}
 
 
-  
+
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
 
   .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:34px 30px;position:relative}
@@ -209,7 +209,7 @@
   .step p{color:var(--steel);font-size:.94rem}
 
 
-  
+
   .cov{text-align:center}
 
   .cov .tags{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:26px 0 20px}
@@ -221,7 +221,7 @@
   .cov .note{margin-top:12px;font-size:.95rem;color:var(--navy);font-weight:700}
 
 
-  
+
   .band{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;border-radius:16px;padding:60px 52px;position:relative;overflow:hidden}
 
   .band::after{content:"";position:absolute;top:-30%;right:-4%;width:42%;height:170%;
@@ -285,7 +285,7 @@
 @media(max-width:640px){.compgrid{grid-template-columns:1fr}}
 
 
-  
+
   .faq{max-width:840px;margin:0 auto}
 
   .faq__item{border-bottom:1px solid var(--line)}
@@ -301,7 +301,7 @@
   .faq__a p{color:var(--steel);padding:0 0 24px;font-size:.98rem}
 
 
-  
+
   #contact{position:relative;overflow:hidden}
 
   #contact .contact-bg{position:absolute;inset:0;z-index:0;background:url('../contact-bg.jpg') center/cover}
@@ -325,7 +325,7 @@
   .contact-cta{display:flex;gap:14px;flex-wrap:wrap}
 
 
-  
+
   footer.site{background:var(--ink);color:#9fb2c4;padding:60px 0 32px;font-size:.9rem}
 
   .tagline{font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:24px;letter-spacing:.01em}
@@ -349,7 +349,7 @@
   .copy{margin-top:18px;font-size:.82rem;color:#6f8093}
 
 
-  
+
   .systems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 
   .sys{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 28px;position:relative;transition:.2s;overflow:hidden}
@@ -374,7 +374,7 @@
 @media(max-width:960px){.systems{grid-template-columns:1fr}}
 
 
-  
+
   .brands{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 
   .brandcat{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:#fff}
@@ -391,7 +391,7 @@
 @media(max-width:640px){.brands{grid-template-columns:1fr}}
 
 
-  
+
   .callbar{display:none}
 @media(max-width:960px){
     .cards{grid-template-columns:repeat(2,1fr)}

@@ -417,6 +417,14 @@ table.spec td.hit{color:var(--orange);font-weight:700}
 .sources li{margin-bottom:10px;color:var(--steel);padding-left:20px;position:relative}
 .sources li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:2px;background:var(--orange)}
 .sources a{word-break:break-word}
+/* The same safety net the breadcrumb already uses, extended to the prose and
+   branch containers the brand and product-family system writes into. Static
+   measurement put the longest unbreakable visible token at 28 characters - a
+   German compound - against roughly 30 characters of content width at 320px.
+   A two-character margin is not a margin. overflow-wrap only acts on a word
+   that cannot fit by itself, so normal wrapping, line length and the design
+   are untouched; this adds a break opportunity where there was none. */
+.prose p,.prose li,.prose h3,.branch p,.branch h3,.desig{overflow-wrap:break-word}
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:1040px){
