@@ -766,3 +766,40 @@ body.nav-locked{overflow:hidden}
    minimum. Behaviour, id and aria are untouched. */
 .nav__toggle{min-width:44px;min-height:44px;align-items:center;
   justify-content:center;padding:0}
+
+/* ---- Service-page clip -------------------------------------------------
+   One silent, looping clip per service page, under the hero band. The frame
+   reserves its own space from an aspect-ratio rather than from the loaded
+   video, so the page does not move when the file arrives - or when it never
+   does, which on a phone or a metered connection is the normal case. The
+   poster is a still frame of the same clip, so the no-JS and the thrifty
+   render is the same picture, not a different one. */
+.pxv{padding:34px 0 10px}
+.pxv__fig{margin:0}
+.pxv__frame{position:relative;aspect-ratio:16/9;background:var(--navy);
+  border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.pxv__frame video{display:block;width:100%;height:100%;object-fit:cover}
+.pxv__play{position:absolute;right:14px;bottom:14px;width:46px;height:46px;
+  min-width:44px;min-height:44px;border:0;border-radius:50%;cursor:pointer;
+  background:rgba(13,42,70,.82);color:#fff;font-size:.95rem;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center}
+/* WHY THIS RULE EXISTS, and why it has to sit here. The button above sets
+   `display`, and a class selector (0,1,0) outranks the user-agent sheet's
+   `[hidden]{display:none}`. So `hidden` in the markup stopped working the
+   moment the button got a display value: a real Chromium run found the control
+   visible on all 16 service pages in exactly the two modes that must never be
+   offered it - reduced motion and Save-Data - with no src bound and no request
+   made. The attribute selector (0,2,0) outranks the class and is declared
+   after it, so `hidden` means hidden again, and a later `.pxv__play{display:}`
+   rule could not take it back. */
+.pxv__play[hidden]{display:none}
+.pxv__play:hover{background:var(--navy)}
+.pxv__play:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.pxv__ico::before{content:"\25B6"}
+.pxv.is-playing .pxv__ico::before{content:"\275A\275A"}
+.pxv__cap{margin:12px 0 0;font-size:.9rem;line-height:1.55;color:#5A6B7C;
+  max-width:70ch}
+@media (max-width:640px){
+  .pxv{padding:22px 0 6px}
+  .pxv__frame{border-radius:8px}
+}
