@@ -11,6 +11,11 @@
 - Independent third-party service provider. Not an authorized service center for any
   manufacturer, and we do not perform manufacturer warranty work. Brand and model names
   on our pages identify equipment only.
+- What that does NOT mean: it is not a refusal to look at equipment that is under
+  warranty. Where a unit is covered by an active manufacturer warranty we work only
+  inside a scope the equipment seller or manufacturer has authorized in writing, and we
+  tell the customer to go to that party first. Both halves of this are on every service
+  page; citing only the first half states something we do not say.
 - Field service and bench repair. Every job starts with a written scope and a fixed
   evaluation fee quoted before anyone travels, and ends with a written report.
 - Component-level work: boards repaired rather than only swapped, obsolete parts
@@ -66,11 +71,20 @@
   control and drive chain replacement, source replacement, CO2 to fiber conversion, and the repair,
   retrofit or replace comparison stated in writing.
 
+- [OEM and distributor field service support](https://phasexlaser.com/oem-distributor-field-service-support/):
+  attendance, commissioning and warranty-period visits carried out for manufacturers and
+  distributors that have no field organisation in North America, under their written scope and
+  their instructions. This is a subcontracted field capability, not a representation: we do not
+  speak for the manufacturer and we do not hold their authorisation.
+
 ## Laser equipment classes, by application
 
 - [Laser systems we service, by application](https://phasexlaser.com/industrial-laser-service/applications/):
   the index of equipment classes, ordered by what a stoppage costs their owners. Each page states what is
-  in scope, what is not, and who owns the result. French, Spanish and German: /fr/, /es/ and /de/ under
+  in scope, what is not, and who owns the result. Every indexable page on this site exists
+  in four languages at the same path under /fr/, /es/ and /de/, with reciprocal hreflang and
+  a self-reference on each; the technical scope is identical in all four and the wording is
+  written for each market rather than translated from the English. French, Spanish and German: /fr/, /es/ and /de/ under
   the same path.
 - [Semiconductor and wafer laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/semiconductor-wafer-laser-equipment-service/):
   wafer-level and advanced-packaging tools. Source interface, beam delivery outside the sealed module,
@@ -86,16 +100,6 @@
   and head, powder or wire delivery, robot and motion, shielding gas, cell control and interlocks.
   Metallurgical and dimensional qualification of a deposited layer is the customer's; where the component
   is a certified part it belongs to the certificate holder and the regulator.
-
-## OEM and distributor field service
-
-- [OEM and distributor field service support](https://phasexlaser.com/oem-distributor-field-service-support/):
-  independent U.S. field service carried out as a subcontractor to equipment manufacturers,
-  distributors and importers. Installation and commissioning, system evaluation, accessible
-  field repair, operator handoff, and a written field report after every visit. White-label
-  attendance and non-solicitation by written agreement; rates agreed in writing before
-  dispatch. Not an authorized representative of any manufacturer. French, Spanish and German:
-  /fr/, /es/ and /de/ under the same path.
 
 ## Packaging and printing laser service
 
@@ -137,6 +141,7 @@
 - Manufacturer pages: [Coherent](https://phasexlaser.com/scientific-laser-repair/coherent/),
   [Spectra-Physics](https://phasexlaser.com/scientific-laser-repair/spectra-physics/),
   [Onefive and NKT](https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana/),
+  [Katana 10 HP](https://phasexlaser.com/scientific-laser-repair/onefive-nkt-katana-10-hp/),
   [Light Conversion](https://phasexlaser.com/scientific-laser-repair/light-conversion/),
   [Continuum and Lumibird](https://phasexlaser.com/scientific-laser-repair/continuum-lumibird/),
   [EKSPLA](https://phasexlaser.com/scientific-laser-repair/ekspla/),
@@ -186,6 +191,36 @@
 - Part numbers on this equipment are frequently the machine builder's number rather than
   the component maker's, and the two do not always look different. That ambiguity is the
   single most useful thing a photograph of the label resolves.
+
+## Brands and product families, A to Z
+
+- [Laser brand and product-family index](https://phasexlaser.com/laser-brand-index/): one
+  indexable page listing the manufacturers we are asked about across six equipment classes -
+  sources, cutting and welding heads, controls and drives, machines and cells, packaging and
+  printing systems, and laboratory lasers. Each entry states what the equipment does in a
+  machine, what we accept it for, and which page answers it. Product families are printed
+  only where they were read from that manufacturer's own site, datasheet or operation manual,
+  with the URL and the date recorded in our source ledger; where a maker publishes no current
+  page for a series the entry asks for the nameplate instead of naming a designation we
+  cannot stand behind. Deliberately one page and not one page per brand.
+- [Imported fiber laser cutting machine service](https://phasexlaser.com/industrial-laser-service/imported-fiber-laser-machine-service/):
+  written for machines whose local support has thinned out. The recurring problem on these
+  platforms is that the source, the head and the controller are three different
+  manufacturers, so no single vendor owns a fault; the page covers the nine machine builders
+  we see most and what to send so a first reply is useful.
+- [Raycus fiber laser source service](https://phasexlaser.com/industrial-laser-service/raycus/):
+  the RFL-C continuous-wave designation and the Global, HP and multi-module groups as Raycus
+  publishes them, how to read the label on the source rather than the machine plate, and what
+  we accept for evaluation and component-level work.
+- [Han's Laser equipment service](https://phasexlaser.com/industrial-laser-service/hans-laser/):
+  the same brand appears on laser sources, on complete cutting machines and on marking systems
+  inside packaging lines. The page exists to resolve which of the three a caller has, because
+  the service conversation is different in each.
+- [Esko CDI flexo plate imaging service](https://phasexlaser.com/packaging-laser-service/esko-cdi/):
+  digital flexo plate imaging, including the Optics 40 imaging option and Pixel+ screening as
+  Esko documents them. Prepress sits in front of press scheduling, so an imager that is down
+  becomes missed press windows within a shift, and there are very few independent companies in
+  North America who will look at this class of equipment.
 
 ## Vocabulary and definitions
 
