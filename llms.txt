@@ -104,6 +104,32 @@
 - [Medical tube, stent and hypotube laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/medical-tube-stent-laser-equipment-service/): complete-machine evaluation around precision medical-tube processing. Rotary and linear motion, collets, tube feed, vision, controls, safety, cooling, extraction and accessible laser interfaces. Representative Coherent StarCut Tube and StarFeed families are named for identification. PhaseX does not change validated recipes, qualify a medical-device process or release product.
 - [Metal additive and LPBF equipment subsystem service](https://phasexlaser.com/industrial-laser-service/applications/metal-additive-lpbf-equipment-service/): accessible recoater and platform motion, gas and filter interfaces, cooling, controls, safety and accessible laser/scanner interfaces on EOS, Nikon SLM, 3D Systems DMP, Renishaw RenAM and TRUMPF TruPrint families. Powder and chamber readiness must be confirmed before field work; build parameters, process qualification and part acceptance remain with the owner.
 
+- [ECO3 MAGIS DI flexo imaging system service](https://phasexlaser.com/packaging-laser-service/eco3-magis-di-service/):
+  drum and vacuum, imaging head interfaces, motion and registration, controls, cooling and extraction on MAGIS DI
+  260 S, 360 S, 360 H+, 470 H, 600 H and 800 H+ drum imagers. ECO3 runs its own North American service organisation;
+  PhaseX is independent additional or alternative capacity, not an ECO3 appointment. Amfortis and RIP recipes,
+  material selection, software licences, plate-process acceptance and production release stay with the customer and ECO3.
+- [SPGPrints TITANIUM and PLATINUM prepress equipment service](https://phasexlaser.com/packaging-laser-service/spgprints-titanium-platinum-service/):
+  TITANIUM multifunction CTP in 25x30 and 48x35 inch variants, formerly variLEX, and PLATINUM direct laser engraving,
+  formerly KRONOS, on sealed CO2 or fiber platforms for sleeves, rollers and plate-on-drum work. Drum and sleeve
+  handling, motion, controls, cooling and extraction are in scope. Active 3D RIP recipes, calibrated material
+  databases, OEM software and licences, and print-form acceptance stay with the customer and SPGPrints.
+- [Pharmaceutical tablet laser drilling equipment service](https://phasexlaser.com/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/):
+  tablet transport and indexing, vision and reject handling, accessible laser and shutter interfaces, extraction,
+  controls and utilities on CMS Laser TD-10, TD-70, TD-70-2 and TD-140 systems, Ackley Hartnett H-Track, VIP, Delta,
+  Servo, IBM, Cantilever, Lab and R&D laser drills, and installed EAM systems. PhaseX provides as-found and as-left
+  equipment records only. Recipe, hole geometry, drug-release behaviour, IQ/OQ/PQ, the 21 CFR Part 11 determination,
+  GMP change control, contamination assessment, validation and batch or product release stay with the site quality unit.
+- [Aerospace and turbine multi-axis laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/):
+  five-axis and rotary motion, processing heads, accessible source interfaces, assist gas, cooling, extraction,
+  controls and the cell safety chain on Prima Power LASERDYNE 795 and 811 with the 430 and 606D installed base,
+  DMG MORI LASERTEC 50, 100 and 160 PowerDrill and PowerShape, Winbro DRILL-300 and the 100 and 200 Series,
+  Synova MCS 500 and MCS 300 Laser MicroJet, and TRUMPF TruLaser Cell 3000 and 7040. Process parameters, part
+  programmes, qualification and revalidation, FAI and NDT, certified-component release, airworthiness and any
+  export-controlled or classified data stay with the owner, the certificate holder and the authority. PhaseX is not
+  a repair station, holds no aviation approval and claims no military or government authorization.
+  Deposition, cladding and robotic welding cells are covered separately on the welding, cladding and DED cell page.
+
 ## Packaging and printing laser service
 
 - [Brands A to Z with service scope per class](https://phasexlaser.com/packaging-laser-service/#scopes):

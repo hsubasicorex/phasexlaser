@@ -1,0 +1,251 @@
+{
+ "_note": "Source ledger for the November 2026 high-value equipment expansion. Three evidence classes are kept apart on purpose. official_product_identity proves only that a manufacturer publishes that platform under that name. phasex_service_evidence would prove that PhaseX has serviced that platform, and is empty: no completed-job record exists for these families. evaluation_only_intake is what the site actually offers today. Manufacturer product evidence must never be presented as proof of PhaseX experience on a platform.",
+ "_checked": "2026-11-05",
+ "_evidence_classes": {
+  "official_product_identity": "The manufacturer publishes this platform or model family under this name on the cited URL.",
+  "phasex_service_evidence": "A completed PhaseX job on that platform, with a job record. EMPTY for every family below.",
+  "evaluation_only_intake": "PhaseX accepts the equipment for evaluation and scope definition; the serviceable boundary is settled after configuration review."
+ },
+ "families": [
+  {
+   "manufacturer": "ECO3",
+   "model_family": "MAGIS DI",
+   "model_families_named_on_page": [
+    "MAGIS DI 260 S",
+    "MAGIS DI 360 S",
+    "MAGIS DI 360 H+",
+    "MAGIS DI 470 H",
+    "MAGIS DI 600 H",
+    "MAGIS DI 800 H+"
+   ],
+   "route": "/packaging-laser-service/eco3-magis-di-service/",
+   "localized_routes": [
+    "/packaging-laser-service/eco3-magis-di-service/",
+    "/fr/packaging-laser-service/eco3-magis-di-service/",
+    "/es/packaging-laser-service/eco3-magis-di-service/",
+    "/de/packaging-laser-service/eco3-magis-di-service/"
+   ],
+   "official_product_identity": [
+    {
+     "url": "https://eco3.com/products?application=packaging-labels",
+     "title": "ECO3 packaging and label products",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://eco3.com/products/magis-di-600-h",
+     "title": "ECO3 MAGIS DI 600 H",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://eco3.com/products/magis-di-360-s",
+     "title": "ECO3 MAGIS DI 360 S",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://eco3.com/about-us",
+     "title": "ECO3 company and service organisation",
+     "checked": "2026-11-05"
+    }
+   ],
+   "phasex_service_evidence": [],
+   "evaluation_only_intake": true,
+   "claim_boundary": "ECO3 maintains its own North American technical service. PhaseX is independent additional or alternative capacity and holds no ECO3 appointment. Amfortis and RIP recipes, material selection, software licences, plate-process acceptance and production release remain with the customer and ECO3."
+  },
+  {
+   "manufacturer": "SPGPrints",
+   "model_family": "TITANIUM / PLATINUM",
+   "model_families_named_on_page": [
+    "TITANIUM 25x30 in",
+    "TITANIUM 48x35 in",
+    "TITANIUM (formerly variLEX)",
+    "PLATINUM CO2",
+    "PLATINUM fiber",
+    "PLATINUM (formerly KRONOS)"
+   ],
+   "route": "/packaging-laser-service/spgprints-titanium-platinum-service/",
+   "localized_routes": [
+    "/packaging-laser-service/spgprints-titanium-platinum-service/",
+    "/fr/packaging-laser-service/spgprints-titanium-platinum-service/",
+    "/es/packaging-laser-service/spgprints-titanium-platinum-service/",
+    "/de/packaging-laser-service/spgprints-titanium-platinum-service/"
+   ],
+   "official_product_identity": [
+    {
+     "url": "https://www.spgprints.com/titanium-laser-engraving-system-1",
+     "title": "SPGPrints TITANIUM system page",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://spgprints.com/hubfs/spgprints_leaflet_titanium_2024.pdf?hsLang=en",
+     "title": "SPGPrints TITANIUM leaflet (PDF, 2024)",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.spgprints.com/platinum-laser-engraving-system-2",
+     "title": "SPGPrints PLATINUM system page",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://spgprints.com/hubfs/spgprints_leaflet_platinum_2024.pdf?hsLang=en",
+     "title": "SPGPrints PLATINUM leaflet (PDF, 2024)",
+     "checked": "2026-11-05"
+    }
+   ],
+   "phasex_service_evidence": [],
+   "evaluation_only_intake": true,
+   "claim_boundary": "No SPGPrints appointment, no OEM software access, no licence rights. Active 3D RIP recipes, calibrated material databases, OEM software, licences and updates, and print-form acceptance remain with the customer and SPGPrints. Sealed laser and engraving heads are not opened."
+  },
+  {
+   "manufacturer": "CMS Laser / Ackley Hartnett / EAM (EAP Lasers)",
+   "model_family": "Tablet laser drilling",
+   "model_families_named_on_page": [
+    "CMS Laser TD-10",
+    "CMS Laser TD-70",
+    "CMS Laser TD-70-2",
+    "CMS Laser TD-140",
+    "Ackley Hartnett H-Track",
+    "Ackley Hartnett VIP",
+    "Ackley Hartnett Delta",
+    "Ackley Hartnett Servo",
+    "Ackley Hartnett IBM",
+    "Ackley Hartnett Cantilever",
+    "Ackley Hartnett Lab and R&D Laser Drill",
+    "Installed EAM tablet drilling systems"
+   ],
+   "route": "/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/",
+   "localized_routes": [
+    "/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/",
+    "/fr/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/",
+    "/es/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/",
+    "/de/industrial-laser-service/applications/pharmaceutical-tablet-laser-drilling-equipment-service/"
+   ],
+   "official_product_identity": [
+    {
+     "url": "https://cmslaser.com/products/specialized-laser-systems/pharmaceutical-laser-systems/pharmaceutical-laser-drilling-systems/",
+     "title": "CMS Laser pharmaceutical drilling systems",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://cmslaser.com/products/specialized-laser-systems/pharmaceutical-laser-systems/td-10-pharmaceutical-tablet-drilling-system/",
+     "title": "CMS Laser TD-10",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://cmslaser.com/products/specialized-laser-systems/pharmaceutical-laser-systems/td-140-pharmaceutical-tablet-drilling-system/",
+     "title": "CMS Laser TD-140",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://ackleyhartnett.com/view-all-machines/",
+     "title": "Ackley Hartnett machine range",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://ackleyhartnett.com/product/vip-laser-drill/",
+     "title": "Ackley Hartnett VIP Laser Drill",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://eaplaser.com/",
+     "title": "EAP Lasers, support for installed EAM systems",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/process-validation-general-principles-and-practices",
+     "title": "FDA, Process Validation: General Principles and Practices",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application",
+     "title": "FDA, Part 11 Electronic Records: Scope and Application",
+     "checked": "2026-11-05"
+    }
+   ],
+   "phasex_service_evidence": [],
+   "evaluation_only_intake": true,
+   "claim_boundary": "Equipment service and as-found / as-left technical records only. Recipe content, hole geometry, drug-release behaviour, IQ/OQ/PQ, the 21 CFR Part 11 determination, GMP change control, contamination and cleaning assessment, validation, requalification and batch or product release remain with the site and its quality unit. Site access normally requires gowning, induction and in some plants a quality agreement."
+  },
+  {
+   "manufacturer": "Prima Power / DMG MORI / Winbro / Synova / TRUMPF",
+   "model_family": "Multi-axis aerospace and turbine laser machines",
+   "model_families_named_on_page": [
+    "Prima Power LASERDYNE 795",
+    "Prima Power LASERDYNE 811",
+    "Prima Power LASERDYNE 430 (installed base)",
+    "Prima Power LASERDYNE 606D (installed base)",
+    "DMG MORI LASERTEC 50 PowerDrill",
+    "DMG MORI LASERTEC 100 PowerDrill",
+    "DMG MORI LASERTEC 160 PowerDrill / PowerShape",
+    "Winbro DRILL-300",
+    "Winbro 100 Series",
+    "Winbro 200 Series",
+    "Synova MCS 500 Laser MicroJet",
+    "Synova MCS 300 Laser MicroJet",
+    "TRUMPF TruLaser Cell 3000",
+    "TRUMPF TruLaser Cell 7040"
+   ],
+   "route": "/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/",
+   "localized_routes": [
+    "/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/",
+    "/fr/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/",
+    "/es/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/",
+    "/de/industrial-laser-service/applications/aerospace-turbine-laser-equipment-service/"
+   ],
+   "official_product_identity": [
+    {
+     "url": "https://www.primapower.com/en/technologies/3d-laser-cutting/laserdyne/laserdyne-795",
+     "title": "Prima Power LASERDYNE 795",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.primapower.com/en/technologies/specialized-processing-laserdyne/laserdyne-machines",
+     "title": "Prima Power LASERDYNE machine range",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://us.dmgmori.com/products/machines/lasertec/lasertec-powerdrill",
+     "title": "DMG MORI LASERTEC PowerDrill range",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://en.dmgmori.com/products/machines/lasertec/lasertec-powerdrill/lasertec-50-powerdrill",
+     "title": "DMG MORI LASERTEC 50 PowerDrill",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://winbrogroup.com/drill-300/",
+     "title": "Winbro DRILL-300",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://winbrogroup.com/industries/",
+     "title": "Winbro industries and platform range",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.synova.ch/main-application-areas/aerospace/",
+     "title": "Synova Laser MicroJet, aerospace applications",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.trumpf.com/en_US/products/machines-systems/laser-welding-systems-and-the-arc-welding-cell/trulaser-cell-3000/",
+     "title": "TRUMPF TruLaser Cell 3000",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.trumpf.com/en_INT/products/machines-systems/3d-laser-cutting-machines/trulaser-cell-7040/",
+     "title": "TRUMPF TruLaser Cell 7040",
+     "checked": "2026-11-05"
+    },
+    {
+     "url": "https://www.faa.gov/newsroom/how-it-works-aircraft-certification",
+     "title": "FAA, how aircraft certification works",
+     "checked": "2026-11-05"
+    }
+   ],
+   "phasex_service_evidence": [],
+   "evaluation_only_intake": true,
+   "claim_boundary": "Process parameters, part programmes, engine and component drawings, qualification and revalidation, first article inspection, non-destructive testing, certified-component release and airworthiness remain with the owner, the certificate holder and the relevant authority. Export-controlled, classified and customer-proprietary data is not requested or stored. PhaseX is not a repair station, holds no aviation approval and claims no military or government authorization."
+  }
+ ]
+}
