@@ -101,6 +101,9 @@
   Metallurgical and dimensional qualification of a deposited layer is the customer's; where the component
   is a certified part it belongs to the certificate holder and the regulator.
 
+- [Medical tube, stent and hypotube laser equipment service](https://phasexlaser.com/industrial-laser-service/applications/medical-tube-stent-laser-equipment-service/): complete-machine evaluation around precision medical-tube processing. Rotary and linear motion, collets, tube feed, vision, controls, safety, cooling, extraction and accessible laser interfaces. Representative Coherent StarCut Tube and StarFeed families are named for identification. PhaseX does not change validated recipes, qualify a medical-device process or release product.
+- [Metal additive and LPBF equipment subsystem service](https://phasexlaser.com/industrial-laser-service/applications/metal-additive-lpbf-equipment-service/): accessible recoater and platform motion, gas and filter interfaces, cooling, controls, safety and accessible laser/scanner interfaces on EOS, Nikon SLM, 3D Systems DMP, Renishaw RenAM and TRUMPF TruPrint families. Powder and chamber readiness must be confirmed before field work; build parameters, process qualification and part acceptance remain with the owner.
+
 ## Packaging and printing laser service
 
 - [Brands A to Z with service scope per class](https://phasexlaser.com/packaging-laser-service/#scopes):
