@@ -245,7 +245,7 @@ footer .f-logo p{max-width:290px}
 .crumb .wrap{padding-top:13px;padding-bottom:13px}
 .crumb a:hover{color:var(--orange)}
 /* The separator is an ATOMIC inline, so the line may break at its edges.
-   This is the whole fix for a real 320px overflow Codex measured in Chrome on
+   This fixes a real 320px overflow measured in Chrome on
    two German routes: scrollWidth 323 against clientWidth 320, and 361 against
    320. The markup is `</span><b>Laseranlagen…` with no whitespace between the
    two, so "/Laseranlagen" was ONE unbreakable run - the browser had no

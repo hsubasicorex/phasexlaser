@@ -217,10 +217,11 @@
   inside packaging lines. The page exists to resolve which of the three a caller has, because
   the service conversation is different in each.
 - [Esko CDI flexo plate imaging service](https://phasexlaser.com/packaging-laser-service/esko-cdi/):
-  digital flexo plate imaging, including the Optics 40 imaging option and Pixel+ screening as
-  Esko documents them. Prepress sits in front of press scheduling, so an imager that is down
-  becomes missed press windows within a shift, and there are very few independent companies in
-  North America who will look at this class of equipment.
+  independent field service for customer-owned CDI Spark, CDI Advance and CDI Crystal flexo
+  imagers. The page distinguishes the CDI Crystal laser imager from the XPS Crystal UV LED
+  exposure unit, identifies the exact installed platform before accepting scope, and links to
+  Esko's official product and technical documentation. PhaseX is independent and does not claim
+  Esko authorization, factory certification or a guaranteed repair outcome.
 
 ## Vocabulary and definitions
 
