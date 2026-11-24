@@ -1,6 +1,6 @@
 {
  "_note": "Source ledger for the November 2026 high-value equipment expansion. Three evidence classes are kept apart on purpose. official_product_identity proves only that a manufacturer publishes that platform under that name. phasex_service_evidence would prove that PhaseX has serviced that platform, and is empty: no completed-job record exists for these families. evaluation_only_intake is what the site actually offers today. Manufacturer product evidence must never be presented as proof of PhaseX experience on a platform.",
- "_checked": "2026-11-05",
+ "_checked": "2026-11-23",
  "_evidence_classes": {
   "official_product_identity": "The manufacturer publishes this platform or model family under this name on the cited URL.",
   "phasex_service_evidence": "A completed PhaseX job on that platform, with a job record. EMPTY for every family below.",
@@ -246,6 +246,63 @@
    "phasex_service_evidence": [],
    "evaluation_only_intake": true,
    "claim_boundary": "Process parameters, part programmes, engine and component drawings, qualification and revalidation, first article inspection, non-destructive testing, certified-component release and airworthiness remain with the owner, the certificate holder and the relevant authority. Export-controlled, classified and customer-proprietary data is not requested or stored. PhaseX is not a repair station, holds no aviation approval and claims no military or government authorization."
+  },
+  {
+   "manufacturer": "Coherent / Lightel / Laser Mechanisms (identification references)",
+   "model_family": "High-power fiber delivery cables, connectors and source-side fiber assemblies",
+   "model_families_named_on_page": [
+    "QBH",
+    "QD",
+    "HLC-8",
+    "LCA",
+    "LLK-D",
+    "LLK-B"
+   ],
+   "route": "/industrial-laser-service/fiber-delivery-cable-repair/",
+   "localized_routes": [
+    "/industrial-laser-service/fiber-delivery-cable-repair/",
+    "/fr/industrial-laser-service/fiber-delivery-cable-repair/",
+    "/es/industrial-laser-service/fiber-delivery-cable-repair/",
+    "/de/industrial-laser-service/fiber-delivery-cable-repair/"
+   ],
+   "official_product_identity": [
+    {
+     "url": "https://www.coherent.com/components-accessories/beam-delivery/fiber-optic-cables",
+     "title": "Coherent, fiber optic beam-delivery cables",
+     "checked": "2026-11-23"
+    },
+    {
+     "url": "https://www.lightel.com/wp-content/uploads/qbh-high-power-laser-delivery-cable.pdf",
+     "title": "Lightel, QBH high-power delivery cable (PDF)",
+     "checked": "2026-11-23"
+    },
+    {
+     "url": "https://www.lasermech.com/fibertool/",
+     "title": "Laser Mechanisms, fiber connector families",
+     "checked": "2026-11-23"
+    }
+   ],
+   "phasex_service_evidence": [
+    {
+     "class": "service history",
+     "scope": "MAX Photonics and nLIGHT equipment",
+     "basis": "completed work, held off-site"
+    },
+    {
+     "class": "evaluation only",
+     "scope": "Raycus, IPG Photonics, JPT, GW LaserTech",
+     "basis": "no completed delivery-cable repair record"
+    }
+   ],
+   "evaluation_only_intake": true,
+   "claim_boundary": "In-house specialty splicing is NOT a released service. It is gated on acceptance of the workstation and on validation of each specific cable class. Active and gain fiber is a source-level evaluation class only; no repair capability is offered or implied. Electrical harnesses, DC bus and interlock wiring are explicitly outside the optical scope. No universal power, beam-quality, back-reflection or thermal validation is claimed.",
+   "time_sensitive_claim": {
+    "statement": "workstation is in commissioning; specialty splicing released per cable class after acceptance",
+    "written": "2026-11-23",
+    "review_by": "2027-02-23",
+    "owner": "service lead",
+    "action_if_unreviewed": "Treat the commissioning sentence as stale. Either record acceptance and the validated cable classes, or remove the forward-looking wording from all four locales."
+   }
   }
  ]
 }

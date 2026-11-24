@@ -293,3 +293,8 @@
   safety function.
 - We do not publish instrumentation as a fixed laboratory inventory. Measurement
   instruments for each job are named in that job's written proposal.
+## High-power fiber delivery cable service
+- [High-power fiber laser delivery cable repair, replacement and splicing](https://phasexlaser.com/industrial-laser-service/fiber-delivery-cable-repair/): external beam-delivery cables, process fibers and QBH, QD or equivalent output assemblies, plus the source-side optical path: internal fiber assemblies, pump and signal leads, combiner pigtails and the run from the combiner to the output interface. Optical only - power-supply harnesses, DC bus and interlock wiring are electrical and are handled under laser source repair. Evaluation intake is open; a dedicated large-diameter fusion-splicing and cleaving workstation is ordered and in commissioning, and is not presented as a validated process. PhaseX has service history with MAX Photonics and nLIGHT equipment; Raycus, IPG Photonics, JPT and GW LaserTech are accepted for evaluation only.
+- [Réparation, remplacement et épissure de câbles de transport de faisceau](https://phasexlaser.com/fr/industrial-laser-service/fiber-delivery-cable-repair/)
+- [Reparación, reemplazo y empalme de cables de transporte de haz](https://phasexlaser.com/es/industrial-laser-service/fiber-delivery-cable-repair/)
+- [Reparatur, Austausch und Spleißen von Faserlaser-Übertragungskabeln](https://phasexlaser.com/de/industrial-laser-service/fiber-delivery-cable-repair/)
